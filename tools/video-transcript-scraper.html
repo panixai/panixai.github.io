@@ -1,17 +1,123 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Video &amp; Podcast Transcript: Any Link, MP3 or RSS to Text | Panix</title><meta name="description" content="Transcribe public videos and podcasts from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Uses existing captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks.">
-<link rel="canonical" href="https://panixai.github.io/tools/video-transcript-scraper.html"><meta property="og:title" content="Video &amp; Podcast Transcript: Any Link, MP3 or RSS to Text | Panix">
-<meta property="og:description" content="Transcribe public videos and podcasts from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Uses existing captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks."><meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css"></head><body>
-<header class="nav"><a class="brand" href="/">Panix<span>AI</span></a>
-<nav><a href="/#tools">Tools</a><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a></nav></header>
-<main class="page"><p class="crumb"><a href="/">All tools</a> / Social &amp; video</p>
-<h1>Video &amp; Podcast Transcript</h1><p class="lead">Any Link, MP3 or RSS to Text</p>
-<p>Transcribe public videos and podcasts from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Uses existing captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks.</p>
-<p><a class="btn" href="https://apify.com/panix/video-transcript-scraper" target="_blank" rel="noopener">Run it on Apify</a></p>
-<div class="demo ph"><p>Demo video coming soon</p></div>
-<h2>How it works</h2><ol class="steps"><li>Open the Actor and enter your input.</li><li>Press Run. You pay per result, and you can set a spend limit.</li><li>Download JSON, CSV or Excel, or call it from code.</li></ol>
-<h2>Related tools</h2><ul class="rel"><li><a href="/tools/instagram-reel-transcript.html">Instagram Reel Transcript</a></li><li><a href="/tools/pinterest-scraper.html">Pinterest Scraper</a></li><li><a href="/tools/threads-scraper.html">Threads Scraper &amp; Monitor</a></li><li><a href="/tools/tiktok-scraper.html">TikTok Scraper</a></li></ul>
-</main><footer><p>Panix Actors on Apify. Pay per result. Public pages only, no login or captcha solving.</p>
-<p>Need a custom scraper? <a href="https://apify.com/panix" target="_blank" rel="noopener">Message me on Apify</a>.</p></footer></body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video &amp; Podcast Transcript: Any Link, MP3 or RSS to Text | Panix AI Labs</title>
+<meta name="description" content="Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.">
+<link rel="canonical" href="https://panixai.github.io/tools/video-transcript-scraper.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Panix AI Labs">
+<meta property="og:title" content="Video &amp; Podcast Transcript: Any Link, MP3 or RSS to Text | Panix AI Labs"><meta property="og:description" content="Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.">
+<meta property="og:url" content="https://panixai.github.io/tools/video-transcript-scraper.html"><meta property="og:image" content="https://panixai.github.io/assets/img/logo-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+<link rel="stylesheet" href="/assets/style.css?v=mwkhmau4">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Video & Podcast Transcript: Any Link, MP3 or RSS to Text","description":"Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://apify.com/panix/video-transcript-scraper","publisher":{"@type":"Organization","name":"Panix AI Labs","url":"https://panixai.github.io"},"offers":{"@type":"Offer","price":0.0025,"priceCurrency":"USD"}}</script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="/" aria-label="Panix AI Labs home"><img src="/assets/img/logo-64.png" width="28" height="28" alt=""><span>Panix AI Labs</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="/#tools">Tools</a><a href="/#api">API</a><a href="/#faq">FAQ</a><a href="/#custom">Custom work</a>
+  </nav>
+  <div class="nav-r">
+    <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode"><span class="i-sun"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="i-moon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span></button>
+    <a class="btn btn-sm" href="https://apify.com/panix" target="_blank" rel="noopener">Apify Store <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
+</div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="crumb" aria-label="Breadcrumb"><a href="/#tools">Tools</a><span>/</span><a href="/?c=transcripts#tools">Transcripts</a></nav>
+  <div class="tool">
+    <div class="tool-top">
+      <header class="tool-head"><img class="av" src="/assets/img/video-transcript-scraper.png" width="56" height="56" alt="" loading="lazy" decoding="async"><div><h1>Video &amp; Podcast Transcript</h1><p class="lead">Any Link, MP3 or RSS to Text</p></div></header>
+      <p class="desc">Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.</p>
+    </div>
+    <div class="tool-main">
+      
+      <section class="sec"><h2>Example input</h2><p class="muted">Paste this into the Actor's JSON input, or send it with the API call below.</p>
+        <pre class="json"><code>{
+  &quot;urls&quot;: [
+    &quot;https://www.youtube.com/watch?v=jNQXAC9IVRw&quot;,
+    &quot;https://x.com/SpaceX/status/1732824684683784516&quot;
+  ],
+  &quot;proxyConfiguration&quot;: {
+    &quot;useApifyProxy&quot;: true
+  }
+}</code></pre></section>
+      <section class="sec"><h2>Output fields</h2><p class="muted">Every row has the same fields. Export as JSON, CSV, Excel or XML.</p>
+        <ul class="fields"><li><code>thumbnailUrl</code></li><li><code>platform</code></li><li><code>title</code></li><li><code>author</code></li><li><code>durationSeconds</code></li><li><code>language</code></li><li><code>transcriptSource</code></li><li><code>transcript</code></li><li><code>url</code></li></ul></section>
+      <section class="sec"><h2>Run it from code</h2><p class="muted">Use your <a href="https://console.apify.com/settings/integrations" target="_blank" rel="noopener">Apify API token</a>. The call waits for the run and returns the rows.</p><div class="code" data-tabs>
+  <div class="code-bar"><div class="tabs" role="tablist"><button class="tab on" role="tab" aria-selected="true" data-tab="curl">cURL</button><button class="tab" role="tab" aria-selected="undefined" data-tab="py">Python</button><button class="tab" role="tab" aria-selected="undefined" data-tab="js">JavaScript</button></div>
+  <button class="icon-btn copy" type="button" aria-label="Copy code"><span class="i-copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></span><span class="i-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button></div>
+  <pre class="pane on" data-pane="curl"><code>curl -X POST &quot;https://api.apify.com/v2/acts/panix~video-transcript-scraper/run-sync-get-dataset-items?token=$APIFY_TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;urls&quot;:[&quot;https://www.youtube.com/watch?v=jNQXAC9IVRw&quot;,&quot;https://x.com/SpaceX/status/1732824684683784516&quot;],&quot;proxyConfiguration&quot;:{&quot;useApifyProxy&quot;:true}}'</code></pre><pre class="pane" data-pane="py"><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;APIFY_TOKEN&quot;)
+run = client.actor(&quot;panix/video-transcript-scraper&quot;).call(run_input={
+    &quot;urls&quot;: [
+        &quot;https://www.youtube.com/watch?v=jNQXAC9IVRw&quot;,
+        &quot;https://x.com/SpaceX/status/1732824684683784516&quot;
+    ],
+    &quot;proxyConfiguration&quot;: {
+        &quot;useApifyProxy&quot;: True
+    }
+})
+
+for item in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(item)</code></pre><pre class="pane" data-pane="js"><code>import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+const run = await client.actor('panix/video-transcript-scraper').call({
+  &quot;urls&quot;: [
+    &quot;https://www.youtube.com/watch?v=jNQXAC9IVRw&quot;,
+    &quot;https://x.com/SpaceX/status/1732824684683784516&quot;
+  ],
+  &quot;proxyConfiguration&quot;: {
+    &quot;useApifyProxy&quot;: true
+  }
+});
+
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(items);</code></pre>
+</div></section>
+      <section class="sec"><h2>Related tools</h2><div class="grid grid-3"><a class="card" href="/tools/instagram-reel-transcript.html" data-cat="transcripts" data-q="instagram reel transcript: speech-to-text, subtitles &amp; stats transcribe public instagram reels to text without login or api key: spoken words, hook, language, timed segments, srt/vtt subtitles, free english translation, plus plays, likes and caption. for content research, influencer marketing, social listening and ai/rag pipelines. transcripts">
+  <div class="card-top"><img class="av" src="/assets/img/instagram-reel-transcript.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Transcripts</span></div>
+  <h3>Instagram Reel Transcript</h3>
+  <p>Speech-to-Text, Subtitles &amp; Stats</p>
+  <div class="card-foot"><span class="price">$0.012 per reel transcript</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/youtube-transcript-scraper.html" data-cat="transcripts" data-q="youtube transcript api &amp; scraper extract transcripts from youtube videos, shorts, playlists, and channels—no youtube api key. get clean text, timestamps, srt, vtt, markdown, metadata, and rag-ready chunks for ai agents and automation. original-language output; failed videos are free. transcripts">
+  <div class="card-top"><img class="av" src="/assets/img/youtube-transcript-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Transcripts</span></div>
+  <h3>YouTube Transcript API &amp; Scraper</h3>
+  <p>Extract transcripts from YouTube videos, Shorts, playlists, and channels—no YouTube API key. Get clean text, timestamps, SRT, VTT, Markdown, metadata, and RAG-ready chunks for AI agents and automation. Original-language output; failed videos are free.</p>
+  <div class="card-foot"><span class="price">$3 / 1,000 transcripts</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a></div></section>
+    </div>
+    <aside class="tool-side"><div class="panel">
+      <div class="price-big">$2.50 / 1,000 transcripts</div>
+      <p class="muted small">Pay only for results. Empty searches cost nothing. Set a spend limit on every run.</p>
+      <a class="btn btn-block" href="https://apify.com/panix/video-transcript-scraper" target="_blank" rel="noopener">Run on Apify <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="btn btn-ghost btn-block" href="https://apify.com/panix/video-transcript-scraper/api" target="_blank" rel="noopener">API reference</a>
+      <table class="price-t"><thead><tr><th>Event</th><th class="num">Price</th></tr></thead><tbody><tr><td><span class="ev">Transcript</span></td><td class="num">$0.0025</td></tr><tr><td><span class="ev">Speech-to-text minute</span><span class="tag">optional</span></td><td class="num">$0.009</td></tr><tr><td><span class="ev">High accuracy minute</span><span class="tag">optional</span></td><td class="num">$0.024</td></tr><tr><td><span class="ev">Run start</span></td><td class="num">$0.001</td></tr></tbody></table>
+      <details class="tiers"><summary>Lower prices on paid Apify plans</summary><table><tr><td>Free</td><td class="num">$0.0025</td></tr><tr><td>Bronze</td><td class="num">$0.002</td></tr><tr><td>Silver</td><td class="num">$0.0018</td></tr><tr><td>Gold</td><td class="num">$0.0016</td></tr><tr><td>Platinum</td><td class="num">$0.0016</td></tr><tr><td>Diamond</td><td class="num">$0.0016</td></tr></table></details>
+      <dl class="facts">
+        <div><dt>Runs succeeded, 30 days</dt><dd>100%</dd></div>
+        <div><dt>Login needed</dt><dd>No</dd></div>
+        <div><dt>Free to try</dt><dd>With Apify's free monthly credit</dd></div>
+      </dl>
+    </div></aside>
+  </div>
+</div>
+</main>
+<footer class="foot"><div class="wrap foot-in">
+  <div class="foot-brand"><img src="/assets/img/logo-64.png" width="24" height="24" alt=""><span>Panix AI Labs</span></div>
+  <p class="muted">Web data tools on Apify. Public pages only, pay per result.</p>
+  <nav class="foot-links" aria-label="Footer"><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a><a href="mailto:saoud.pro@gmail.com">saoud.pro@gmail.com</a><a href="/sitemap.xml">Sitemap</a></nav>
+</div></footer>
+<script src="/assets/app.js?v=mwkhmau4" defer></script>
+</body></html>

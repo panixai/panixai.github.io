@@ -1,44 +1,277 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Panix: Apify web data tools for jobs, ads, e-commerce and video</title><meta name="description" content="24 Apify Actors that turn public pages into clean rows. Pay per result.">
-<link rel="canonical" href="https://panixai.github.io/"><meta property="og:title" content="Panix: Apify web data tools for jobs, ads, e-commerce and video">
-<meta property="og:description" content="24 Apify Actors that turn public pages into clean rows. Pay per result."><meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css"></head><body>
-<header class="nav"><a class="brand" href="/">Panix<span>AI</span></a>
-<nav><a href="/#tools">Tools</a><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a></nav></header>
-<section class="hero"><h1>Turn any public page into <em>clean rows</em></h1>
-<p class="lead">24 Apify Actors for jobs, ads, prices, video and news. Pay per result. No login.</p>
-<div class="stage" aria-hidden="true"><div class="input"><span class="lbl">input</span><code id="typed"></code></div>
-<div class="arrow">&rarr;</div><div class="out"><span class="lbl">rows</span><div id="rows"></div></div></div>
-<p><a class="btn" href="#tools">Browse 24 tools</a> <a class="btn ghost" href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a></p></section>
-<section id="tools" class="tools"><h2>Tools</h2>
-<div class="filters"><input id="q" type="search" placeholder="Search tools" aria-label="Search tools">
-<button class="chip on" data-c="">All</button><button class="chip" data-c="Jobs &amp; hiring">Jobs &amp; hiring</button><button class="chip" data-c="Ads &amp; competitors">Ads &amp; competitors</button><button class="chip" data-c="E-commerce &amp; pricing">E-commerce &amp; pricing</button><button class="chip" data-c="Social &amp; video">Social &amp; video</button><button class="chip" data-c="News, travel &amp; sports">News, travel &amp; sports</button><button class="chip" data-c="Documents">Documents</button></div>
-<div class="grid"><a class="card" data-cat="News, travel &amp; sports" data-text="airbnb scraper: listings, prices, reviews &amp; calendar scrape airbnb listings by place, search link or listing link without login: price for your dates, rating, beds, location, photos, plus details, host, amenities, house rules, availability calendar and guest reviews. splits big cities into map areas for thousands of listings." href="/tools/airbnb-scraper.html">
-<small>News, travel &amp; sports</small><h3>Airbnb Scraper</h3><p>Listings, Prices, Reviews &amp; Calendar</p></a><a class="card" data-cat="E-commerce &amp; pricing" data-text="aliexpress search scraper: prices, sold counts &amp; ratings aliexpress products from search terms, search links and category pages: price, discount, exact sold count, rating, ships-from country, delivery estimate, choice and sponsored flags, listing date and rank, for 60 ship-to countries. watchlists flag new products and price changes." href="/tools/aliexpress-scraper.html">
-<small>E-commerce &amp; pricing</small><h3>AliExpress Search Scraper</h3><p>Prices, Sold Counts &amp; Ratings</p></a><a class="card" data-cat="E-commerce &amp; pricing" data-text="amazon arbitrage finder: walmart, target &amp; global price gaps find products to resell on amazon: compares amazon with walmart, target and other amazon countries by barcode, works out fba fees, profit and roi, and ranks products best first with a buy, maybe or skip answer. no login." href="/tools/amazon-arbitrage-finder.html">
-<small>E-commerce &amp; pricing</small><h3>Amazon Arbitrage Finder</h3><p>Walmart, Target &amp; Global Price Gaps</p></a><a class="card" data-cat="E-commerce &amp; pricing" data-text="amazon product scraper: prices, bsr, sales &amp; price tracker scrape amazon search results, best sellers lists, asins and product links in 16 stores without login. price, list price, best sellers rank, bought in past month, seller, stock, specs, variants, images, rating breakdown and amazon's review summary. local delivery postcode and price-change tracking." href="/tools/amazon-product-scraper.html">
-<small>E-commerce &amp; pricing</small><h3>Amazon Product Scraper</h3><p>Prices, BSR, Sales &amp; Price Tracker</p></a><a class="card" data-cat="Jobs &amp; hiring" data-text="ats jobs scraper: greenhouse, lever, workday +15 every open job from company career sites on greenhouse, lever, ashby, workday, smartrecruiters, workable and 12 more ats, by board link, website or company name. one clean schema with parsed salary, location, remote type, seniority and skills, plus new-job monitoring and hiring summaries." href="/tools/ats-jobs-scraper.html">
-<small>Jobs &amp; hiring</small><h3>ATS Jobs Scraper</h3><p>Greenhouse, Lever, Workday +15</p></a><a class="card" data-cat="Ads &amp; competitors" data-text="facebook ads library scraper &amp; ad monitor scrape the meta ad library by keyword, facebook page or ad library url: ad copy, media, start dates, days running, platforms, landing pages, eu reach and political spend. for competitor research, ad spying and brand monitoring, with only-new-ads alerts. no login, no browser." href="/tools/facebook-ads-library-scraper.html">
-<small>Ads &amp; competitors</small><h3>Facebook Ads Library Scraper &amp; Ad Monitor</h3><p>Scrape the Meta Ad Library by keyword, Facebook Page or Ad Library URL: ad copy, media, start dates, days running, platforms, landing pages, EU reach and political spend. For competitor research, ad spying and brand monitoring, with only-new-ads alerts. No login, no browser.</p></a><a class="card" data-cat="News, travel &amp; sports" data-text="flashscore scraper: live scores, results &amp; odds scrape flashscore for 29 sports: fixtures, live scores and results with every period, plus goals, cards, stats, lineups, injuries, odds, head-to-head, tennis point-by-point and league tables. for betting models, odds tracking, live score apps and fantasy. only-changed mode for live polling." href="/tools/flashscore-scraper.html">
-<small>News, travel &amp; sports</small><h3>Flashscore Scraper</h3><p>Live Scores, Results &amp; Odds</p></a><a class="card" data-cat="Ads &amp; competitors" data-text="google ads transparency scraper &amp; ad monitor see the ads any company runs on google search, youtube, shopping, maps and play. ad text, youtube video links, landing pages, dates, countries, eu reach and targeting, advertiser checks and new-ad monitoring. no login." href="/tools/google-ads-transparency-scraper.html">
-<small>Ads &amp; competitors</small><h3>Google Ads Transparency Scraper &amp; Ad Monitor</h3><p>See the ads any company runs on Google Search, YouTube, Shopping, Maps and Play. Ad text, YouTube video links, landing pages, dates, countries, EU reach and targeting, advertiser checks and new-ad monitoring. No login.</p></a><a class="card" data-cat="News, travel &amp; sports" data-text="google news scraper &amp; monitor: real links, text, new only get google news articles by keyword, topic or place with the real publisher link, source, date and related coverage. add article text, or deliver only new articles since the last run. no login." href="/tools/google-news-scraper.html">
-<small>News, travel &amp; sports</small><h3>Google News Scraper &amp; Monitor</h3><p>Real Links, Text, New Only</p></a><a class="card" data-cat="Social &amp; video" data-text="instagram reel transcript: speech-to-text, subtitles &amp; stats turn public instagram reels into text without login. paste reel links or a username. get the spoken words, opening hook, language, timed segments, srt/vtt subtitles, optional english translation, plus plays, likes, caption and audio. music-only reels are free." href="/tools/instagram-reel-transcript.html">
-<small>Social &amp; video</small><h3>Instagram Reel Transcript</h3><p>Speech-to-Text, Subtitles &amp; Stats</p></a><a class="card" data-cat="Documents" data-text="invoice, receipt &amp; pdf table to json/markdown ocr extract invoices, receipts, bank statements and pdf tables to structured json and llm-ready markdown. digital pages are read directly; scanned pages and photos get ocr. for accounting, expense tools, erp imports and ai agents in n8n, make or zapier. failed files are free." href="/tools/invoice-table-json-extractor.html">
-<small>Documents</small><h3>Invoice, Receipt &amp; PDF Table to JSON/Markdown OCR</h3><p>Extract invoices, receipts, bank statements and PDF tables to structured JSON and LLM-ready Markdown. Digital pages are read directly; scanned pages and photos get OCR. For accounting, expense tools, ERP imports and AI agents in n8n, Make or Zapier. Failed files are free.</p></a><a class="card" data-cat="Ads &amp; competitors" data-text="linkedin ad library scraper: ads, impressions &amp; targeting get every ad a company runs on linkedin from the official linkedin ad library: ad text, images, videos, click-through links with utm tags and who paid. eu ads also include run dates, impressions, countries and targeting. no login." href="/tools/linkedin-ad-library-scraper.html">
-<small>Ads &amp; competitors</small><h3>LinkedIn Ad Library Scraper</h3><p>Ads, Impressions &amp; Targeting</p></a><a class="card" data-cat="Jobs &amp; hiring" data-text="linkedin company scraper: details, posts &amp; similar companies scrape linkedin company pages without login. use links, names, ids or websites. get industry, size, headcount, followers, hq and office addresses, website, founded year, specialties, recent posts with reactions, and similar companies for lead lists. track changes between runs." href="/tools/linkedin-company-scraper.html">
-<small>Jobs &amp; hiring</small><h3>LinkedIn Company Scraper</h3><p>Details, Posts &amp; Similar Companies</p></a><a class="card" data-cat="Jobs &amp; hiring" data-text="linkedin jobs scraper: salaries, remote &amp; only-new jobs scrape linkedin job search results and job pages without login or cookies. each job comes with full description, employment type, experience level, industries, applicants, parsed salary, workplace type, skills and easy apply. exact filters linkedin dropped, only-new mode for daily alerts." href="/tools/linkedin-jobs-scraper.html">
-<small>Jobs &amp; hiring</small><h3>LinkedIn Jobs Scraper</h3><p>Salaries, Remote &amp; Only-New Jobs</p></a><a class="card" data-cat="Social &amp; video" data-text="pinterest scraper: pins, boards, profiles &amp; search scrape pinterest pins, video pins, boards and profiles by keyword or link, no login. real pin links and save counts, outbound links, product prices, monthly views, keyword suggestions. date, saves and domain filters, only-new-pins monitoring." href="/tools/pinterest-scraper.html">
-<small>Social &amp; video</small><h3>Pinterest Scraper</h3><p>Pins, Boards, Profiles &amp; Search</p></a><a class="card" data-cat="Jobs &amp; hiring" data-text="resume &amp; cv parser: pdf to markdown &amp; json parse pdf resumes and cvs into clean, llm-ready markdown that keeps every section: contact, summary, experience, education and skills. text pages are read directly and scanned pages get ocr. for recruiters, ats imports and ai candidate screening in n8n, make or zapier. failed files are free." href="/tools/resume-cv-json-parser.html">
-<small>Jobs &amp; hiring</small><h3>Resume &amp; CV Parser</h3><p>PDF to Markdown &amp; JSON</p></a><a class="card" data-cat="Social &amp; video" data-text="threads scraper &amp; monitor: profiles, posts, search, no login scrape meta threads without login: profiles with followers and engagement, full post histories, keyword and hashtag search, single posts. likes, replies, reposts, quotes, media, links, hashtags. date and likes filters, only-new-posts monitoring for schedules and ai agents." href="/tools/threads-scraper.html">
-<small>Social &amp; video</small><h3>Threads Scraper &amp; Monitor</h3><p>Profiles, Posts, Search, No Login</p></a><a class="card" data-cat="Ads &amp; competitors" data-text="tiktok ads scraper: ad library &amp; top ads get tiktok ads from the official tiktok ad library (eu, uk, turkey, brazil) with targeting, reach and landing pages, or the creative center top ads (us and 27 more countries) with ctr, likes and video links. no login." href="/tools/tiktok-ads-scraper.html">
-<small>Ads &amp; competitors</small><h3>TikTok Ads Scraper</h3><p>Ad Library &amp; Top Ads</p></a><a class="card" data-cat="Social &amp; video" data-text="tiktok scraper: profiles, videos &amp; transcripts scrape tiktok profiles, their videos and photo posts, single video links and video transcripts without login. followers, likes, views, comments, shares, hashtags, music, engagement rate and the spoken text with timestamps. date and view filters, only-new-videos monitoring." href="/tools/tiktok-scraper.html">
-<small>Social &amp; video</small><h3>TikTok Scraper</h3><p>Profiles, Videos &amp; Transcripts</p></a><a class="card" data-cat="Social &amp; video" data-text="video &amp; podcast transcript: any link, mp3 or rss to text transcribe public videos and podcasts from a link: tiktok, x, vimeo, youtube, ted, loom, soundcloud and many more sites, mp3/mp4 files, rss feeds and apple podcasts. uses existing captions first, whisper speech-to-text when none. srt, vtt, markdown and rag chunks." href="/tools/video-transcript-scraper.html">
-<small>Social &amp; video</small><h3>Video &amp; Podcast Transcript</h3><p>Any Link, MP3 or RSS to Text</p></a><a class="card" data-cat="E-commerce &amp; pricing" data-text="walmart scraper: products, prices, reviews &amp; price tracker scrape walmart search, category and deals pages, item ids and product links without login. price, was-price, seller, stock, upc, specs, all variants with prices, rating breakdown, review highlights, store aisle, pickup and delivery. customer reviews and price-change tracking." href="/tools/walmart-scraper.html">
-<small>E-commerce &amp; pricing</small><h3>Walmart Scraper</h3><p>Products, Prices, Reviews &amp; Price Tracker</p></a><a class="card" data-cat="Social &amp; video" data-text="youtube comments scraper: replies, shorts &amp; channels scrape youtube comments and replies from videos, shorts, whole channels, playlists or searches. likes, reply counts, pinned and creator-heart flags, author channel, video title. keyword, likes and date filters, only-new-comments monitoring. no api key or quota." href="/tools/youtube-comments-scraper.html">
-<small>Social &amp; video</small><h3>YouTube Comments Scraper</h3><p>Replies, Shorts &amp; Channels</p></a><a class="card" data-cat="Social &amp; video" data-text="youtube scraper: search, channels, shorts &amp; video details scrape youtube search results, channels, shorts, live streams, playlists and hashtags. every video comes with likes, exact views, upload date, duration, tags, category, chapters, comment count and channel subscribers. no api key or quota, fast http, no browser." href="/tools/youtube-scraper.html">
-<small>Social &amp; video</small><h3>YouTube Scraper</h3><p>Search, Channels, Shorts &amp; Video Details</p></a><a class="card" data-cat="Social &amp; video" data-text="youtube transcript api &amp; scraper extract transcripts from youtube videos, shorts, playlists, and channels—no youtube api key. get clean text, timestamps, srt, vtt, markdown, metadata, and rag-ready chunks for ai agents and automation. original-language output; failed videos are free." href="/tools/youtube-transcript-scraper.html">
-<small>Social &amp; video</small><h3>YouTube Transcript API &amp; Scraper</h3><p>Extract transcripts from YouTube videos, Shorts, playlists, and channels—no YouTube API key. Get clean text, timestamps, SRT, VTT, Markdown, metadata, and RAG-ready chunks for AI agents and automation. Original-language output; failed videos are free.</p></a></div></section><footer><p>Panix Actors on Apify. Pay per result. Public pages only, no login or captcha solving.</p>
-<p>Need a custom scraper? <a href="https://apify.com/panix" target="_blank" rel="noopener">Message me on Apify</a>.</p></footer>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="/assets/app.js"></script></body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panix AI Labs: web data tools for jobs, ads, e-commerce and video</title>
+<meta name="description" content="24 Apify tools that turn public pages into clean rows: jobs, ad libraries, Amazon and Walmart prices, YouTube and TikTok, transcripts and news. Pay per result.">
+<link rel="canonical" href="https://panixai.github.io/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Panix AI Labs">
+<meta property="og:title" content="Panix AI Labs: web data tools for jobs, ads, e-commerce and video"><meta property="og:description" content="24 Apify tools that turn public pages into clean rows: jobs, ad libraries, Amazon and Walmart prices, YouTube and TikTok, transcripts and news. Pay per result.">
+<meta property="og:url" content="https://panixai.github.io/"><meta property="og:image" content="https://panixai.github.io/assets/img/logo-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+<link rel="stylesheet" href="/assets/style.css?v=mwkhmau4">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Panix AI Labs","url":"https://panixai.github.io","logo":"https://panixai.github.io/assets/img/logo-512.png","sameAs":["https://apify.com/panix"]}</script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="/" aria-label="Panix AI Labs home"><img src="/assets/img/logo-64.png" width="28" height="28" alt=""><span>Panix AI Labs</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="/#tools">Tools</a><a href="/#api">API</a><a href="/#faq">FAQ</a><a href="/#custom">Custom work</a>
+  </nav>
+  <div class="nav-r">
+    <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode"><span class="i-sun"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="i-moon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span></button>
+    <a class="btn btn-sm" href="https://apify.com/panix" target="_blank" rel="noopener">Apify Store <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
+</div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+  <a class="pill" href="https://apify.com/panix" target="_blank" rel="noopener"><span class="dot"></span>24 tools on Apify Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <h1>Public web data,<br>delivered as clean rows.</h1>
+  <p class="lead">Scrapers and APIs for jobs, ad libraries, e-commerce, social video and news. Pay per result, no login, ready for your code or AI agent.</p>
+  <div class="cta"><a class="btn" href="#tools">Browse tools</a><a class="btn btn-ghost" href="#api">Use the API</a></div>
+  <div class="demo" data-demo>
+  <div class="demo-bar"><span class="dots"><i></i><i></i><i></i></span>
+    <div class="tabs" role="tablist" aria-label="Example runs"><button class="tab on" role="tab" aria-selected="true" data-tab="news">Google News</button><button class="tab" role="tab" aria-selected="false" data-tab="jobs">LinkedIn Jobs</button><button class="tab" role="tab" aria-selected="false" data-tab="amazon">Amazon</button></div></div>
+  <div class="demo-body pane on" data-pane="news">
+    <div class="demo-in"><div class="label">Input</div><pre><code>{
+  &quot;searchQueries&quot;: [
+    &quot;electric vehicles&quot;
+  ],
+  &quot;timeframe&quot;: &quot;1d&quot;
+}</code></pre></div>
+    <div class="demo-out"><div class="label">Dataset <span class="muted">· sample</span></div>
+      <table><thead><tr><th>title</th><th>source</th><th>publishedAt</th></tr></thead><tbody><tr><td>EV sales climb as new models reach dealers</td><td>Reuters</td><td>2h ago</td></tr><tr><td>Battery prices fall for third year</td><td>Bloomberg</td><td>4h ago</td></tr><tr><td>Charging networks expand along highways</td><td>The Verge</td><td>6h ago</td></tr><tr><td>Automakers plan cheaper compact EVs</td><td>CNBC</td><td>9h ago</td></tr></tbody></table></div>
+  </div><div class="demo-body pane" data-pane="jobs">
+    <div class="demo-in"><div class="label">Input</div><pre><code>{
+  &quot;keywords&quot;: &quot;data engineer&quot;,
+  &quot;location&quot;: &quot;Berlin&quot;
+}</code></pre></div>
+    <div class="demo-out"><div class="label">Dataset <span class="muted">· sample</span></div>
+      <table><thead><tr><th>title</th><th>company</th><th>salary</th></tr></thead><tbody><tr><td>Senior Data Engineer</td><td>Northwind</td><td>€75k–90k</td></tr><tr><td>Analytics Engineer</td><td>Contoso</td><td>€65k–80k</td></tr><tr><td>Data Platform Engineer</td><td>Fabrikam</td><td>€80k–95k</td></tr><tr><td>ML Data Engineer</td><td>Tailspin</td><td>€70k–85k</td></tr></tbody></table></div>
+  </div><div class="demo-body pane" data-pane="amazon">
+    <div class="demo-in"><div class="label">Input</div><pre><code>{
+  &quot;search&quot;: &quot;wireless earbuds&quot;,
+  &quot;country&quot;: &quot;US&quot;
+}</code></pre></div>
+    <div class="demo-out"><div class="label">Dataset <span class="muted">· sample</span></div>
+      <table><thead><tr><th>title</th><th>price</th><th>rating</th></tr></thead><tbody><tr><td>Wireless Earbuds Pro, ANC</td><td>$39.99</td><td>4.6</td></tr><tr><td>Sport Earbuds, 40h battery</td><td>$24.50</td><td>4.4</td></tr><tr><td>Open-ear Earbuds</td><td>$59.00</td><td>4.5</td></tr><tr><td>Budget Earbuds, USB-C</td><td>$18.99</td><td>4.2</td></tr></tbody></table></div>
+  </div>
+</div>
+  <dl class="stats">
+    <div><dt>Tools</dt><dd>24</dd></div>
+    <div><dt>Runs succeeded, 30 days</dt><dd>99.4%</dd></div>
+    <div><dt>Starting price</dt><dd>$0.60<small> / 1,000</small></dd></div>
+    <div><dt>Login needed</dt><dd>None</dd></div>
+  </dl>
+</div></section>
+
+<section class="sec-lg" id="tools"><div class="wrap">
+  <div class="sec-head"><h2>Tools</h2><p class="muted">Every tool has the same clean fields on every run, and exports to JSON, CSV or Excel.</p></div>
+  <div class="filter">
+    <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search tools" autocomplete="off" aria-label="Search tools"><kbd>/</kbd></label>
+    <div class="seg" role="tablist" aria-label="Categories">
+      <button class="seg-b on" data-c="" role="tab" aria-selected="true">All <span>24</span></button>
+      <button class="seg-b" data-c="jobs" role="tab" aria-selected="false">Jobs &amp; hiring <span>4</span></button><button class="seg-b" data-c="ads" role="tab" aria-selected="false">Ad intelligence <span>4</span></button><button class="seg-b" data-c="commerce" role="tab" aria-selected="false">E-commerce <span>4</span></button><button class="seg-b" data-c="social" role="tab" aria-selected="false">Social &amp; video <span>5</span></button><button class="seg-b" data-c="transcripts" role="tab" aria-selected="false">Transcripts <span>3</span></button><button class="seg-b" data-c="more" role="tab" aria-selected="false">News, travel &amp; sports <span>3</span></button><button class="seg-b" data-c="docs" role="tab" aria-selected="false">Documents <span>1</span></button>
+    </div>
+  </div>
+  <div class="grid" id="grid"><a class="card" href="/tools/ats-jobs-scraper.html" data-cat="jobs" data-q="ats jobs scraper: greenhouse, lever, workday +15 scrape every open job from company career sites on greenhouse, lever, ashby, workday, smartrecruiters, workable and 12 more ats. parsed salary, location, remote type and seniority in one schema. for job boards, recruiting, sales leads, hiring-trend research and new-job alerts. jobs &amp; hiring">
+  <div class="card-top"><img class="av" src="/assets/img/ats-jobs-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <h3>ATS Jobs Scraper</h3>
+  <p>Greenhouse, Lever, Workday +15</p>
+  <div class="card-foot"><span class="price">$1.50 / 1,000 jobs</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/linkedin-company-scraper.html" data-cat="jobs" data-q="linkedin company scraper: details, posts &amp; similar companies scrape linkedin company pages without login from links, names, ids or websites: industry, size, headcount, followers, hq and office addresses, website, specialties, recent posts and similar companies. for lead generation, crm enrichment, sales prospecting and market research. jobs &amp; hiring">
+  <div class="card-top"><img class="av" src="/assets/img/linkedin-company-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <h3>LinkedIn Company Scraper</h3>
+  <p>Details, Posts &amp; Similar Companies</p>
+  <div class="card-foot"><span class="price">$3 / 1,000 companies</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/linkedin-jobs-scraper.html" data-cat="jobs" data-q="linkedin jobs scraper: salaries, remote &amp; only-new jobs scrape linkedin jobs without login: full description, salary, employment type, experience level, applicants, remote/hybrid, skills. exact filters linkedin dropped and only-new mode for daily job alerts. for recruiting, lead generation, job boards and salary research. jobs &amp; hiring">
+  <div class="card-top"><img class="av" src="/assets/img/linkedin-jobs-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <h3>LinkedIn Jobs Scraper</h3>
+  <p>Salaries, Remote &amp; Only-New Jobs</p>
+  <div class="card-foot"><span class="price">$1 / 1,000 jobs</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/resume-cv-json-parser.html" data-cat="jobs" data-q="resume &amp; cv parser: pdf to markdown &amp; json parse pdf resumes and cvs into clean, llm-ready markdown that keeps every section: contact, summary, experience, education and skills. text pages are read directly and scanned pages get ocr. for recruiters, ats imports and ai candidate screening in n8n, make or zapier. failed files are free. jobs &amp; hiring">
+  <div class="card-top"><img class="av" src="/assets/img/resume-cv-json-parser.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <h3>Resume &amp; CV Parser</h3>
+  <p>PDF to Markdown &amp; JSON</p>
+  <div class="card-foot"><span class="price">$0.015 per resume</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/facebook-ads-library-scraper.html" data-cat="ads" data-q="facebook ads library scraper &amp; ad monitor scrape the meta ad library by keyword, facebook page or ad library url: ad copy, media, start dates, days running, platforms, landing pages, eu reach and political spend. for competitor research, ad spying and brand monitoring, with only-new-ads alerts. no login, no browser. ad intelligence">
+  <div class="card-top"><img class="av" src="/assets/img/facebook-ads-library-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Ad intelligence</span></div>
+  <h3>Facebook Ads Library Scraper &amp; Ad Monitor</h3>
+  <p>Scrape the Meta Ad Library by keyword, Facebook Page or Ad Library URL: ad copy, media, start dates, days running, platforms, landing pages, EU reach and political spend. For competitor research, ad spying and brand monitoring, with only-new-ads alerts. No login, no browser.</p>
+  <div class="card-foot"><span class="price">$0.60 / 1,000 ads</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/google-ads-transparency-scraper.html" data-cat="ads" data-q="google ads transparency scraper &amp; ad monitor see the ads any company runs on google search, youtube, shopping, maps and play. get ad text, youtube video links, landing pages, dates, countries, eu reach and targeting. for competitor ad research, ad checks and new-ad alerts. no login. ad intelligence">
+  <div class="card-top"><img class="av" src="/assets/img/google-ads-transparency-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Ad intelligence</span></div>
+  <h3>Google Ads Transparency Scraper &amp; Ad Monitor</h3>
+  <p>See the ads any company runs on Google Search, YouTube, Shopping, Maps and Play. Get ad text, YouTube video links, landing pages, dates, countries, EU reach and targeting. For competitor ad research, ad checks and new-ad alerts. No login.</p>
+  <div class="card-foot"><span class="price">$1.20 / 1,000 ads</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/linkedin-ad-library-scraper.html" data-cat="ads" data-q="linkedin ad library scraper: ads, impressions &amp; targeting see every ad a company runs on linkedin: ad text, images, videos, click-through links with utm campaign tags and who paid, from the official linkedin ad library. eu ads add run dates, impressions, countries and targeting. track new competitor ads. no login. ad intelligence">
+  <div class="card-top"><img class="av" src="/assets/img/linkedin-ad-library-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Ad intelligence</span></div>
+  <h3>LinkedIn Ad Library Scraper</h3>
+  <p>Ads, Impressions &amp; Targeting</p>
+  <div class="card-foot"><span class="price">$0.60 / 1,000 ads</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/tiktok-ads-scraper.html" data-cat="ads" data-q="tiktok ads scraper: ad library &amp; top ads see the tiktok ads any brand runs: ad videos, ad text, landing pages, dates, reach and targeting from the tiktok ad library (europe, uk, turkey, brazil), plus the best-performing top ads with ctr and likes for the us and 27 more countries. no login. ad intelligence">
+  <div class="card-top"><img class="av" src="/assets/img/tiktok-ads-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Ad intelligence</span></div>
+  <h3>TikTok Ads Scraper</h3>
+  <p>Ad Library &amp; Top Ads</p>
+  <div class="card-foot"><span class="price">$0.60 / 1,000 ads</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/aliexpress-scraper.html" data-cat="commerce" data-q="aliexpress search scraper: prices, sold counts &amp; ratings scrape aliexpress search results and categories: price, discount, exact sold count, rating, delivery estimate, ships-from, choice and sponsored flags, rank and listing date, for 60 countries. for dropshipping product research, price tracking and trend analysis. e-commerce">
+  <div class="card-top"><img class="av" src="/assets/img/aliexpress-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">E-commerce</span></div>
+  <h3>AliExpress Search Scraper</h3>
+  <p>Prices, Sold Counts &amp; Ratings</p>
+  <div class="card-foot"><span class="price">$2 / 1,000 products</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/amazon-arbitrage-finder.html" data-cat="commerce" data-q="amazon arbitrage finder: walmart, target &amp; global price gaps find products to resell on amazon. compares amazon with walmart, target and other amazon countries by barcode, adds fba fees, profit, roi and sales per month, and ranks products best first with a buy, maybe or skip answer. for online arbitrage and fba sellers. no login. e-commerce">
+  <div class="card-top"><img class="av" src="/assets/img/amazon-arbitrage-finder.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">E-commerce</span></div>
+  <h3>Amazon Arbitrage Finder</h3>
+  <p>Walmart, Target &amp; Global Price Gaps</p>
+  <div class="card-foot"><span class="price">$8 / 1,000 comparisons</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/amazon-product-scraper.html" data-cat="commerce" data-q="amazon product scraper: prices, bsr, sales &amp; price tracker scrape amazon products without login: price, best sellers rank, bought in past month, seller, stock, specs, variants, images and review summary from searches, best sellers, asins or links in 16 stores. local delivery postcode and price tracking. for sellers, price monitoring and market research. e-commerce">
+  <div class="card-top"><img class="av" src="/assets/img/amazon-product-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">E-commerce</span></div>
+  <h3>Amazon Product Scraper</h3>
+  <p>Prices, BSR, Sales &amp; Price Tracker</p>
+  <div class="card-foot"><span class="price">$2.50 / 1,000 products</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/walmart-scraper.html" data-cat="commerce" data-q="walmart scraper: products, prices, reviews &amp; price tracker scrape walmart products and reviews without login: price, was-price, seller, stock, upc, specs, every variant with its price, rating breakdown, store aisle, pickup and delivery. from searches, categories, deals, item ids or links. price tracking for sellers, brands and price monitoring. e-commerce">
+  <div class="card-top"><img class="av" src="/assets/img/walmart-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">E-commerce</span></div>
+  <h3>Walmart Scraper</h3>
+  <p>Products, Prices, Reviews &amp; Price Tracker</p>
+  <div class="card-foot"><span class="price">$3 / 1,000 products</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/pinterest-scraper.html" data-cat="social" data-q="pinterest scraper: pins, boards, profiles &amp; search scrape pinterest pins, video pins, boards and profiles by keyword or link, no login: real pin links, saves, outbound links, product prices, monthly views, keyword suggestions. free date, saves and domain filters, only-new-pins monitoring. for e-commerce, seo and social media marketing. social &amp; video">
+  <div class="card-top"><img class="av" src="/assets/img/pinterest-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Social &amp; video</span></div>
+  <h3>Pinterest Scraper</h3>
+  <p>Pins, Boards, Profiles &amp; Search</p>
+  <div class="card-foot"><span class="price">$2 / 1,000 pins</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/threads-scraper.html" data-cat="social" data-q="threads scraper &amp; monitor: profiles, posts, search, no login scrape meta threads without login: profiles with followers and engagement, full post histories, keyword and hashtag search, single posts. likes, replies, reposts, media, links, hashtags. only new posts mode for scheduled monitoring, brand tracking, social listening and ai agents. social &amp; video">
+  <div class="card-top"><span class="av av-mono" style="width:40px;height:40px">T</span><span class="card-cat">Social &amp; video</span></div>
+  <h3>Threads Scraper &amp; Monitor</h3>
+  <p>Profiles, Posts, Search, No Login</p>
+  <div class="card-foot"><span class="price">$2 / 1,000 posts</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/tiktok-scraper.html" data-cat="social" data-q="tiktok scraper: profiles, videos &amp; transcripts scrape tiktok profiles, videos, photo posts and transcripts without login: followers, views, likes, comments, shares, engagement rate, hashtags, sounds and the spoken text with timestamps. free date and view filters, only-new-video monitoring. for influencer research, social listening and ai. social &amp; video">
+  <div class="card-top"><img class="av" src="/assets/img/tiktok-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Social &amp; video</span></div>
+  <h3>TikTok Scraper</h3>
+  <p>Profiles, Videos &amp; Transcripts</p>
+  <div class="card-foot"><span class="price">$1.20 / 1,000 videos</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/youtube-comments-scraper.html" data-cat="social" data-q="youtube comments scraper: replies, shorts &amp; channels scrape youtube comments and replies from videos, shorts, channels, playlists or searches: likes, pinned and creator-heart flags, authors, video title. keyword, likes and date filters, only-new monitoring. no api key. for brand monitoring, sentiment analysis and research. social &amp; video">
+  <div class="card-top"><img class="av" src="/assets/img/youtube-comments-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Social &amp; video</span></div>
+  <h3>YouTube Comments Scraper</h3>
+  <p>Replies, Shorts &amp; Channels</p>
+  <div class="card-foot"><span class="price">$1 / 1,000 comments</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/youtube-scraper.html" data-cat="social" data-q="youtube scraper: search, channels, shorts &amp; video details scrape youtube search, channels, shorts, live streams, playlists and hashtags with likes, exact views, upload date, duration, tags, category, chapters, comments count and subscribers. no api key or quota. for influencer research, seo, competitor tracking and datasets. social &amp; video">
+  <div class="card-top"><img class="av" src="/assets/img/youtube-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Social &amp; video</span></div>
+  <h3>YouTube Scraper</h3>
+  <p>Search, Channels, Shorts &amp; Video Details</p>
+  <div class="card-foot"><span class="price">$2.50 / 1,000 videos</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/instagram-reel-transcript.html" data-cat="transcripts" data-q="instagram reel transcript: speech-to-text, subtitles &amp; stats transcribe public instagram reels to text without login or api key: spoken words, hook, language, timed segments, srt/vtt subtitles, free english translation, plus plays, likes and caption. for content research, influencer marketing, social listening and ai/rag pipelines. transcripts">
+  <div class="card-top"><img class="av" src="/assets/img/instagram-reel-transcript.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Transcripts</span></div>
+  <h3>Instagram Reel Transcript</h3>
+  <p>Speech-to-Text, Subtitles &amp; Stats</p>
+  <div class="card-foot"><span class="price">$0.012 per reel transcript</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/video-transcript-scraper.html" data-cat="transcripts" data-q="video &amp; podcast transcript: any link, mp3 or rss to text turn public videos and podcasts into text from a link: tiktok, x, vimeo, youtube, ted, loom, soundcloud and many more sites, mp3/mp4 files, rss feeds and apple podcasts. captions first, whisper speech-to-text when none. srt, vtt, markdown and rag chunks for ai, research and n8n. transcripts">
+  <div class="card-top"><img class="av" src="/assets/img/video-transcript-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Transcripts</span></div>
+  <h3>Video &amp; Podcast Transcript</h3>
+  <p>Any Link, MP3 or RSS to Text</p>
+  <div class="card-foot"><span class="price">$2.50 / 1,000 transcripts</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/youtube-transcript-scraper.html" data-cat="transcripts" data-q="youtube transcript api &amp; scraper extract transcripts from youtube videos, shorts, playlists, and channels—no youtube api key. get clean text, timestamps, srt, vtt, markdown, metadata, and rag-ready chunks for ai agents and automation. original-language output; failed videos are free. transcripts">
+  <div class="card-top"><img class="av" src="/assets/img/youtube-transcript-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Transcripts</span></div>
+  <h3>YouTube Transcript API &amp; Scraper</h3>
+  <p>Extract transcripts from YouTube videos, Shorts, playlists, and channels—no YouTube API key. Get clean text, timestamps, SRT, VTT, Markdown, metadata, and RAG-ready chunks for AI agents and automation. Original-language output; failed videos are free.</p>
+  <div class="card-foot"><span class="price">$3 / 1,000 transcripts</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/airbnb-scraper.html" data-cat="more" data-q="airbnb scraper: listings, prices, reviews &amp; calendar scrape airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. splits big cities into map areas for thousands of listings. for short-term rental market research, pricing and travel apps. news, travel &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/airbnb-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">News, travel &amp; sports</span></div>
+  <h3>Airbnb Scraper</h3>
+  <p>Listings, Prices, Reviews &amp; Calendar</p>
+  <div class="card-foot"><span class="price">$1.25 / 1,000 listings</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/flashscore-scraper.html" data-cat="more" data-q="flashscore scraper: live scores, results &amp; odds scrape flashscore for 29 sports: fixtures, live scores and results with every period, plus goals, cards, stats, lineups, injuries, odds, head-to-head, tennis point-by-point and league tables. for betting models, odds tracking, live score apps and fantasy. only-changed mode for live polling. news, travel &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/flashscore-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">News, travel &amp; sports</span></div>
+  <h3>Flashscore Scraper</h3>
+  <p>Live Scores, Results &amp; Odds</p>
+  <div class="card-foot"><span class="price">$0.90 / 1,000 matches</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/google-news-scraper.html" data-cat="more" data-q="google news scraper &amp; monitor: real links, text, new only get google news articles by keyword, topic or place with the real publisher link, source, date and related coverage. add article text, or get only new articles since your last run. schedule it for news alerts and ai agents. no login. news, travel &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/google-news-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">News, travel &amp; sports</span></div>
+  <h3>Google News Scraper &amp; Monitor</h3>
+  <p>Real Links, Text, New Only</p>
+  <div class="card-foot"><span class="price">$1.80 / 1,000 articles</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/invoice-table-json-extractor.html" data-cat="docs" data-q="invoice, receipt &amp; pdf table to json/markdown ocr extract invoices, receipts, bank statements and pdf tables to structured json and llm-ready markdown. digital pages are read directly; scanned pages and photos get ocr. for accounting, expense tools, erp imports and ai agents in n8n, make or zapier. failed files are free. documents">
+  <div class="card-top"><img class="av" src="/assets/img/invoice-table-json-extractor.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Documents</span></div>
+  <h3>Invoice, Receipt &amp; PDF Table to JSON/Markdown OCR</h3>
+  <p>Extract invoices, receipts, bank statements and PDF tables to structured JSON and LLM-ready Markdown. Digital pages are read directly; scanned pages and photos get OCR. For accounting, expense tools, ERP imports and AI agents in n8n, Make or Zapier. Failed files are free.</p>
+  <div class="card-foot"><span class="price">$5 / 1,000 pages</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a></div>
+  <p class="empty muted" id="empty" hidden>No tools match. <a href="#custom">Ask for a custom one.</a></p>
+</div></section>
+
+<section class="sec-lg alt"><div class="wrap">
+  <div class="sec-head"><h2>How it works</h2></div>
+  <ol class="steps">
+    <li><span class="n">1</span><h3>Pick a tool</h3><p class="muted">Enter keywords, URLs or a company name. Each field has a short explanation.</p></li>
+    <li><span class="n">2</span><h3>Run it</h3><p class="muted">Run once, or schedule it daily with only-new results. Set a spend limit.</p></li>
+    <li><span class="n">3</span><h3>Get rows</h3><p class="muted">Download JSON, CSV or Excel, or send rows to Sheets, Slack, a webhook or your agent.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec-lg" id="api"><div class="wrap split">
+  <div><h2>One HTTP call per tool</h2>
+    <p class="muted">Send the input, get the rows back. Works from any language, n8n, Make, Zapier, and AI agents through Apify's MCP server.</p>
+    <ul class="ticks"><li>Synchronous endpoint returns rows directly</li><li>Same field names on every run</li><li>Webhooks when a scheduled run finishes</li></ul>
+  </div>
+  <div class="code" data-tabs>
+  <div class="code-bar"><div class="tabs" role="tablist"><button class="tab on" role="tab" aria-selected="true" data-tab="curl">cURL</button><button class="tab" role="tab" aria-selected="undefined" data-tab="py">Python</button><button class="tab" role="tab" aria-selected="undefined" data-tab="js">JavaScript</button></div>
+  <button class="icon-btn copy" type="button" aria-label="Copy code"><span class="i-copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></span><span class="i-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button></div>
+  <pre class="pane on" data-pane="curl"><code>curl -X POST &quot;https://api.apify.com/v2/acts/panix~google-news-scraper/run-sync-get-dataset-items?token=$APIFY_TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;searchQueries&quot;:[&quot;artificial intelligence&quot;],&quot;timeframe&quot;:&quot;1d&quot;,&quot;maxResultsPerSearch&quot;:20,&quot;proxyConfiguration&quot;:{&quot;useApifyProxy&quot;:true}}'</code></pre><pre class="pane" data-pane="py"><code>from apify_client import ApifyClient
+
+client = ApifyClient(&quot;APIFY_TOKEN&quot;)
+run = client.actor(&quot;panix/google-news-scraper&quot;).call(run_input={
+    &quot;searchQueries&quot;: [
+        &quot;artificial intelligence&quot;
+    ],
+    &quot;timeframe&quot;: &quot;1d&quot;,
+    &quot;maxResultsPerSearch&quot;: 20,
+    &quot;proxyConfiguration&quot;: {
+        &quot;useApifyProxy&quot;: True
+    }
+})
+
+for item in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(item)</code></pre><pre class="pane" data-pane="js"><code>import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+const run = await client.actor('panix/google-news-scraper').call({
+  &quot;searchQueries&quot;: [
+    &quot;artificial intelligence&quot;
+  ],
+  &quot;timeframe&quot;: &quot;1d&quot;,
+  &quot;maxResultsPerSearch&quot;: 20,
+  &quot;proxyConfiguration&quot;: {
+    &quot;useApifyProxy&quot;: true
+  }
+});
+
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(items);</code></pre>
+</div>
+</div></section>
+
+<section class="sec-lg alt" id="faq"><div class="wrap narrow">
+  <div class="sec-head"><h2>Questions</h2></div>
+  <div class="faq"><details><summary>How do I try a tool?</summary><p>Open the tool and press <b>Run on Apify</b>. Apify's free plan includes monthly credit, which is enough to test any of these tools on real data.</p></details><details><summary>How much does it cost?</summary><p>You pay per result, from $0.60 per 1,000. Each tool page lists every price. Searches that find nothing cost nothing, and you can cap any run with a spend limit.</p></details><details><summary>Can I call these from my own code or AI agent?</summary><p>Yes. Every tool is an HTTP endpoint: send JSON input, get rows back as JSON, CSV or Excel. Each tool page has ready cURL, Python and JavaScript calls. The tools also work through Apify's MCP server for AI agents.</p></details><details><summary>Do I need a login or cookies?</summary><p>No. The tools read public pages only and never solve captchas.</p></details><details><summary>Can I get only new results every day?</summary><p>Many tools have an only-new mode. Schedule the run on Apify and you get only the items that weren't there last time, sent to Sheets, Slack, a webhook or email.</p></details><details><summary>What if a website changes?</summary><p>The tools run against their live sources on a schedule. When a site changes, the tool is fixed and the change goes into its changelog on Apify.</p></details></div>
+</div></section>
+
+<section class="sec-lg" id="custom"><div class="wrap narrow center">
+  <h2>Need a source that isn't here?</h2>
+  <p class="muted">I build custom scrapers and daily data feeds. Send the site, a few example pages and where the data should go.</p>
+  <div class="cta"><a class="btn" href="mailto:saoud.pro@gmail.com?subject=Custom%20scraper">Email me</a><a class="btn btn-ghost" href="https://apify.com/panix" target="_blank" rel="noopener">See all tools on Apify</a></div>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap foot-in">
+  <div class="foot-brand"><img src="/assets/img/logo-64.png" width="24" height="24" alt=""><span>Panix AI Labs</span></div>
+  <p class="muted">Web data tools on Apify. Public pages only, pay per result.</p>
+  <nav class="foot-links" aria-label="Footer"><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a><a href="mailto:saoud.pro@gmail.com">saoud.pro@gmail.com</a><a href="/sitemap.xml">Sitemap</a></nav>
+</div></footer>
+<script src="/assets/app.js?v=mwkhmau4" defer></script>
+</body></html>

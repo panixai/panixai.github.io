@@ -1,43 +1,78 @@
 (function () {
-  // Filter + search
-  var q = document.getElementById('q'), cards = [].slice.call(document.querySelectorAll('.card')), chips = [].slice.call(document.querySelectorAll('.chip')), cat = '';
-  function apply() {
-    var t = q.value.toLowerCase();
-    cards.forEach(function (c) {
-      c.style.display = (!cat || c.dataset.cat === cat) && c.dataset.text.indexOf(t) > -1 ? '' : 'none';
-    });
-  }
-  q.addEventListener('input', apply);
-  chips.forEach(function (b) {
-    b.addEventListener('click', function () {
-      chips.forEach(function (x) { x.classList.remove('on'); });
-      b.classList.add('on'); cat = b.dataset.c; apply();
+  var doc = document.documentElement;
+
+  // Theme toggle
+  var t = document.getElementById('theme');
+  if (t) t.addEventListener('click', function () {
+    var next = doc.dataset.theme === 'dark' ? 'light' : 'dark';
+    doc.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  // Tabs (code blocks and hero demo)
+  document.querySelectorAll('[data-tabs], [data-demo]').forEach(function (box) {
+    box.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab');
+      if (!b || !box.contains(b)) return;
+      box.querySelectorAll('.tab').forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-selected', on); });
+      box.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.dataset.pane === b.dataset.tab); });
+      if (box.hasAttribute('data-demo')) { stop(); animateRows(box.querySelector('.pane.on')); }
     });
   });
 
-  // Hero demo: type an input, stream rows
-  var typed = document.getElementById('typed'), rows = document.getElementById('rows');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var demos = [
-    { input: '{ "keyword": "data engineer", "location": "Berlin" }', rows: ['Data Engineer | Acme GmbH | EUR 70-85k', 'Analytics Engineer | Nordly | EUR 65-80k', 'ML Engineer | Brightway | EUR 80-95k', 'BI Developer | Kaufland | EUR 60-72k'] },
-    { input: '{ "query": "wireless earbuds", "country": "US" }', rows: ['Earbuds Pro | $39.99 | 4.6 stars', 'AirTune 2 | $24.50 | 4.3 stars', 'SoundBud X | $59.00 | 4.7 stars', 'BassGo | $18.99 | 4.1 stars'] },
-    { input: '{ "videoUrl": "youtube.com/watch?v=..." }', rows: ['00:00 Welcome to the show', '00:07 Today we cover pricing', '00:19 Let us look at the data', '00:31 Thanks for watching'] }
-  ];
-  var i = 0;
-  function show(d) {
-    typed.textContent = d.input; rows.innerHTML = '';
-    d.rows.forEach(function (r) { var e = document.createElement('div'); e.className = 'row'; e.textContent = r; rows.appendChild(e); });
-  }
-  if (reduce || !window.gsap) { show(demos[0]); return; }
-  function play() {
-    var d = demos[i++ % demos.length];
-    typed.textContent = ''; rows.innerHTML = '';
-    var o = { n: 0 }, tl = gsap.timeline({ onComplete: function () { gsap.delayedCall(1.8, play); } });
-    tl.to(o, { n: d.input.length, duration: 1.6, ease: 'none', onUpdate: function () { typed.textContent = d.input.slice(0, Math.round(o.n)); } });
-    tl.add(function () {
-      d.rows.forEach(function (r) { var e = document.createElement('div'); e.className = 'row'; e.textContent = r; rows.appendChild(e); });
+  // Copy buttons
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var pane = b.closest('.code').querySelector('.pane.on code');
+      navigator.clipboard.writeText(pane.textContent).then(function () {
+        b.classList.add('copied'); setTimeout(function () { b.classList.remove('copied'); }, 1400);
+      });
     });
-    tl.from('#rows .row', { opacity: 0, x: -20, stagger: 0.25, duration: 0.4 });
+  });
+
+  // Hero demo: rows stream in, tabs rotate until the user picks one
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var demo = document.querySelector('[data-demo]'), timer = null;
+  function animateRows(pane) {
+    if (reduce || !pane) return;
+    pane.querySelectorAll('tbody tr').forEach(function (r, i) {
+      r.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 360, delay: 120 + i * 110, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' });
+    });
   }
-  play();
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  if (demo && !reduce) {
+    animateRows(demo.querySelector('.pane.on'));
+    var tabs = demo.querySelectorAll('.tab'), i = 0;
+    timer = setInterval(function () {
+      i = (i + 1) % tabs.length;
+      tabs.forEach(function (x, k) { x.classList.toggle('on', k === i); x.setAttribute('aria-selected', k === i); });
+      demo.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.dataset.pane === tabs[i].dataset.tab); });
+      animateRows(demo.querySelector('.pane.on'));
+    }, 4500);
+    demo.addEventListener('mouseenter', stop);
+  }
+
+  // Tool search and category filter
+  var q = document.getElementById('q'), grid = document.getElementById('grid');
+  if (q && grid) {
+    var cards = [].slice.call(grid.querySelectorAll('.card')), segs = [].slice.call(document.querySelectorAll('.seg-b'));
+    var empty = document.getElementById('empty'), cat = new URLSearchParams(location.search).get('c') || '';
+    var apply = function () {
+      var term = q.value.trim().toLowerCase(), shown = 0;
+      cards.forEach(function (c) {
+        var ok = (!cat || c.dataset.cat === cat) && (!term || term.split(/\s+/).every(function (w) { return c.dataset.q.indexOf(w) > -1; }));
+        c.hidden = !ok; if (ok) shown++;
+      });
+      segs.forEach(function (s) { var on = s.dataset.c === cat; s.classList.toggle('on', on); s.setAttribute('aria-selected', on); });
+      empty.hidden = shown > 0;
+    };
+    q.addEventListener('input', apply);
+    segs.forEach(function (s) { s.addEventListener('click', function () { cat = s.dataset.c; apply(); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === '/' && document.activeElement !== q && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
+      if (e.key === 'Escape' && document.activeElement === q) { q.value = ''; apply(); q.blur(); }
+    });
+    apply();
+  }
 })();

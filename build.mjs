@@ -1,88 +1,353 @@
-// Generates the static site from d:\PANIX\actors\*\.actor\actor.json
+// Static site generator for panixai.github.io
+// Data: data/store.json (public Apify Store API, refresh with `node scripts/fetch-assets.mjs`)
+//       d:/PANIX/actors/*/.actor/*.json (input and output schemas)
+// Run:  node build.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 
-const SRC = 'd:/PANIX/actors';
-const OUT = path.resolve('.');
+const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(\w:)/, '$1'));
+const SRC = process.env.ACTORS_DIR || 'd:/PANIX/actors';
 const BASE = 'https://panixai.github.io';
+const BRAND = 'Panix AI Labs';
+const PROFILE = 'https://apify.com/panix';
+const EMAIL = 'saoud.pro@gmail.com';
+const V = Date.now().toString(36); // cache-busting for css/js
 
-const CATS = {
-  'Jobs & hiring': ['ats-jobs-scraper', 'linkedin-jobs-scraper', 'linkedin-company-scraper', 'resume-cv-json-parser'],
-  'Ads & competitors': ['facebook-ads-library-scraper', 'google-ads-transparency-scraper', 'linkedin-ad-library-scraper', 'tiktok-ads-scraper'],
-  'E-commerce & pricing': ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper', 'ebay-scraper'],
-  'Social & video': ['youtube-scraper', 'youtube-comments-scraper', 'youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper'],
-  'News, travel & sports': ['google-news-scraper', 'airbnb-scraper', 'flashscore-scraper'],
-  'Documents': ['invoice-table-json-extractor']
-};
-const catOf = n => Object.keys(CATS).find(c => CATS[c].includes(n)) || 'Other';
+const CATS = [
+  ['jobs', 'Jobs & hiring', ['ats-jobs-scraper', 'linkedin-jobs-scraper', 'linkedin-company-scraper', 'resume-cv-json-parser']],
+  ['ads', 'Ad intelligence', ['facebook-ads-library-scraper', 'google-ads-transparency-scraper', 'linkedin-ad-library-scraper', 'tiktok-ads-scraper']],
+  ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
+  ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper']],
+  ['transcripts', 'Transcripts', ['youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript']],
+  ['more', 'News, travel & sports', ['google-news-scraper', 'airbnb-scraper', 'flashscore-scraper']],
+  ['docs', 'Documents', ['invoice-table-json-extractor']]
+];
+const catOf = n => CATS.find(c => c[2].includes(n)) || ['more', 'Other', []];
 
-const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// ---------- helpers ----------
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const readJson = f => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return null; } };
+const fmtUsd = n => '$' + (n >= 1 ? n.toFixed(2).replace(/\.00$/, '') : n >= 0.1 ? n.toFixed(2) : String(+n.toFixed(4)));
+const plural = w => /(s|x|ch|sh)$/.test(w) ? w + 'es' : /[^aeiou]y$/.test(w) ? w.slice(0, -1) + 'ies' : w + 's';
+const unitOf = t => t.replace(/\s+delivered$/i, '').toLowerCase();
 
-const actors = [];
+function pricing(a) {
+  const ev = a.currentPricingInfo?.pricingPerEvent?.actorChargeEvents || {};
+  const price = v => v.eventTieredPricingUsd?.FREE?.tieredEventPriceUsd ?? v.eventPriceUsd ?? 0;
+  const tiers = v => v.eventTieredPricingUsd ? Object.entries(v.eventTieredPricingUsd).map(([k, x]) => [k, x.tieredEventPriceUsd]) : null;
+  const events = Object.entries(ev).filter(([k]) => k !== 'apify-actor-start')
+    .map(([k, v]) => ({ key: k, title: v.eventTitle, desc: v.eventDescription, price: price(v), tiers: tiers(v), primary: !!v.isPrimaryEvent }));
+  const primary = events.find(e => e.primary) || events[0];
+  const start = ev['apify-actor-start'] ? price(ev['apify-actor-start']) : null;
+  let line = '';
+  if (primary) {
+    const unit = unitOf(primary.title);
+    line = primary.price >= 0.01 ? `${fmtUsd(primary.price)} per ${unit}` : `${fmtUsd(primary.price * 1000)} / 1,000 ${plural(unit)}`;
+  }
+  return { events, primary, start, line };
+}
+
+// sample input from schema prefills, plus required fields
+function sampleInput(schema) {
+  if (!schema?.properties) return {};
+  const out = {};
+  for (const [k, p] of Object.entries(schema.properties)) {
+    if (p.prefill !== undefined) out[k] = p.prefill;
+    else if ((schema.required || []).includes(k) && p.default !== undefined) out[k] = p.default;
+  }
+  return out;
+}
+
+function outputFields(ds) {
+  const views = ds?.views ? Object.values(ds.views) : [];
+  const v = views[0];
+  const fields = v?.transformation?.fields || Object.keys(ds?.fields?.properties || {});
+  const props = ds?.fields?.properties || {};
+  return fields.slice(0, 24).map(f => ({ name: f, desc: props[f]?.description || '' }));
+}
+
+// ---------- load data ----------
+const store = readJson(path.join(ROOT, 'data', 'store.json'));
+if (!store) throw new Error('data/store.json missing. Run: node scripts/fetch-assets.mjs');
+
+const local = {};
 for (const d of fs.readdirSync(SRC)) {
-  const f = path.join(SRC, d, '.actor', 'actor.json');
-  if (!fs.existsSync(f)) continue;
-  const j = JSON.parse(fs.readFileSync(f, 'utf8'));
-  const [short, ...rest] = j.title.split(': ');
-  actors.push({
-    slug: j.name, title: j.title, short, tagline: rest.join(': '),
-    desc: j.description, cat: catOf(j.name),
-    url: `https://apify.com/panix/${j.name}`
-  });
+  const dir = path.join(SRC, d, '.actor');
+  const aj = readJson(path.join(dir, 'actor.json'));
+  if (!aj) continue;
+  local[aj.name] = { input: readJson(path.join(dir, 'input_schema.json')), dataset: readJson(path.join(dir, 'dataset_schema.json')) };
 }
-actors.sort((a, b) => a.title.localeCompare(b.title));
 
-const css = fs.readFileSync(path.join(OUT, 'assets', 'style.css'), 'utf8');
-const head = (title, desc, url) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)}</title><meta name="description" content="${esc(desc)}">
-<link rel="canonical" href="${url}"><meta property="og:title" content="${esc(title)}">
-<meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css"></head><body>
-<header class="nav"><a class="brand" href="/">Panix<span>AI</span></a>
-<nav><a href="/#tools">Tools</a><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a></nav></header>`;
-const foot = `<footer><p>Panix Actors on Apify. Pay per result. Public pages only, no login or captcha solving.</p>
-<p>Need a custom scraper? <a href="https://apify.com/panix" target="_blank" rel="noopener">Message me on Apify</a>.</p></footer>`;
+const actors = store.map(a => {
+  const [short, ...rest] = a.title.split(/:\s+/);
+  const c = catOf(a.name);
+  const r = a.stats?.publicActorRunStats30Days || {};
+  const icon = fs.existsSync(path.join(ROOT, 'assets', 'img', a.name + '.png')) ? `/assets/img/${a.name}.png` : null;
+  return {
+    slug: a.name, id: a.id, title: a.title, short, tagline: rest.join(': '), desc: a.description,
+    catKey: c[0], cat: c[1], icon, url: a.url, apiId: `panix~${a.name}`,
+    runs: r.TOTAL || 0, ok: r.SUCCEEDED || 0,
+    price: pricing(a), input: sampleInput(local[a.name]?.input), fields: outputFields(local[a.name]?.dataset)
+  };
+}).sort((x, y) => CATS.findIndex(c => c[0] === x.catKey) - CATS.findIndex(c => c[0] === y.catKey) || x.short.localeCompare(y.short));
 
-// Actor pages
-fs.mkdirSync(path.join(OUT, 'tools'), { recursive: true });
+const totalRuns = actors.reduce((s, a) => s + a.runs, 0);
+const totalOk = actors.reduce((s, a) => s + a.ok, 0);
+const successPct = totalRuns ? (Math.floor(totalOk / totalRuns * 1000) / 10) : null;
+const minPer1k = Math.min(...actors.filter(a => a.price.primary).map(a => a.price.primary.price * 1000));
+
+// ---------- shared chrome ----------
+const ICON = {
+  sun: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  moon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  arrow: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  ext: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>',
+  search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  copy: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>',
+  check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+};
+
+const avatar = (a, size = 40) => a.icon
+  ? `<img class="av" src="${a.icon}" width="${size}" height="${size}" alt="" loading="lazy" decoding="async">`
+  : `<span class="av av-mono" style="width:${size}px;height:${size}px">${esc(a.short[0])}</span>`;
+
+const head = ({ title, desc, url, jsonld }) => `<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+<meta property="og:type" content="website"><meta property="og:site_name" content="${BRAND}">
+<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url}"><meta property="og:image" content="${BASE}/assets/img/logo-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+<link rel="stylesheet" href="/assets/style.css?v=${V}">
+${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ''}
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="/" aria-label="${BRAND} home"><img src="/assets/img/logo-64.png" width="28" height="28" alt=""><span>${BRAND}</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="/#tools">Tools</a><a href="/#api">API</a><a href="/#faq">FAQ</a><a href="/#custom">Custom work</a>
+  </nav>
+  <div class="nav-r">
+    <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode"><span class="i-sun">${ICON.sun}</span><span class="i-moon">${ICON.moon}</span></button>
+    <a class="btn btn-sm" href="${PROFILE}" target="_blank" rel="noopener">Apify Store ${ICON.ext}</a>
+  </div>
+</div></header>
+<main id="main">`;
+
+const foot = `</main>
+<footer class="foot"><div class="wrap foot-in">
+  <div class="foot-brand"><img src="/assets/img/logo-64.png" width="24" height="24" alt=""><span>${BRAND}</span></div>
+  <p class="muted">Web data tools on Apify. Public pages only, pay per result.</p>
+  <nav class="foot-links" aria-label="Footer"><a href="${PROFILE}" target="_blank" rel="noopener">Apify profile</a><a href="mailto:${EMAIL}">${EMAIL}</a><a href="/sitemap.xml">Sitemap</a></nav>
+</div></footer>
+<script src="/assets/app.js?v=${V}" defer></script>
+</body></html>`;
+
+function codeTabs(a) {
+  const input = JSON.stringify(a.input, null, 2);
+  const inputPy = JSON.stringify(a.input, null, 4).replace(/\btrue\b/g, 'True').replace(/\bfalse\b/g, 'False').replace(/\bnull\b/g, 'None');
+  const curl = `curl -X POST "https://api.apify.com/v2/acts/${a.apiId}/run-sync-get-dataset-items?token=$APIFY_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '${JSON.stringify(a.input)}'`;
+  const py = `from apify_client import ApifyClient
+
+client = ApifyClient("APIFY_TOKEN")
+run = client.actor("panix/${a.slug}").call(run_input=${inputPy.replace(/\n/g, '\n')})
+
+for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+    print(item)`;
+  const js = `import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+const run = await client.actor('panix/${a.slug}').call(${input});
+
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(items);`;
+  const tab = (id, label, code, on) => `<button class="tab${on ? ' on' : ''}" role="tab" aria-selected="${on}" data-tab="${id}">${label}</button>`;
+  const pane = (id, code, on) => `<pre class="pane${on ? ' on' : ''}" data-pane="${id}"><code>${esc(code)}</code></pre>`;
+  return `<div class="code" data-tabs>
+  <div class="code-bar"><div class="tabs" role="tablist">${tab('curl', 'cURL', curl, true)}${tab('py', 'Python', py)}${tab('js', 'JavaScript', js)}</div>
+  <button class="icon-btn copy" type="button" aria-label="Copy code"><span class="i-copy">${ICON.copy}</span><span class="i-check">${ICON.check}</span></button></div>
+  ${pane('curl', curl, true)}${pane('py', py)}${pane('js', js)}
+</div>`;
+}
+
+// ---------- actor pages ----------
+fs.rmSync(path.join(ROOT, 'tools'), { recursive: true, force: true });
+fs.mkdirSync(path.join(ROOT, 'tools'), { recursive: true });
+
 for (const a of actors) {
-  const related = actors.filter(x => x.cat === a.cat && x.slug !== a.slug).slice(0, 4);
-  const demo = fs.existsSync(path.join(OUT, 'videos', `${a.slug}.mp4`))
-    ? `<video class="demo" src="/videos/${a.slug}.mp4" controls muted loop playsinline preload="metadata"></video>`
-    : `<div class="demo ph"><p>Demo video coming soon</p></div>`;
-  const html = `${head(a.title + ' | Panix', a.desc, `${BASE}/tools/${a.slug}.html`)}
-<main class="page"><p class="crumb"><a href="/">All tools</a> / ${esc(a.cat)}</p>
-<h1>${esc(a.short)}</h1><p class="lead">${esc(a.tagline || a.desc)}</p>
-<p>${esc(a.desc)}</p>
-<p><a class="btn" href="${a.url}" target="_blank" rel="noopener">Run it on Apify</a></p>
-${demo}
-<h2>How it works</h2><ol class="steps"><li>Open the Actor and enter your input.</li><li>Press Run. You pay per result, and you can set a spend limit.</li><li>Download JSON, CSV or Excel, or call it from code.</li></ol>
-${related.length ? `<h2>Related tools</h2><ul class="rel">${related.map(r => `<li><a href="/tools/${r.slug}.html">${esc(r.short)}</a></li>`).join('')}</ul>` : ''}
-</main>${foot}</body></html>`;
-  fs.writeFileSync(path.join(OUT, 'tools', `${a.slug}.html`), html);
+  const related = actors.filter(x => x.catKey === a.catKey && x.slug !== a.slug).slice(0, 3);
+  const p = a.price;
+  const video = fs.existsSync(path.join(ROOT, 'videos', `${a.slug}.mp4`))
+    ? `<section class="sec"><video class="video" src="/videos/${a.slug}.mp4" poster="/videos/${a.slug}.jpg" controls muted loop playsinline preload="none"></video></section>` : '';
+  const rate = a.runs >= 5 ? `${Math.floor(a.ok / a.runs * 1000) / 10}%` : null;
+  const priceRows = p.events.map(e => `<tr><td><span class="ev">${esc(e.title)}</span>${e.primary ? '' : '<span class="tag">optional</span>'}</td><td class="num">${fmtUsd(e.price)}</td></tr>`).join('');
+  const tierRow = p.primary?.tiers ? `<details class="tiers"><summary>Lower prices on paid Apify plans</summary><table>${p.primary.tiers.map(([t, v]) => `<tr><td>${t[0] + t.slice(1).toLowerCase()}</td><td class="num">${fmtUsd(v)}</td></tr>`).join('')}</table></details>` : '';
+
+  const html = `${head({
+    title: `${a.title} | ${BRAND}`, desc: a.desc, url: `${BASE}/tools/${a.slug}.html`,
+    jsonld: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: a.title, description: a.desc, applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: a.url, publisher: { '@type': 'Organization', name: BRAND, url: BASE }, offers: p.primary ? { '@type': 'Offer', price: p.primary.price, priceCurrency: 'USD' } : undefined }
+  })}
+<div class="wrap">
+  <nav class="crumb" aria-label="Breadcrumb"><a href="/#tools">Tools</a><span>/</span><a href="/?c=${a.catKey}#tools">${esc(a.cat)}</a></nav>
+  <div class="tool">
+    <div class="tool-top">
+      <header class="tool-head">${avatar(a, 56)}<div><h1>${esc(a.short)}</h1><p class="lead">${esc(a.tagline)}</p></div></header>
+      <p class="desc">${esc(a.desc)}</p>
+    </div>
+    <div class="tool-main">
+      ${video}
+      <section class="sec"><h2>Example input</h2><p class="muted">Paste this into the Actor's JSON input, or send it with the API call below.</p>
+        <pre class="json"><code>${esc(JSON.stringify(a.input, null, 2))}</code></pre></section>
+      ${a.fields.length ? `<section class="sec"><h2>Output fields</h2><p class="muted">Every row has the same fields. Export as JSON, CSV, Excel or XML.</p>
+        <ul class="fields">${a.fields.map(f => `<li${f.desc ? ` title="${esc(f.desc)}"` : ''}><code>${esc(f.name)}</code></li>`).join('')}</ul></section>` : ''}
+      <section class="sec"><h2>Run it from code</h2><p class="muted">Use your <a href="https://console.apify.com/settings/integrations" target="_blank" rel="noopener">Apify API token</a>. The call waits for the run and returns the rows.</p>${codeTabs(a)}</section>
+      ${related.length ? `<section class="sec"><h2>Related tools</h2><div class="grid grid-3">${related.map(card).join('')}</div></section>` : ''}
+    </div>
+    <aside class="tool-side"><div class="panel">
+      <div class="price-big">${esc(p.line)}</div>
+      <p class="muted small">Pay only for results. Empty searches cost nothing. Set a spend limit on every run.</p>
+      <a class="btn btn-block" href="${a.url}" target="_blank" rel="noopener">Run on Apify ${ICON.ext}</a>
+      <a class="btn btn-ghost btn-block" href="${a.url}/api" target="_blank" rel="noopener">API reference</a>
+      <table class="price-t"><thead><tr><th>Event</th><th class="num">Price</th></tr></thead><tbody>${priceRows}${p.start ? `<tr><td><span class="ev">Run start</span></td><td class="num">${fmtUsd(p.start)}</td></tr>` : ''}</tbody></table>
+      ${tierRow}
+      <dl class="facts">
+        ${rate ? `<div><dt>Runs succeeded, 30 days</dt><dd>${rate}</dd></div>` : ''}
+        <div><dt>Login needed</dt><dd>No</dd></div>
+        <div><dt>Free to try</dt><dd>With Apify's free monthly credit</dd></div>
+      </dl>
+    </div></aside>
+  </div>
+</div>
+${foot}`;
+  fs.writeFileSync(path.join(ROOT, 'tools', `${a.slug}.html`), html);
 }
 
-// Home
-const cats = Object.keys(CATS);
-const cards = actors.map(a => `<a class="card" data-cat="${esc(a.cat)}" data-text="${esc((a.title + ' ' + a.desc).toLowerCase())}" href="/tools/${a.slug}.html">
-<small>${esc(a.cat)}</small><h3>${esc(a.short)}</h3><p>${esc(a.tagline || a.desc)}</p></a>`).join('');
-const home = `${head('Panix: Apify web data tools for jobs, ads, e-commerce and video', `${actors.length} Apify Actors that turn public pages into clean rows. Pay per result.`, BASE + '/')}
-<section class="hero"><h1>Turn any public page into <em>clean rows</em></h1>
-<p class="lead">${actors.length} Apify Actors for jobs, ads, prices, video and news. Pay per result. No login.</p>
-<div class="stage" aria-hidden="true"><div class="input"><span class="lbl">input</span><code id="typed"></code></div>
-<div class="arrow">&rarr;</div><div class="out"><span class="lbl">rows</span><div id="rows"></div></div></div>
-<p><a class="btn" href="#tools">Browse ${actors.length} tools</a> <a class="btn ghost" href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a></p></section>
-<section id="tools" class="tools"><h2>Tools</h2>
-<div class="filters"><input id="q" type="search" placeholder="Search tools" aria-label="Search tools">
-<button class="chip on" data-c="">All</button>${cats.map(c => `<button class="chip" data-c="${esc(c)}">${esc(c)}</button>`).join('')}</div>
-<div class="grid">${cards}</div></section>${foot}
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="/assets/app.js"></script></body></html>`;
-fs.writeFileSync(path.join(OUT, 'index.html'), home);
+function card(a) {
+  return `<a class="card" href="/tools/${a.slug}.html" data-cat="${a.catKey}" data-q="${esc((a.title + ' ' + a.desc + ' ' + a.cat).toLowerCase())}">
+  <div class="card-top">${avatar(a, 40)}<span class="card-cat">${esc(a.cat)}</span></div>
+  <h3>${esc(a.short)}</h3>
+  <p>${esc(a.tagline || a.desc)}</p>
+  <div class="card-foot"><span class="price">${esc(a.price.line)}</span><span class="go">${ICON.arrow}</span></div>
+</a>`;
+}
 
-// sitemap, robots
+// ---------- home ----------
+const counts = Object.fromEntries(CATS.map(c => [c[0], actors.filter(a => a.catKey === c[0]).length]));
+const demos = [
+  { id: 'news', label: 'Google News', input: { searchQueries: ['electric vehicles'], timeframe: '1d' },
+    cols: ['title', 'source', 'publishedAt'], rows: [
+      ['EV sales climb as new models reach dealers', 'Reuters', '2h ago'], ['Battery prices fall for third year', 'Bloomberg', '4h ago'],
+      ['Charging networks expand along highways', 'The Verge', '6h ago'], ['Automakers plan cheaper compact EVs', 'CNBC', '9h ago']] },
+  { id: 'jobs', label: 'LinkedIn Jobs', input: { keywords: 'data engineer', location: 'Berlin' },
+    cols: ['title', 'company', 'salary'], rows: [
+      ['Senior Data Engineer', 'Northwind', '€75k–90k'], ['Analytics Engineer', 'Contoso', '€65k–80k'],
+      ['Data Platform Engineer', 'Fabrikam', '€80k–95k'], ['ML Data Engineer', 'Tailspin', '€70k–85k']] },
+  { id: 'amazon', label: 'Amazon', input: { search: 'wireless earbuds', country: 'US' },
+    cols: ['title', 'price', 'rating'], rows: [
+      ['Wireless Earbuds Pro, ANC', '$39.99', '4.6'], ['Sport Earbuds, 40h battery', '$24.50', '4.4'],
+      ['Open-ear Earbuds', '$59.00', '4.5'], ['Budget Earbuds, USB-C', '$18.99', '4.2']] }
+];
+const demoHtml = `<div class="demo" data-demo>
+  <div class="demo-bar"><span class="dots"><i></i><i></i><i></i></span>
+    <div class="tabs" role="tablist" aria-label="Example runs">${demos.map((d, i) => `<button class="tab${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-tab="${d.id}">${d.label}</button>`).join('')}</div></div>
+  ${demos.map((d, i) => `<div class="demo-body pane${i ? '' : ' on'}" data-pane="${d.id}">
+    <div class="demo-in"><div class="label">Input</div><pre><code>${esc(JSON.stringify(d.input, null, 2))}</code></pre></div>
+    <div class="demo-out"><div class="label">Dataset <span class="muted">· sample</span></div>
+      <table><thead><tr>${d.cols.map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${d.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+  </div>`).join('')}
+</div>`;
+
+const faq = [
+  ['How do I try a tool?', `Open the tool and press <b>Run on Apify</b>. Apify's free plan includes monthly credit, which is enough to test any of these tools on real data.`],
+  ['How much does it cost?', `You pay per result, from ${fmtUsd(minPer1k)} per 1,000. Each tool page lists every price. Searches that find nothing cost nothing, and you can cap any run with a spend limit.`],
+  ['Can I call these from my own code or AI agent?', `Yes. Every tool is an HTTP endpoint: send JSON input, get rows back as JSON, CSV or Excel. Each tool page has ready cURL, Python and JavaScript calls. The tools also work through Apify's MCP server for AI agents.`],
+  ['Do I need a login or cookies?', `No. The tools read public pages only and never solve captchas.`],
+  ['Can I get only new results every day?', `Many tools have an only-new mode. Schedule the run on Apify and you get only the items that weren't there last time, sent to Sheets, Slack, a webhook or email.`],
+  ['What if a website changes?', `The tools run against their live sources on a schedule. When a site changes, the tool is fixed and the change goes into its changelog on Apify.`]
+];
+
+const home = `${head({
+  title: `${BRAND}: web data tools for jobs, ads, e-commerce and video`,
+  desc: `${actors.length} Apify tools that turn public pages into clean rows: jobs, ad libraries, Amazon and Walmart prices, YouTube and TikTok, transcripts and news. Pay per result.`,
+  url: BASE + '/',
+  jsonld: { '@context': 'https://schema.org', '@type': 'Organization', name: BRAND, url: BASE, logo: `${BASE}/assets/img/logo-512.png`, sameAs: [PROFILE] }
+})}
+<section class="hero"><div class="wrap">
+  <a class="pill" href="${PROFILE}" target="_blank" rel="noopener"><span class="dot"></span>${actors.length} tools on Apify Store ${ICON.arrow}</a>
+  <h1>Public web data,<br>delivered as clean rows.</h1>
+  <p class="lead">Scrapers and APIs for jobs, ad libraries, e-commerce, social video and news. Pay per result, no login, ready for your code or AI agent.</p>
+  <div class="cta"><a class="btn" href="#tools">Browse tools</a><a class="btn btn-ghost" href="#api">Use the API</a></div>
+  ${demoHtml}
+  <dl class="stats">
+    <div><dt>Tools</dt><dd>${actors.length}</dd></div>
+    ${successPct ? `<div><dt>Runs succeeded, 30 days</dt><dd>${successPct}%</dd></div>` : ''}
+    <div><dt>Starting price</dt><dd>${fmtUsd(minPer1k)}<small> / 1,000</small></dd></div>
+    <div><dt>Login needed</dt><dd>None</dd></div>
+  </dl>
+</div></section>
+
+<section class="sec-lg" id="tools"><div class="wrap">
+  <div class="sec-head"><h2>Tools</h2><p class="muted">Every tool has the same clean fields on every run, and exports to JSON, CSV or Excel.</p></div>
+  <div class="filter">
+    <label class="search">${ICON.search}<input id="q" type="search" placeholder="Search tools" autocomplete="off" aria-label="Search tools"><kbd>/</kbd></label>
+    <div class="seg" role="tablist" aria-label="Categories">
+      <button class="seg-b on" data-c="" role="tab" aria-selected="true">All <span>${actors.length}</span></button>
+      ${CATS.filter(c => counts[c[0]]).map(c => `<button class="seg-b" data-c="${c[0]}" role="tab" aria-selected="false">${esc(c[1])} <span>${counts[c[0]]}</span></button>`).join('')}
+    </div>
+  </div>
+  <div class="grid" id="grid">${actors.map(card).join('')}</div>
+  <p class="empty muted" id="empty" hidden>No tools match. <a href="#custom">Ask for a custom one.</a></p>
+</div></section>
+
+<section class="sec-lg alt"><div class="wrap">
+  <div class="sec-head"><h2>How it works</h2></div>
+  <ol class="steps">
+    <li><span class="n">1</span><h3>Pick a tool</h3><p class="muted">Enter keywords, URLs or a company name. Each field has a short explanation.</p></li>
+    <li><span class="n">2</span><h3>Run it</h3><p class="muted">Run once, or schedule it daily with only-new results. Set a spend limit.</p></li>
+    <li><span class="n">3</span><h3>Get rows</h3><p class="muted">Download JSON, CSV or Excel, or send rows to Sheets, Slack, a webhook or your agent.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec-lg" id="api"><div class="wrap split">
+  <div><h2>One HTTP call per tool</h2>
+    <p class="muted">Send the input, get the rows back. Works from any language, n8n, Make, Zapier, and AI agents through Apify's MCP server.</p>
+    <ul class="ticks"><li>Synchronous endpoint returns rows directly</li><li>Same field names on every run</li><li>Webhooks when a scheduled run finishes</li></ul>
+  </div>
+  ${codeTabs(actors.find(a => a.slug === 'google-news-scraper') || actors[0])}
+</div></section>
+
+<section class="sec-lg alt" id="faq"><div class="wrap narrow">
+  <div class="sec-head"><h2>Questions</h2></div>
+  <div class="faq">${faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>
+</div></section>
+
+<section class="sec-lg" id="custom"><div class="wrap narrow center">
+  <h2>Need a source that isn't here?</h2>
+  <p class="muted">I build custom scrapers and daily data feeds. Send the site, a few example pages and where the data should go.</p>
+  <div class="cta"><a class="btn" href="mailto:${EMAIL}?subject=Custom%20scraper">Email me</a><a class="btn btn-ghost" href="${PROFILE}" target="_blank" rel="noopener">See all tools on Apify</a></div>
+</div></section>
+${foot}`;
+fs.writeFileSync(path.join(ROOT, 'index.html'), home);
+
+// 404
+fs.writeFileSync(path.join(ROOT, '404.html'), `${head({ title: `Page not found | ${BRAND}`, desc: 'Page not found', url: BASE + '/404.html' })}
+<section class="hero"><div class="wrap center"><h1>Page not found</h1><p class="lead">That page doesn't exist.</p><div class="cta"><a class="btn" href="/">Back to all tools</a></div></div></section>${foot}`);
+
+// sitemap + robots
+const today = new Date().toISOString().slice(0, 10);
 const urls = [BASE + '/', ...actors.map(a => `${BASE}/tools/${a.slug}.html`)];
-fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u => `<url><loc>${u}</loc></url>`).join('')}</urlset>`);
-fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${BASE}/sitemap.xml\n`);
-console.log('built', actors.length, 'actors');
+fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${BASE}/sitemap.xml\n`);
+console.log(`built ${actors.length} tools, ${totalRuns} runs, ${successPct}% ok, from ${fmtUsd(minPer1k)}/1k`);
