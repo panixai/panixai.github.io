@@ -1,0 +1,1009 @@
+{
+ "google-news-scraper": {
+  "run": "BXPfNjgpzXsf0aKcq",
+  "input": {
+   "searchQueries": [
+    "artificial intelligence"
+   ],
+   "timeframe": "1d",
+   "countries": [
+    "US"
+   ]
+  },
+  "cols": [
+   "title",
+   "source",
+   "publishedAt"
+  ],
+  "rows": [
+   [
+    "Verifiable AI Study Maps ZKP Hardware Costs",
+    "CASRAI",
+    "16:38 UTC"
+   ],
+   [
+    "Mark Cuban Says Learn AI or Become \"a Dinosaur With…",
+    "The Motley Fool",
+    "16:30 UTC"
+   ],
+   [
+    "Victoria University lecturers steer students away f…",
+    "RNZ",
+    "16:28 UTC"
+   ],
+   [
+    "Emmanuel Macron's AI Push: French President Calls F…",
+    "NDTV",
+    "16:28 UTC"
+   ]
+  ],
+  "use": [
+   "Brand and competitor alerts",
+   "News feeds for AI agents and RAG",
+   "Market and PR monitoring"
+  ],
+  "flow": "Every hour · only new articles · Slack"
+ },
+ "linkedin-jobs-scraper": {
+  "run": "KXL2Y3TNA1aKZueHC",
+  "input": {
+   "searchTerms": [
+    "python developer"
+   ],
+   "locations": [
+    "United States"
+   ],
+   "maxJobsPerSearch": 20
+  },
+  "cols": [
+   "title",
+   "company",
+   "location"
+  ],
+  "rows": [
+   [
+    "Senior python developer",
+    "UNIS",
+    "Irvine, CA"
+   ],
+   [
+    "Senior Python Software Engineer",
+    "Kommerce Hub",
+    "Tampa, FL"
+   ],
+   [
+    "Senior Python Engineer",
+    "Virtusa",
+    "Jersey City, NJ"
+   ],
+   [
+    "Python Engineer and Developer - A…",
+    "iCapital",
+    "Stamford, CT"
+   ]
+  ],
+  "use": [
+   "Job boards and job alerts",
+   "Hiring signals for sales leads",
+   "Salary and labor market research"
+  ],
+  "flow": "Daily · only new jobs · Google Sheets"
+ },
+ "ats-jobs-scraper": {
+  "run": "16UpzKQyEfxyASRND",
+  "input": {
+   "companies": [
+    "https://job-boards.greenhouse.io/anthropic"
+   ]
+  },
+  "cols": [
+   "title",
+   "companyName",
+   "salary"
+  ],
+  "rows": [
+   [
+    "3P Revenue Accounting & Reporti…",
+    "Anthropic",
+    "190K–230K"
+   ],
+   [
+    "Account Executive, AI Native",
+    "Anthropic",
+    "222.8K–290K"
+   ],
+   [
+    "Account Executive, Nonprofit",
+    "Anthropic",
+    "290K–380K"
+   ],
+   [
+    "Account Executive, Startups",
+    "Anthropic",
+    "222.8K–290K"
+   ]
+  ],
+  "use": [
+   "Career-page job feeds",
+   "Track who is hiring for what",
+   "Recruiting and sourcing tools"
+  ],
+  "flow": "Daily · only new jobs · webhook"
+ },
+ "linkedin-company-scraper": {
+  "run": "d4XKZeFNsc9t9J8lW",
+  "input": {
+   "companies": [
+    "https://www.linkedin.com/company/stripe",
+    "https://www.linkedin.com/company/hubspot",
+    "Anthropic"
+   ],
+   "includePosts": true
+  },
+  "cols": [
+   "name",
+   "companySize",
+   "followers"
+  ],
+  "rows": [
+   [
+    "Stripe",
+    "5,001-10,000",
+    "1.8M"
+   ],
+   [
+    "HubSpot",
+    "5,001-10,000",
+    "1.8M"
+   ],
+   [
+    "Anthropic",
+    "501-1,000",
+    "5.5M"
+   ]
+  ],
+  "use": [
+   "Enrich CRM accounts",
+   "Lead scoring and ICP filters",
+   "Track company growth and posts"
+  ],
+  "flow": "Weekly · track changes · CRM via Make"
+ },
+ "resume-cv-json-parser": {
+  "run": "sxFREt7BJKg1BMAaL",
+  "input": {
+   "documentUrls": [
+    "sample-cv.pdf",
+    "sample-cv-two-column.pdf",
+    "sample-cv-scanned.pdf"
+   ]
+  },
+  "cols": [
+   "file",
+   "candidate",
+   "status"
+  ],
+  "rows": [
+   [
+    "sample-cv.pdf",
+    "Jordan Ellis",
+    "success"
+   ],
+   [
+    "sample-cv-two-column.pdf",
+    "Amira Haddad",
+    "success"
+   ],
+   [
+    "sample-cv-scanned.pdf",
+    "Lukas Brenner",
+    "success"
+   ]
+  ],
+  "use": [
+   "ATS imports from PDF CVs",
+   "AI candidate screening",
+   "Resume search and matching"
+  ],
+  "flow": "New CV in Drive · parse · Airtable via n8n"
+ },
+ "facebook-ads-library-scraper": {
+  "run": "7ffCrDSUHuZqJXcqa",
+  "input": {
+   "searchTerms": [
+    "running shoes"
+   ],
+   "countries": [
+    "US"
+   ],
+   "activeStatus": "active"
+  },
+  "cols": [
+   "pageName",
+   "mediaType",
+   "daysRunning"
+  ],
+  "rows": [
+   [
+    "KURU Footwear",
+    "video",
+    "130 days"
+   ],
+   [
+    "SHEIN",
+    "image",
+    "120 days"
+   ],
+   [
+    "HOKA",
+    "image",
+    "49 days"
+   ]
+  ],
+  "use": [
+   "Competitor ad research",
+   "Find long-running winning ads",
+   "New-ad alerts for brands"
+  ],
+  "flow": "Daily · only new ads · Slack"
+ },
+ "google-ads-transparency-scraper": {
+  "run": "eacfgGs03dggGqVl5",
+  "input": {
+   "searchTerms": [
+    "nike"
+   ],
+   "region": "US"
+  },
+  "cols": [
+   "advertiserName",
+   "format",
+   "daysShown"
+  ],
+  "rows": [
+   [
+    "Nike, Inc.",
+    "text",
+    "959 days"
+   ],
+   [
+    "Nike, Inc.",
+    "text",
+    "925 days"
+   ],
+   [
+    "Nike, Inc.",
+    "image",
+    "153 days"
+   ],
+   [
+    "Nike, Inc.",
+    "text",
+    "872 days"
+   ]
+  ],
+  "use": [
+   "See every Google ad a brand runs",
+   "Agency pitches and audits",
+   "Search, YouTube and Display research"
+  ],
+  "flow": "Weekly · only new ads · Google Sheets"
+ },
+ "linkedin-ad-library-scraper": {
+  "run": "crXJAFmDoopfZNS6d",
+  "input": {
+   "advertisers": [
+    "HubSpot"
+   ],
+   "dateRange": "all-time"
+  },
+  "cols": [
+   "headline",
+   "formatLabel",
+   "advertiserName"
+  ],
+  "rows": [
+   [
+    "Let's fix that. HUG Berlin · Nov…",
+    "Single Image",
+    "made2GROW GmbH"
+   ],
+   [
+    "Strategy, specs, and best practic…",
+    "Single Image",
+    "HubSpot"
+   ],
+   [
+    "Download the free LinkedIn Ads gu…",
+    "Single Image",
+    "HubSpot"
+   ],
+   [
+    "Update your CRM, directly in Chat…",
+    "Single Image",
+    "HubSpot"
+   ]
+  ],
+  "use": [
+   "B2B competitor ad research",
+   "Messaging and offer analysis",
+   "Track new campaigns"
+  ],
+  "flow": "Weekly · only new ads · Notion via Make"
+ },
+ "tiktok-ads-scraper": {
+  "run": "96eh5pAyGukC1JkRJ",
+  "input": {
+   "searchTerms": [
+    "nike"
+   ],
+   "mode": "adLibrary"
+  },
+  "cols": [
+   "advertiserName",
+   "country",
+   "uniqueReach"
+  ],
+  "rows": [
+   [
+    "NIKE Retail B.V.",
+    "France",
+    "10K-100K"
+   ],
+   [
+    "NIKE Retail B.V.",
+    "France",
+    "100K-200K"
+   ],
+   [
+    "NIKE Retail B.V.",
+    "France",
+    "10K-100K"
+   ],
+   [
+    "NIKE Retail B.V.",
+    "France",
+    "10K-100K"
+   ]
+  ],
+  "use": [
+   "TikTok creative research",
+   "Find top ads by reach",
+   "Competitor launch tracking"
+  ],
+  "flow": "Daily · only new ads · Slack"
+ },
+ "amazon-product-scraper": {
+  "run": "zcnzylLiOv9q9mqJ5",
+  "input": {
+   "searchTerms": [
+    "beauty cream"
+   ],
+   "marketplace": "co.uk"
+  },
+  "cols": [
+   "title",
+   "price",
+   "rating"
+  ],
+  "rows": [
+   [
+    "L'Oréal Paris Age Perfect Skincar…",
+    "£17.89",
+    "4.6 · 347"
+   ],
+   [
+    "3 x 75ml Dove FACE & BODY Care BE…",
+    "£6.12",
+    "4.9 · 13"
+   ],
+   [
+    "Eveline Cosmetics Magic Skin CC B…",
+    "£6.56",
+    "4.4 · 3.3K"
+   ],
+   [
+    "NIVEA TIME TO SOOTHE Beauty Gift…",
+    "£8.55",
+    "4.8 · 22"
+   ]
+  ],
+  "use": [
+   "Price and stock monitoring",
+   "Product and niche research",
+   "Best Sellers and BSR tracking"
+  ],
+  "flow": "Daily · price changes · Google Sheets"
+ },
+ "amazon-arbitrage-finder": {
+  "run": "kBmyta7HGjWxcNHR2",
+  "input": {
+   "searchTerms": [
+    "lego"
+   ],
+   "compareStores": [
+    "walmart",
+    "target"
+   ],
+   "fulfillment": "FBA"
+  },
+  "cols": [
+   "title",
+   "buy",
+   "profit"
+  ],
+  "rows": [
+   [
+    "LEGO Classic Large Creative…",
+    "$33.49 target",
+    "-$15.14 · Skip"
+   ],
+   [
+    "LEGO Disney and Pixar ‘Up’…",
+    "$59.99 target",
+    "-$36.00 · Skip"
+   ],
+   [
+    "LEGO Up-Scaled Santa Minifi…",
+    "$41.99 target",
+    "-$15.26 · Skip"
+   ]
+  ],
+  "use": [
+   "Online arbitrage sourcing",
+   "Profit, ROI and fee checks",
+   "Walmart and Target price gaps"
+  ],
+  "flow": "Daily · Buy verdicts only · Telegram"
+ },
+ "walmart-scraper": {
+  "run": "7Mcnx2tlAHgeB5Vm5",
+  "input": {
+   "searchTerms": [
+    "air fryer"
+   ],
+   "maxResultsPerSearch": 10
+  },
+  "cols": [
+   "title",
+   "price",
+   "rating"
+  ],
+  "rows": [
+   [
+    "Chefman TurboFry 3-in-1 Air Fryer…",
+    "$37.99",
+    "4.6 · 498"
+   ],
+   [
+    "Magnavox 2.64Qt/2.5L 1,000-Watt A…",
+    "$37.99",
+    "4.4 · 5"
+   ],
+   [
+    "DAIVOS 5QT Air Fryer with Viewing…",
+    "$59.49",
+    "4.7 · 105"
+   ],
+   [
+    "6QT Air Fryer, 8 Preset Functions…",
+    "$48.99",
+    "4.6 · 21"
+   ]
+  ],
+  "use": [
+   "Price and rollback tracking",
+   "Seller and assortment research",
+   "Retail analytics dashboards"
+  ],
+  "flow": "Daily · price changes · BigQuery"
+ },
+ "aliexpress-scraper": {
+  "run": "XTw0yVyekxjU23nqK",
+  "input": {
+   "searchTerms": [
+    "wireless earbuds"
+   ],
+   "shipTo": "US"
+  },
+  "cols": [
+   "title",
+   "price",
+   "soldCount"
+  ],
+  "rows": [
+   [
+    "2026 New Air 3【 Pro3 】 Bluetooth…",
+    "$13.52",
+    "4,228 sold"
+   ],
+   [
+    "ROSESELSA Ceramics Ultra True Wir…",
+    "$32.36",
+    "109 sold"
+   ],
+   [
+    "Bluetooth TWS Gaming Earphones Lo…",
+    "$3.06",
+    "5,545 sold"
+   ],
+   [
+    "Wireless Earbuds Bluetooth TWS Sp…",
+    "$32.34",
+    "1,058 sold"
+   ]
+  ],
+  "use": [
+   "Dropshipping product research",
+   "Supplier price checks",
+   "Trend and best-seller tracking"
+  ],
+  "flow": "Weekly · new products · Shopify via Make"
+ },
+ "youtube-scraper": {
+  "run": "ANWblEgZ6oPwMRPpY",
+  "input": {
+   "searchTerms": [
+    "python tutorial"
+   ],
+   "maxResults": 20
+  },
+  "cols": [
+   "title",
+   "channelName",
+   "views"
+  ],
+  "rows": [
+   [
+    "Python Full Course for free 🐍",
+    "Bro Code",
+    "13.5M"
+   ],
+   [
+    "Python Full Course for Beginners",
+    "Programming with Mosh",
+    "49.6M"
+   ],
+   [
+    "Python Tutorial for Beginners - L…",
+    "TechWorld with Nana",
+    "6.9M"
+   ],
+   [
+    "Learn Python - Full Course for Be…",
+    "freeCodeCamp.org",
+    "49.6M"
+   ]
+  ],
+  "use": [
+   "Content and topic research",
+   "Influencer discovery",
+   "Channel analytics"
+  ],
+  "flow": "Weekly · new videos · Google Sheets"
+ },
+ "youtube-comments-scraper": {
+  "run": "IiYd1ixMGNYRRCpAa",
+  "input": {
+   "startUrls": [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+   ],
+   "sortBy": "top",
+   "maxComments": 50
+  },
+  "cols": [
+   "text",
+   "likes",
+   "replies"
+  ],
+  "rows": [
+   [
+    "My algebra teacher said that this was a lin…",
+    "72K",
+    "690"
+   ],
+   [
+    "Let’s put the meme aside, this is actually…",
+    "222K",
+    "641"
+   ],
+   [
+    "I Rick rolled my entire French class becaus…",
+    "108K",
+    "694"
+   ],
+   [
+    "Ok let’s be honest here Rick rolling is the…",
+    "428K",
+    "772"
+   ]
+  ],
+  "use": [
+   "Audience and sentiment analysis",
+   "Product feedback mining",
+   "AI summaries of comments"
+  ],
+  "flow": "Daily · only new comments · OpenAI via n8n"
+ },
+ "tiktok-scraper": {
+  "run": "NP9Ie1fKStnRAFKTm",
+  "input": {
+   "profiles": [
+    "natgeo"
+   ],
+   "resultsPerProfile": 10,
+   "includeTranscripts": true
+  },
+  "cols": [
+   "description",
+   "views",
+   "likes"
+  ],
+  "rows": [
+   [
+    "full tutorial for diggy proddies…",
+    "110.7K",
+    "7.9K"
+   ],
+   [
+    "The Voyager spacecrafts are the f…",
+    "4.9K",
+    "337"
+   ],
+   [
+    "Road collisions in Brazil have ki…",
+    "1.8K",
+    "134"
+   ],
+   [
+    "A little slice of paradise, hidde…",
+    "14K",
+    "1.3K"
+   ]
+  ],
+  "use": [
+   "Creator and trend research",
+   "Video transcripts for AI",
+   "Brand and campaign tracking"
+  ],
+  "flow": "Daily · only new videos · Airtable"
+ },
+ "pinterest-scraper": {
+  "run": "bXuBqvJe2Vp9XNfrp",
+  "input": {
+   "searchQueries": [
+    "minimalist kitchen"
+   ],
+   "searchType": "pins"
+  },
+  "cols": [
+   "title",
+   "domain",
+   "saves"
+  ],
+  "rows": [
+   [
+    "10 Dream House Kitchen Ideas: Style…",
+    "roomhint.com",
+    "0"
+   ],
+   [
+    "Modern Minimalist Kitchen with Ligh…",
+    "a.co",
+    "12"
+   ],
+   [
+    "Minimalist Kitchen Ideas With Clear…",
+    "maisore.base44.app",
+    "11"
+   ],
+   [
+    "White Kitchen Ideas | Bright Shaker…",
+    "",
+    "1"
+   ]
+  ],
+  "use": [
+   "Visual trend research",
+   "Find products and outbound links",
+   "Board and creator analysis"
+  ],
+  "flow": "Weekly · new pins · Google Sheets"
+ },
+ "threads-scraper": {
+  "run": "zcsSmBHWoMGsg3QWV",
+  "input": {
+   "profiles": [
+    "zuck"
+   ],
+   "searchQueries": [
+    "artificial intelligence"
+   ]
+  },
+  "cols": [
+   "text",
+   "username",
+   "likes"
+  ],
+  "rows": [
+   [
+    "Pavlova with Muse helping on our ques…",
+    "@zuck",
+    "1.5K"
+   ],
+   [
+    "Using our new spaces feature on Muse…",
+    "@zuck",
+    "2.4K"
+   ],
+   [
+    "Now in the Muse app: talk with your M…",
+    "@zuck",
+    "1.8K"
+   ],
+   [
+    "Tried to get the family to dress as b…",
+    "@zuck",
+    "4.5K"
+   ]
+  ],
+  "use": [
+   "Social listening",
+   "Creator and brand monitoring",
+   "Posts for AI analysis"
+  ],
+  "flow": "Hourly · only new posts · Slack"
+ },
+ "youtube-transcript-scraper": {
+  "run": "KTONTBthK2bfX5DZe",
+  "input": {
+   "playlistUrls": [
+    "https://www.youtube.com/playlist?list=PLOGi5-fAu8bH7ddYcU-rClnxhchNrfym2"
+   ],
+   "maxVideos": 20
+  },
+  "cols": [
+   "title",
+   "duration",
+   "words"
+  ],
+  "rows": [
+   [
+    "Two US Governors — a Democrat and a…",
+    "19:25",
+    "3,395"
+   ],
+   [
+    "Why You Should Be Able to Vote on Y…",
+    "11:22",
+    "1,828"
+   ],
+   [
+    "Sean Sherman: Why aren't there more…",
+    "18:12",
+    "3,487"
+   ],
+   [
+    "Why Democracy Requires Renewal | Mi…",
+    "14:10",
+    "2,036"
+   ]
+  ],
+  "use": [
+   "RAG and AI knowledge bases",
+   "Summaries and show notes",
+   "Search inside videos"
+  ],
+  "flow": "New video · transcript · vector DB via n8n"
+ },
+ "video-transcript-scraper": {
+  "run": "KQMiuEtN1UK2Tpwni",
+  "input": {
+   "urls": [
+    "https://www.tiktok.com/@jacksonstips/video/7353781970163272993",
+    "https://www.tiktok.com/@gordonramsayofficial/video/7229884545150061851",
+    "https://www.tiktok.com/@olympics/video/7208589533632269574"
+   ]
+  },
+  "cols": [
+   "title",
+   "platform",
+   "words"
+  ],
+  "rows": [
+   [
+    "SpaceX - At dawn from the gatew…",
+    "X",
+    "58"
+   ],
+   [
+    "can’t be good at everything",
+    "TikTok",
+    "17"
+   ],
+   [
+    "Never give up on your dreams 🏒…",
+    "TikTok",
+    "6"
+   ],
+   [
+    "The New Vimeo Player (You Know,…",
+    "Vimeo",
+    "124"
+   ]
+  ],
+  "use": [
+   "Transcripts from any video link",
+   "Podcast to text and SRT",
+   "Content repurposing with AI"
+  ],
+  "flow": "New episode (RSS) · transcript · Notion"
+ },
+ "instagram-reel-transcript": {
+  "run": "oZqF5yREc0a2G2wun",
+  "input": {
+   "reels": [
+    "DMpuiXeubFY",
+    "DcwAWXDOXss",
+    "DdUAMWNBktR"
+   ],
+   "language": "auto"
+  },
+  "cols": [
+   "ownerUsername",
+   "hook",
+   "likes"
+  ],
+  "rows": [
+   [
+    "@zachking",
+    "This is a message to all artifi…",
+    "7.1M"
+   ],
+   [
+    "@natgeo",
+    "Alright cool. Well, we did it.…",
+    "45.1K"
+   ],
+   [
+    "@figuringout.co",
+    "The person that can turn their…",
+    "869.4K"
+   ],
+   [
+    "@natgeo",
+    "Hudson Bay for a wolf, there ar…",
+    "59.1K"
+   ]
+  ],
+  "use": [
+   "Reel scripts and hooks",
+   "Creator research",
+   "Captions and subtitles"
+  ],
+  "flow": "New reels · transcript · Google Docs"
+ },
+ "airbnb-scraper": {
+  "run": "XwOvuex7mYsDCaVqe",
+  "input": {
+   "locationQueries": [
+    "Lisbon, Portugal"
+   ],
+   "currency": "USD"
+  },
+  "cols": [
+   "name",
+   "pricePerNight",
+   "rating"
+  ],
+  "rows": [
+   [
+    "Double Room",
+    "$89.55",
+    "4.76 · 63"
+   ],
+   [
+    "Gat Rossio, Standard single room",
+    "$92.23",
+    "4.73 · 659"
+   ],
+   [
+    "227 Boutique Apartment Cais do…",
+    "$143",
+    "5 · 6"
+   ],
+   [
+    "Perfect Stay Avenida 5",
+    "$145",
+    "5 · 5"
+   ]
+  ],
+  "use": [
+   "Short-term rental pricing",
+   "Market and occupancy research",
+   "Competitor listing tracking"
+  ],
+  "flow": "Weekly · prices · Looker Studio"
+ },
+ "flashscore-scraper": {
+  "run": "wLCgP9q1xgeEZnJ2b",
+  "input": {
+   "sports": [
+    "football"
+   ],
+   "days": [
+    "0"
+   ]
+  },
+  "cols": [
+   "match",
+   "score",
+   "status"
+  ],
+  "rows": [
+   [
+    "Uganda – Botswana",
+    "1-0",
+    "1st half"
+   ],
+   [
+    "Madagascar U23 – South Africa U23",
+    "0-1",
+    "Finished"
+   ],
+   [
+    "Kawempe Muslim W – Lekie W",
+    "0-5",
+    "Finished"
+   ]
+  ],
+  "use": [
+   "Live score apps and widgets",
+   "Betting and odds models",
+   "Fantasy and sports analytics"
+  ],
+  "flow": "Every minute · only changed · webhook"
+ },
+ "invoice-table-json-extractor": {
+  "sample": true,
+  "input": {
+   "documentUrls": [
+    "invoice-2026-114.pdf"
+   ],
+   "outputFormat": "json"
+  },
+  "cols": [
+   "description",
+   "qty",
+   "amount"
+  ],
+  "rows": [
+   [
+    "Website hosting, Nov",
+    "1",
+    "$49.00"
+   ],
+   [
+    "Design hours",
+    "12",
+    "$960.00"
+   ],
+   [
+    "Domain renewal",
+    "2",
+    "$31.98"
+   ],
+   [
+    "Total",
+    "",
+    "$1,040.98"
+   ]
+  ],
+  "use": [
+   "Bookkeeping and accounting imports",
+   "Receipts to spreadsheets",
+   "Tables from PDFs for AI"
+  ],
+  "flow": "New PDF in email · extract · Xero via Make"
+ }
+}

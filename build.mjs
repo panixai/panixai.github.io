@@ -154,6 +154,7 @@ const foot = `</main>
   <p class="muted">Web data tools on Apify. Public pages only, pay per result.</p>
   <nav class="foot-links" aria-label="Footer"><a href="${PROFILE}" target="_blank" rel="noopener">Apify profile</a><a href="mailto:${EMAIL}">${EMAIL}</a><a href="/sitemap.xml">Sitemap</a></nav>
 </div></footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 <script src="/assets/app.js?v=${V}" defer></script>
 </body></html>`;
 
@@ -249,29 +250,45 @@ function card(a) {
 // ---------- home ----------
 const featured = actors.find(a => a.video);
 const counts = Object.fromEntries(CATS.map(c => [c[0], actors.filter(a => a.catKey === c[0]).length]));
-const demos = [
-  { id: 'news', label: 'Google News', input: { searchQueries: ['electric vehicles'], timeframe: '1d' },
-    cols: ['title', 'source', 'publishedAt'], rows: [
-      ['EV sales climb as new models reach dealers', 'Reuters', '2h ago'], ['Battery prices fall for third year', 'Bloomberg', '4h ago'],
-      ['Charging networks expand along highways', 'The Verge', '6h ago'], ['Automakers plan cheaper compact EVs', 'CNBC', '9h ago']] },
-  { id: 'jobs', label: 'LinkedIn Jobs', input: { keywords: 'data engineer', location: 'Berlin' },
-    cols: ['title', 'company', 'salary'], rows: [
-      ['Senior Data Engineer', 'Northwind', '€75k–90k'], ['Analytics Engineer', 'Contoso', '€65k–80k'],
-      ['Data Platform Engineer', 'Fabrikam', '€80k–95k'], ['ML Data Engineer', 'Tailspin', '€70k–85k']] },
-  { id: 'amazon', label: 'Amazon', input: { search: 'wireless earbuds', country: 'US' },
-    cols: ['title', 'price', 'rating'], rows: [
-      ['Wireless Earbuds Pro, ANC', '$39.99', '4.6'], ['Sport Earbuds, 40h battery', '$24.50', '4.4'],
-      ['Open-ear Earbuds', '$59.00', '4.5'], ['Budget Earbuds, USB-C', '$18.99', '4.2']] }
+// Playground: every Actor's real input -> dataset sample -> where it's used. Data from data/demos.json (scripts/make-demos.mjs).
+const DEMOS = readJson(path.join(ROOT, 'data', 'demos.json')) || {};
+const TAB_LABEL = { 'invoice-table-json-extractor': 'Invoice & PDF tables', 'youtube-transcript-scraper': 'YouTube Transcript', 'google-ads-transparency-scraper': 'Google Ads', 'facebook-ads-library-scraper': 'Facebook Ads', 'linkedin-ad-library-scraper': 'LinkedIn Ads', 'video-transcript-scraper': 'Video & Podcast Transcript', 'amazon-product-scraper': 'Amazon', 'aliexpress-scraper': 'AliExpress', 'resume-cv-json-parser': 'Resume & CV Parser' };
+const tabLabel = a => TAB_LABEL[a.slug] || a.short.replace(/\s*&\s*Monitor$/, '').replace(/\s+Scraper\b/, '').replace(/\s+Search$/, '');
+const brandSvg = n => { const s = fs.readFileSync(path.join(ROOT, 'assets', 'brands', n + '.svg'), 'utf8'); return s.replace(/<title>.*?<\/title>/, '').replace('<svg ', '<svg aria-hidden="true" fill="currentColor" width="18" height="18" '); };
+const CONNECT = [
+  ['n8n', brandSvg('n8n')], ['Make', brandSvg('make')], ['Zapier', brandSvg('zapier')], ['Google Sheets', brandSvg('googlesheets')],
+  ['AI agents', brandSvg('modelcontextprotocol')],
+  ['REST API', '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>']
 ];
-const demoHtml = `<div class="demo" data-demo>
-  <div class="demo-bar"><span class="dots"><i></i><i></i><i></i></span>
-    <div class="tabs" role="tablist" aria-label="Example runs">${demos.map((d, i) => `<button class="tab${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-tab="${d.id}">${d.label}</button>`).join('')}</div></div>
-  ${demos.map((d, i) => `<div class="demo-body pane${i ? '' : ' on'}" data-pane="${d.id}">
-    <div class="demo-in"><div class="label">Input</div><pre><code>${esc(JSON.stringify(d.input, null, 2))}</code></pre></div>
-    <div class="demo-out"><div class="label">Dataset <span class="muted">· sample</span></div>
-      <table><thead><tr>${d.cols.map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${d.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
-  </div>`).join('')}
+const PG_FIRST = ['google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
+const pgRank = a => { const i = PG_FIRST.indexOf(a.slug); return i < 0 ? 100 + actors.indexOf(a) : i; };
+const pgItems = actors.filter(a => DEMOS[a.slug]).sort((x, y) => pgRank(x) - pgRank(y)).map(a => ({ slug: a.slug, label: tabLabel(a), name: a.short, icon: a.icon, page: `/tools/${a.slug}.html`, price: a.price.line, ...DEMOS[a.slug] }));
+const jsonHtml = obj => esc(JSON.stringify(obj, null, 2)).split('\n').map(line => `<span class="ln">${line
+  .replace(/^(\s*)(&quot;[^&]*?&quot;)(:)/, '$1<span class="k">$2</span>$3')
+  .replace(/(:\s|^\s+)(&quot;.*?&quot;)(,?)$/, '$1<span class="s">$2</span>$3')
+  .replace(/(:\s)(-?\d[\d.]*|true|false|null)(,?)$/, '$1<span class="n">$2</span>$3')}</span>`).join('');
+const pg0 = pgItems[0];
+const pgHtml = !pg0 ? '' : `<div class="pg" data-pg aria-label="Live examples of every tool">
+  <div class="pg-tabs" role="tablist" aria-label="Tools">${pgItems.map((d, i) => `<button class="pg-tab${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-i="${i}">${d.icon ? `<img src="${d.icon}" width="20" height="20" alt="" loading="lazy">` : `<span class="pg-mono">${esc(d.label[0])}</span>`}<span>${esc(d.label)}</span><i class="pg-bar"></i></button>`).join('')}</div>
+  <div class="pg-body">
+    <div class="pg-col pg-in">
+      <div class="pg-head"><span class="label">Input</span><span class="pg-status" data-st="done"><i></i><span>Succeeded</span></span></div>
+      <pre class="pg-json"><code>${jsonHtml(pg0.input)}</code></pre>
+    </div>
+    <div class="pg-col pg-out">
+      <div class="pg-head"><span class="label">Dataset <span class="muted">· ${pg0.sample ? 'sample' : 'from a real run'}</span></span><a class="pg-link" href="${pg0.page}">${esc(pg0.name)} ${ICON.arrow}</a></div>
+      <table class="pg-table"><thead><tr>${pg0.cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${pg0.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>
+    </div>
+    <div class="pg-col pg-use">
+      <div class="pg-head"><span class="label">Put it to work</span></div>
+      <ul class="pg-uses">${pg0.use.map(u => `<li>${esc(u)}</li>`).join('')}</ul>
+      <div class="pg-tiles">${CONNECT.map(([n, svg]) => `<span class="pg-tile">${svg}<span>${n}</span></span>`).join('')}</div>
+      <p class="pg-flow"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg><span>${esc(pg0.flow)}</span></p>
+    </div>
+  </div>
+  <script type="application/json" id="pg-data">${JSON.stringify(pgItems.map(d => ({ ...d, inputHtml: jsonHtml(d.input) }))).replace(/</g, '\\u003c')}</script>
 </div>`;
+
 
 const faq = [
   ['How do I try a tool?', `Open the tool and press <b>Run on Apify</b>. Apify's free plan includes monthly credit, which is enough to test any of these tools on real data.`],
@@ -293,7 +310,7 @@ const home = `${head({
   <h1>Public web data,<br>delivered as clean rows.</h1>
   <p class="lead">Scrapers and APIs for jobs, ad libraries, e-commerce, social video and news. Pay per result, no login, ready for your code or AI agent.</p>
   <div class="cta"><a class="btn" href="#tools">Browse tools</a><a class="btn btn-ghost" href="#api">Use the API</a></div>
-  ${demoHtml}
+  ${pgHtml}
   <dl class="stats">
     <div><dt>Tools</dt><dd>${actors.length}</dd></div>
     ${successPct ? `<div><dt>Runs succeeded, 30 days</dt><dd>${successPct}%</dd></div>` : ''}

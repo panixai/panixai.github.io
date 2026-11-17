@@ -10,13 +10,12 @@
   });
 
   // Tabs (code blocks and hero demo)
-  document.querySelectorAll('[data-tabs], [data-demo]').forEach(function (box) {
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
     box.addEventListener('click', function (e) {
       var b = e.target.closest('.tab');
       if (!b || !box.contains(b)) return;
       box.querySelectorAll('.tab').forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-selected', on); });
       box.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.dataset.pane === b.dataset.tab); });
-      if (box.hasAttribute('data-demo')) { stop(); animateRows(box.querySelector('.pane.on')); }
     });
   });
 
@@ -30,28 +29,76 @@
     });
   });
 
-  // Hero demo: rows stream in, tabs rotate until the user picks one
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var demo = document.querySelector('[data-demo]'), timer = null;
-  function animateRows(pane) {
-    if (reduce || !pane) return;
-    pane.querySelectorAll('tbody tr').forEach(function (r, i) {
-      r.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
-        { duration: 360, delay: 120 + i * 110, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' });
+
+  // Playground: each tool plays input -> run -> dataset rows -> uses -> integrations, then the next tool. Loops; click any tab.
+  var pg = document.querySelector('[data-pg]');
+  if (pg) (function () {
+    var data = JSON.parse(document.getElementById('pg-data').textContent);
+    var tabsEl = pg.querySelector('.pg-tabs'), tabs = [].slice.call(pg.querySelectorAll('.pg-tab'));
+    var code = pg.querySelector('.pg-json code'), st = pg.querySelector('.pg-status'), stText = st.querySelector('span');
+    var thead = pg.querySelector('.pg-table thead tr'), tbody = pg.querySelector('.pg-table tbody');
+    var link = pg.querySelector('.pg-link'), arrow = link.querySelector('svg').outerHTML, outNote = pg.querySelector('.pg-out .label .muted');
+    var uses = pg.querySelector('.pg-uses'), tiles = [].slice.call(pg.querySelectorAll('.pg-tile')), flow = pg.querySelector('.pg-flow'), flowText = flow.querySelector('span');
+    var G = window.gsap, auto = !reduce && !!G, cur = 0, tl = null, hover = false, waiting = false, visible = true;
+    var HOLD = 7.5; // seconds per tool
+    if (!G) pg.classList.add('is-static');
+    var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+
+    function render(d) {
+      code.innerHTML = d.inputHtml;
+      thead.innerHTML = d.cols.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('');
+      tbody.innerHTML = d.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td title="' + esc(c).replace(/"/g, '&quot;') + '">' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('');
+      link.innerHTML = esc(d.name) + ' ' + arrow; link.href = d.page;
+      outNote.textContent = '· ' + (d.sample ? 'sample' : 'from a real run');
+      uses.innerHTML = d.use.map(function (u) { return '<li>' + esc(u) + '</li>'; }).join('');
+      flowText.textContent = d.flow;
+    }
+    function setTab(i) {
+      tabs.forEach(function (t, k) { var on = k === i; t.classList.toggle('on', on); t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+      var t = tabs[i], left = t.offsetLeft - (tabsEl.clientWidth - t.offsetWidth) / 2;
+      tabsEl.scrollTo({ left: Math.max(0, left), behavior: reduce ? 'auto' : 'smooth' });
+    }
+    function sync() { if (tl) { if (visible && !document.hidden) tl.play(); else tl.pause(); } }
+    function done(n) { st.dataset.st = 'done'; stText.textContent = 'Succeeded · ' + n + ' rows'; }
+
+    function go(i) {
+      cur = (i + data.length) % data.length;
+      var d = data[cur];
+      if (tl) { tl.kill(); tl = null; }
+      waiting = false;
+      setTab(cur); render(d);
+      if (!G || reduce) { done(d.rows.length); tiles.forEach(function (t) { t.classList.add('on'); }); return; }
+      G.set(pg.querySelectorAll('.pg-bar'), { scaleX: 0 });
+      tiles.forEach(function (t) { t.classList.remove('on'); });
+      st.dataset.st = 'idle'; stText.textContent = 'Ready';
+      var lines = code.querySelectorAll('.ln'), trs = tbody.querySelectorAll('tr'), lis = uses.querySelectorAll('li');
+      var rowsEnd = 1.25 + trs.length * 0.14;
+      tl = G.timeline({ paused: true, onComplete: function () { if (!auto) return; if (hover) waiting = true; else go(cur + 1); } });
+      tl.fromTo(tabs[cur].querySelector('.pg-bar'), { scaleX: 0 }, { scaleX: 1, duration: HOLD, ease: 'none' }, 0)
+        .from(lines, { opacity: 0, x: -8, duration: 0.3, stagger: 0.045, ease: 'power2.out' }, 0.05)
+        .call(function () { st.dataset.st = 'run'; stText.textContent = 'Running'; }, null, 0.75)
+        .from(thead.children, { opacity: 0, y: -4, duration: 0.3, stagger: 0.05 }, 0.95)
+        .from(trs, { opacity: 0, y: 10, duration: 0.45, stagger: 0.14, ease: 'power3.out' }, 1.2)
+        .call(function () { done(trs.length); }, null, rowsEnd)
+        .from(lis, { opacity: 0, x: 10, duration: 0.4, stagger: 0.16, ease: 'power2.out' }, rowsEnd + 0.2);
+      tiles.forEach(function (t, k) { tl.call(function () { t.classList.add('on'); }, null, rowsEnd + 0.75 + k * 0.12); });
+      tl.from(flow, { opacity: 0, y: 6, duration: 0.4, ease: 'power2.out' }, rowsEnd + 1.6);
+      sync();
+    }
+
+    tabs.forEach(function (t, k) { t.addEventListener('click', function () { go(k); }); });
+    tabsEl.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!k) return; e.preventDefault(); go(cur + k); tabs[cur].focus();
     });
-  }
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  if (demo && !reduce) {
-    animateRows(demo.querySelector('.pane.on'));
-    var tabs = demo.querySelectorAll('.tab'), i = 0;
-    timer = setInterval(function () {
-      i = (i + 1) % tabs.length;
-      tabs.forEach(function (x, k) { x.classList.toggle('on', k === i); x.setAttribute('aria-selected', k === i); });
-      demo.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.dataset.pane === tabs[i].dataset.tab); });
-      animateRows(demo.querySelector('.pane.on'));
-    }, 4500);
-    demo.addEventListener('mouseenter', stop);
-  }
+    // While the mouse is over the panel, finish the current tool but don't move on until it leaves.
+    pg.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hover = true; });
+    pg.addEventListener('pointerleave', function (e) { if (e.pointerType !== 'mouse') return; hover = false; if (waiting) go(cur + 1); });
+    document.addEventListener('visibilitychange', sync);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; sync(); }, { threshold: 0.25 }).observe(pg);
+    go(0);
+  })();
 
   // Demo videos: play while visible, pause button, respect reduced motion
   document.querySelectorAll('video[data-autoplay]').forEach(function (v) {
