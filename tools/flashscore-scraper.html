@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
-<link rel="stylesheet" href="/assets/style.css?v=mwkypern">
+<link rel="stylesheet" href="/assets/style.css?v=mwl03ij8">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Flashscore Scraper: Live Scores, Results & Odds","description":"Scrape Flashscore for 29 sports: fixtures, live scores and results with every period, plus goals, cards, stats, lineups, injuries, odds, head-to-head, tennis point-by-point and league tables. For betting models, odds tracking, live score apps and fantasy. Only-changed mode for live polling.","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://apify.com/panix/flashscore-scraper","publisher":{"@type":"Organization","name":"Panix AI Labs","url":"https://panixai.github.io"},"offers":{"@type":"Offer","price":0.0009,"priceCurrency":"USD"}}</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
 </div></header>
 <main id="main">
 <div class="wrap">
-  <nav class="crumb" aria-label="Breadcrumb"><a href="/#tools">Tools</a><span>/</span><a href="/?c=more#tools">News, travel &amp; sports</a></nav>
+  <nav class="crumb" aria-label="Breadcrumb"><a href="/#tools">Tools</a><span>/</span><a href="/?c=more#tools">Travel, news &amp; sports</a></nav>
   <div class="tool">
     <div class="tool-top">
       <header class="tool-head"><img class="av" src="/assets/img/flashscore-scraper.png" width="56" height="56" alt="" loading="lazy" decoding="async"><div><h1>Flashscore Scraper</h1><p class="lead">Live Scores, Results &amp; Odds</p></div></header>
@@ -87,13 +87,18 @@ const run = await client.actor('panix/flashscore-scraper').call({
 const { items } = await client.dataset(run.defaultDatasetId).listItems();
 console.log(items);</code></pre>
 </div></section>
-      <section class="sec"><h2>Related tools</h2><div class="grid grid-3"><a class="card" href="/tools/airbnb-scraper.html" data-cat="more" data-q="airbnb scraper: listings, prices, reviews &amp; calendar scrape airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. splits big cities into map areas for thousands of listings. for short-term rental market research, pricing and travel apps. news, travel &amp; sports">
-  <div class="card-top"><img class="av" src="/assets/img/airbnb-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">News, travel &amp; sports</span></div>
+      <section class="sec"><h2>Related tools</h2><div class="grid grid-3"><a class="card" href="/tools/airbnb-scraper.html" data-cat="more" data-q="airbnb scraper: listings, prices, reviews &amp; calendar scrape airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. splits big cities into map areas for thousands of listings. for short-term rental market research, pricing and travel apps. travel, news &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/airbnb-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Travel, news &amp; sports</span></div>
   <h3>Airbnb Scraper</h3>
   <p>Listings, Prices, Reviews &amp; Calendar</p>
   <div class="card-foot"><span class="price">$1.25 / 1,000 listings</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-</a><a class="card" href="/tools/google-news-scraper.html" data-cat="more" data-q="google news scraper &amp; monitor: real links, text, new only get google news articles by keyword, topic or place with the real publisher link, source, date and related coverage. add article text, or get only new articles since your last run. schedule it for news alerts and ai agents. no login. news, travel &amp; sports">
-  <div class="card-top"><img class="av" src="/assets/img/google-news-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">News, travel &amp; sports</span></div>
+</a><a class="card" href="/tools/booking-scraper.html" data-cat="more" data-q="booking.com scraper &amp; hotel price tracker scrape booking.com hotels with the real price for your dates: cities, search links or hotel links, thousands per city. stars, reviews, room, free cancellation, deals, location. price calendars over many dates and price-change alerts for hotel revenue, travel and price monitoring. travel, news &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/booking-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat"><span class="badge">Video</span>Travel, news &amp; sports</span></div>
+  <h3>Booking.com Scraper</h3>
+  <p>Hotel Prices, Price Calendar &amp; Tracker</p>
+  <div class="card-foot"><span class="price">$2.50 / 1,000 hotels</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</a><a class="card" href="/tools/google-news-scraper.html" data-cat="more" data-q="google news scraper &amp; monitor: real links, text, new only get google news articles by keyword, topic or place with the real publisher link, source, date and related coverage. add article text, or get only new articles since your last run. schedule it for news alerts and ai agents. no login. travel, news &amp; sports">
+  <div class="card-top"><img class="av" src="/assets/img/google-news-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Travel, news &amp; sports</span></div>
   <h3>Google News Scraper &amp; Monitor</h3>
   <p>Real Links, Text, New Only</p>
   <div class="card-foot"><span class="price">$1.80 / 1,000 articles</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
@@ -121,5 +126,5 @@ console.log(items);</code></pre>
   <nav class="foot-links" aria-label="Footer"><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a><a href="mailto:saoud.pro@gmail.com">saoud.pro@gmail.com</a><a href="/sitemap.xml">Sitemap</a></nav>
 </div></footer>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-<script src="/assets/app.js?v=mwkypern" defer></script>
+<script src="/assets/app.js?v=mwl03ij8" defer></script>
 </body></html>

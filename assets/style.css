@@ -180,7 +180,7 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--line); border-r
 .card { display: flex; flex-direction: column; padding: 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); transition: border-color .15s, box-shadow .15s, transform .15s; }
 .card:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
 .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-.card-cat { font-size: 12px; color: var(--muted); }
+.card-cat { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-left: 12px; }
 .card h3 { margin-bottom: 6px; }
 .card p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card-foot { margin-top: auto; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; }
@@ -276,6 +276,10 @@ pre.json { border: 1px solid var(--line); border-radius: var(--r); background: v
 .cta-left { justify-content: flex-start; margin-top: 28px; }
 .badge { display: inline-block; margin-right: 8px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 500; color: var(--acc); background: var(--acc-soft); border: 1px solid color-mix(in srgb, var(--acc) 35%, transparent); }
 .sec-video { margin-top: 32px; }
+.vid-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+.vid-tabs .seg-b { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px 0 8px; }
+.vid-tabs .av { border-radius: 5px; }
+.vid-pane[hidden] { display: none !important; }
 
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }

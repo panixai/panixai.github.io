@@ -12,8 +12,11 @@ const api = async p => {
   }
 };
 const store = JSON.parse(fs.readFileSync('data/store.json', 'utf8'));
-const out = {};
+// Optional: node scripts/fetch-demos.mjs <actor> ... refreshes only those Actors and keeps the rest.
+const only = process.argv.slice(2);
+const out = only.length && fs.existsSync('data/demos.raw.json') ? JSON.parse(fs.readFileSync('data/demos.raw.json', 'utf8')) : {};
 for (const a of store) {
+  if (only.length && !only.includes(a.name)) continue;
   const runs = (await api(`/acts/panix~${a.name}/runs?desc=1&limit=25&status=SUCCEEDED`))?.data?.items || [];
   const picks = [];
   for (const run of runs) {

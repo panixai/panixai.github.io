@@ -117,6 +117,20 @@
     }
   });
 
+  // Demo video switcher
+  document.querySelectorAll('.vid-tabs').forEach(function (bar) {
+    var sec = bar.closest('section');
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-v]'); if (!b) return;
+      bar.querySelectorAll('[data-v]').forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-selected', on); });
+      sec.querySelectorAll('.vid-pane').forEach(function (p) {
+        var on = p.dataset.vid === b.dataset.v, v = p.querySelector('video');
+        p.hidden = !on; p.classList.toggle('on', on);
+        if (v) { if (on) { v.currentTime = 0; v.preload = 'auto'; var pr = v.play(); if (pr) pr.catch(function () {}); } else v.pause(); }
+      });
+    });
+  });
+
   // Tool search and category filter
   var q = document.getElementById('q'), grid = document.getElementById('grid');
   if (q && grid) {

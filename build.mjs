@@ -19,7 +19,7 @@ const CATS = [
   ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
   ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper']],
   ['transcripts', 'Transcripts', ['youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript']],
-  ['more', 'News, travel & sports', ['google-news-scraper', 'airbnb-scraper', 'flashscore-scraper']],
+  ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper']],
   ['docs', 'Documents', ['invoice-table-json-extractor']]
 ];
 const catOf = n => CATS.find(c => c[2].includes(n)) || ['more', 'Other', []];
@@ -79,7 +79,9 @@ for (const d of fs.readdirSync(SRC)) {
 }
 
 const actors = store.map(a => {
-  const [short, ...rest] = a.title.split(/:\s+/);
+  // Titles without ':' get a short name and tagline here.
+  const SPLIT = { 'booking-scraper': ['Booking.com Scraper', 'Hotel Prices, Price Calendar & Tracker'] };
+  const [short, ...rest] = SPLIT[a.name] || a.title.split(/:\s+/);
   const c = catOf(a.name);
   const r = a.stats?.publicActorRunStats30Days || {};
   const icon = fs.existsSync(path.join(ROOT, 'assets', 'img', a.name + '.png')) ? `/assets/img/${a.name}.png` : null;
@@ -248,11 +250,29 @@ function card(a) {
 }
 
 // ---------- home ----------
-const featured = actors.find(a => a.video);
+// Videos: newest first. Text per video lives in VIDEO_META.
+const VIDEO_META = {
+  'booking-scraper': { len: '30 seconds', points: ['Type a city and pick your dates', 'Get every hotel with its real price', 'Find the cheapest dates with a price calendar', 'Build a travel SaaS, rate tracker or price alerts'] },
+  'flashscore-scraper': { len: '30 seconds', points: ['Pick sports, days and extras', 'Get every match in the same fields', 'Add stats, incidents, form and odds', 'Build live score apps, odds models or fantasy tools'] },
+};
+const vids = Object.keys(VIDEO_META).map(s => actors.find(a => a.slug === s && a.video)).filter(Boolean);
+const vidPanel = (a, i) => `<div class="vid-pane${i ? '' : ' on'}" data-vid="${a.slug}"${i ? ' hidden' : ''}>
+    <span class="eyebrow">See it in action</span><h2>${esc(a.short)}</h2>
+    <p class="muted">${a.tagline ? esc(a.tagline) + '. ' : ''}${VIDEO_META[a.slug].len} from input to clean rows and what you can build with them, using real data from a real run.</p>
+    <ul class="ticks">${VIDEO_META[a.slug].points.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+    <div class="cta cta-left"><a class="btn" href="/tools/${a.slug}.html">Open the tool</a><a class="btn btn-ghost" href="${a.url}" target="_blank" rel="noopener">Run on Apify ${ICON.ext}</a></div>
+  </div>`;
+const videosHtml = () => !vids.length ? '' : `<section class="sec-lg" id="videos"><div class="wrap">
+  ${vids.length > 1 ? `<div class="vid-tabs" role="tablist" aria-label="Demo videos">${vids.map((a, i) => `<button class="seg-b${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-v="${a.slug}">${avatar(a, 18)}${esc(tabLabel(a))}</button>`).join('')}</div>` : ''}
+  <div class="split split-video">
+    <div class="vid-text">${vids.map(vidPanel).join('')}</div>
+    <div class="vid-stage">${vids.map((a, i) => `<div class="vid-pane${i ? '' : ' on'}" data-vid="${a.slug}"${i ? ' hidden' : ''}>${videoTag(a)}</div>`).join('')}</div>
+  </div>
+</div></section>`;
 const counts = Object.fromEntries(CATS.map(c => [c[0], actors.filter(a => a.catKey === c[0]).length]));
 // Playground: every Actor's real input -> dataset sample -> where it's used. Data from data/demos.json (scripts/make-demos.mjs).
 const DEMOS = readJson(path.join(ROOT, 'data', 'demos.json')) || {};
-const TAB_LABEL = { 'invoice-table-json-extractor': 'Invoice & PDF tables', 'youtube-transcript-scraper': 'YouTube Transcript', 'google-ads-transparency-scraper': 'Google Ads', 'facebook-ads-library-scraper': 'Facebook Ads', 'linkedin-ad-library-scraper': 'LinkedIn Ads', 'video-transcript-scraper': 'Video & Podcast Transcript', 'amazon-product-scraper': 'Amazon', 'aliexpress-scraper': 'AliExpress', 'resume-cv-json-parser': 'Resume & CV Parser' };
+const TAB_LABEL = { 'booking-scraper': 'Booking.com', 'invoice-table-json-extractor': 'Invoice & PDF tables', 'youtube-transcript-scraper': 'YouTube Transcript', 'google-ads-transparency-scraper': 'Google Ads', 'facebook-ads-library-scraper': 'Facebook Ads', 'linkedin-ad-library-scraper': 'LinkedIn Ads', 'video-transcript-scraper': 'Video & Podcast Transcript', 'amazon-product-scraper': 'Amazon', 'aliexpress-scraper': 'AliExpress', 'resume-cv-json-parser': 'Resume & CV Parser' };
 const tabLabel = a => TAB_LABEL[a.slug] || a.short.replace(/\s*&\s*Monitor$/, '').replace(/\s+Scraper\b/, '').replace(/\s+Search$/, '');
 const brandSvg = n => { const s = fs.readFileSync(path.join(ROOT, 'assets', 'brands', n + '.svg'), 'utf8'); return s.replace(/<title>.*?<\/title>/, '').replace('<svg ', '<svg aria-hidden="true" fill="currentColor" width="18" height="18" '); };
 const CONNECT = [
@@ -260,7 +280,7 @@ const CONNECT = [
   ['AI agents', brandSvg('modelcontextprotocol')],
   ['REST API', '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>']
 ];
-const PG_FIRST = ['google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
+const PG_FIRST = ['booking-scraper', 'google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
 const pgRank = a => { const i = PG_FIRST.indexOf(a.slug); return i < 0 ? 100 + actors.indexOf(a) : i; };
 const pgItems = actors.filter(a => DEMOS[a.slug]).sort((x, y) => pgRank(x) - pgRank(y)).map(a => ({ slug: a.slug, label: tabLabel(a), name: a.short, icon: a.icon, page: `/tools/${a.slug}.html`, price: a.price.line, ...DEMOS[a.slug] }));
 const jsonHtml = obj => esc(JSON.stringify(obj, null, 2)).split('\n').map(line => `<span class="ln">${line
@@ -319,14 +339,7 @@ const home = `${head({
   </dl>
 </div></section>
 
-${featured ? `<section class="sec-lg"><div class="wrap split split-video">
-  <div><span class="eyebrow">See it in action</span><h2>${esc(featured.short)}</h2>
-    <p class="muted">${esc(featured.tagline)}. Twenty seconds from input to clean rows, with real data from a real run.</p>
-    <ul class="ticks"><li>Pick sports, days and extras</li><li>Get every match in the same fields</li><li>Add stats, incidents, form and odds</li></ul>
-    <div class="cta cta-left"><a class="btn" href="/tools/${featured.slug}.html">Open the tool</a><a class="btn btn-ghost" href="${featured.url}" target="_blank" rel="noopener">Run on Apify ${ICON.ext}</a></div>
-  </div>
-  ${videoTag(featured)}
-</div></section>` : ''}
+${videosHtml()}
 <section class="sec-lg" id="tools"><div class="wrap">
   <div class="sec-head"><h2>Tools</h2><p class="muted">Every tool has the same clean fields on every run, and exports to JSON, CSV or Excel.</p></div>
   <div class="filter">

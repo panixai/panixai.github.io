@@ -56,6 +56,8 @@ const C = {
     use: ['Reel scripts and hooks', 'Creator research', 'Captions and subtitles'], flow: 'New reels · transcript · Google Docs' },
   'airbnb-scraper': { pick: 1, keep: ['locationQueries', 'currency'], filter: r => r.type === 'listing', cols: [['name', r => cut(r.name, 32)], ['pricePerNight', r => money(r.pricePerNight)], ['rating', r => r.rating ? `${r.rating} · ${num(r.reviewsCount)}` : 'new']],
     use: ['Short-term rental pricing', 'Market and occupancy research', 'Competitor listing tracking'], flow: 'Weekly · prices · Looker Studio' },
+  'booking-scraper': { pick: 0, keep: ['search', 'checkIn', 'nights', 'currency'], filter: r => r.type === 'hotel' && r.available, cols: [['name', r => cut(r.name, 30)], ['pricePerNight', r => money(r.pricePerNight, r.currency)], ['reviewScore', r => `${r.reviewScore} · ${r.stars ? r.stars + '★' : '–'}`]],
+    use: ['Travel agency and trip-planner SaaS', 'Hotel rate shopping and revenue tools', 'Price-drop alerts for travellers'], flow: 'Daily · only changed prices · Google Sheets' },
   'flashscore-scraper': { pick: 0, keep: ['sports', 'days'], filter: r => r.scoreText, cols: [['match', r => `${r.homeTeam} – ${r.awayTeam}`], ['score', r => r.scoreText || '–'], ['status', r => r.statusDetail]],
     use: ['Live score apps and widgets', 'Betting and odds models', 'Fantasy and sports analytics'], flow: 'Every minute · only changed · webhook' },
 };
