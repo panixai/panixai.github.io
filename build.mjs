@@ -263,7 +263,7 @@ const vidPanel = (a, i) => `<div class="vid-pane${i ? '' : ' on'}" data-vid="${a
     <div class="cta cta-left"><a class="btn" href="/tools/${a.slug}.html">Open the tool</a><a class="btn btn-ghost" href="${a.url}" target="_blank" rel="noopener">Run on Apify ${ICON.ext}</a></div>
   </div>`;
 const videosHtml = () => !vids.length ? '' : `<section class="sec-lg" id="videos"><div class="wrap">
-  ${vids.length > 1 ? `<div class="vid-tabs" role="tablist" aria-label="Demo videos">${vids.map((a, i) => `<button class="seg-b${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-v="${a.slug}">${avatar(a, 18)}${esc(tabLabel(a))}</button>`).join('')}</div>` : ''}
+  ${vids.length > 1 ? `<div class="vid-tabs" role="tablist" aria-label="Demo videos">${vids.map((a, i) => `<button class="seg-b${i ? '' : ' on'}" role="tab" aria-selected="${!i}" data-v="${a.slug}">${avatar(a, 18)}${esc(VIDEO_META[a.slug].label || tabLabel(a))}</button>`).join('')}</div>` : ''}
   <div class="split split-video">
     <div class="vid-text">${vids.map(vidPanel).join('')}</div>
     <div class="vid-stage">${vids.map((a, i) => `<div class="vid-pane${i ? '' : ' on'}" data-vid="${a.slug}"${i ? ' hidden' : ''}>${videoTag(a)}</div>`).join('')}</div>
