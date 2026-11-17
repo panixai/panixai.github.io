@@ -91,6 +91,10 @@ const actors = store.map(a => {
   };
 }).sort((x, y) => CATS.findIndex(c => c[0] === x.catKey) - CATS.findIndex(c => c[0] === y.catKey) || x.short.localeCompare(y.short));
 
+for (const a of actors) a.video = fs.existsSync(path.join(ROOT, 'videos', `${a.slug}.mp4`));
+const videoTag = a => `<div class="video-wrap"><video class="video" data-autoplay src="/videos/${a.slug}.mp4"${fs.existsSync(path.join(ROOT, 'videos', `${a.slug}.jpg`)) ? ` poster="/videos/${a.slug}.jpg"` : ''} muted loop playsinline preload="none" aria-label="${esc(a.short)} demo: input, output rows and match details"></video>
+<button class="video-btn" type="button" aria-label="Pause video"><span class="i-pause"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></span><span class="i-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button></div>`;
+
 const totalRuns = actors.reduce((s, a) => s + a.runs, 0);
 const totalOk = actors.reduce((s, a) => s + a.ok, 0);
 const successPct = totalRuns ? (Math.floor(totalOk / totalRuns * 1000) / 10) : null;
@@ -189,8 +193,7 @@ fs.mkdirSync(path.join(ROOT, 'tools'), { recursive: true });
 for (const a of actors) {
   const related = actors.filter(x => x.catKey === a.catKey && x.slug !== a.slug).slice(0, 3);
   const p = a.price;
-  const video = fs.existsSync(path.join(ROOT, 'videos', `${a.slug}.mp4`))
-    ? `<section class="sec"><video class="video" src="/videos/${a.slug}.mp4" poster="/videos/${a.slug}.jpg" controls muted loop playsinline preload="none"></video></section>` : '';
+  const video = a.video ? `<section class="sec sec-video">${videoTag(a)}</section>` : '';
   const rate = a.runs >= 5 ? `${Math.floor(a.ok / a.runs * 1000) / 10}%` : null;
   const priceRows = p.events.map(e => `<tr><td><span class="ev">${esc(e.title)}</span>${e.primary ? '' : '<span class="tag">optional</span>'}</td><td class="num">${fmtUsd(e.price)}</td></tr>`).join('');
   const tierRow = p.primary?.tiers ? `<details class="tiers"><summary>Lower prices on paid Apify plans</summary><table>${p.primary.tiers.map(([t, v]) => `<tr><td>${t[0] + t.slice(1).toLowerCase()}</td><td class="num">${fmtUsd(v)}</td></tr>`).join('')}</table></details>` : '';
@@ -236,7 +239,7 @@ ${foot}`;
 
 function card(a) {
   return `<a class="card" href="/tools/${a.slug}.html" data-cat="${a.catKey}" data-q="${esc((a.title + ' ' + a.desc + ' ' + a.cat).toLowerCase())}">
-  <div class="card-top">${avatar(a, 40)}<span class="card-cat">${esc(a.cat)}</span></div>
+  <div class="card-top">${avatar(a, 40)}<span class="card-cat">${a.video ? '<span class="badge">Video</span>' : ''}${esc(a.cat)}</span></div>
   <h3>${esc(a.short)}</h3>
   <p>${esc(a.tagline || a.desc)}</p>
   <div class="card-foot"><span class="price">${esc(a.price.line)}</span><span class="go">${ICON.arrow}</span></div>
@@ -244,6 +247,7 @@ function card(a) {
 }
 
 // ---------- home ----------
+const featured = actors.find(a => a.video);
 const counts = Object.fromEntries(CATS.map(c => [c[0], actors.filter(a => a.catKey === c[0]).length]));
 const demos = [
   { id: 'news', label: 'Google News', input: { searchQueries: ['electric vehicles'], timeframe: '1d' },
@@ -298,6 +302,14 @@ const home = `${head({
   </dl>
 </div></section>
 
+${featured ? `<section class="sec-lg"><div class="wrap split split-video">
+  <div><span class="eyebrow">See it in action</span><h2>${esc(featured.short)}</h2>
+    <p class="muted">${esc(featured.tagline)}. Twenty seconds from input to clean rows, with real data from a real run.</p>
+    <ul class="ticks"><li>Pick sports, days and extras</li><li>Get every match in the same fields</li><li>Add stats, incidents, form and odds</li></ul>
+    <div class="cta cta-left"><a class="btn" href="/tools/${featured.slug}.html">Open the tool</a><a class="btn btn-ghost" href="${featured.url}" target="_blank" rel="noopener">Run on Apify ${ICON.ext}</a></div>
+  </div>
+  ${videoTag(featured)}
+</div></section>` : ''}
 <section class="sec-lg" id="tools"><div class="wrap">
   <div class="sec-head"><h2>Tools</h2><p class="muted">Every tool has the same clean fields on every run, and exports to JSON, CSV or Excel.</p></div>
   <div class="filter">

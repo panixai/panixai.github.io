@@ -53,6 +53,23 @@
     demo.addEventListener('mouseenter', stop);
   }
 
+  // Demo videos: play while visible, pause button, respect reduced motion
+  document.querySelectorAll('video[data-autoplay]').forEach(function (v) {
+    var wrap = v.parentNode, btn = wrap.querySelector('.video-btn'), userPaused = reduce;
+    var sync = function () { wrap.classList.toggle('paused', v.paused); btn.setAttribute('aria-label', v.paused ? 'Play video' : 'Pause video'); };
+    v.addEventListener('play', sync); v.addEventListener('pause', sync); sync();
+    btn.addEventListener('click', function () { if (v.paused) { userPaused = false; v.play(); } else { userPaused = true; v.pause(); } });
+    v.addEventListener('click', function () { btn.click(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting && !userPaused) { v.preload = 'auto'; var p = v.play(); if (p) p.catch(function () {}); }
+          else if (!e.isIntersecting) v.pause();
+        });
+      }, { threshold: 0.35 }).observe(v);
+    }
+  });
+
   // Tool search and category filter
   var q = document.getElementById('q'), grid = document.getElementById('grid');
   if (q && grid) {
