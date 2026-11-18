@@ -163,14 +163,35 @@
     });
     var step = function () { return cards[0].getBoundingClientRect().width + 14; };
     var index = function () { return Math.max(0, Math.min(cards.length - 1, Math.round(track.scrollLeft / step()))); };
-    var go = function (i) { track.scrollTo({ left: Math.max(0, Math.min(cards.length - 1, i)) * step(), behavior: reduce ? 'auto' : 'smooth' }); };
+    var anim;
+    var go = function (i) {
+      var to = Math.max(0, Math.min(cards.length - 1, i)) * step();
+      to = Math.min(to, track.scrollWidth - track.clientWidth);
+      if (reduce) { track.scrollLeft = to; return; }
+      cancelAnimationFrame(anim);
+      var from = track.scrollLeft, t0 = performance.now(), dur = Math.min(900, 480 + Math.abs(to - from) * 0.25);
+      track.style.scrollSnapType = 'none'; track.style.scrollBehavior = 'auto';
+      var ease = function (t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+      var frame = function (now) {
+        var t = Math.min(1, (now - t0) / dur);
+        track.scrollLeft = from + (to - from) * ease(t);
+        if (t < 1) anim = requestAnimationFrame(frame); else { track.style.scrollSnapType = ''; track.style.scrollBehavior = ''; }
+      };
+      anim = requestAnimationFrame(frame);
+    };
+    var bar = document.createElement('div'); bar.className = 'tk-bar'; bar.innerHTML = '<i></i>'; dotsEl.parentNode.appendChild(bar);
     var update = function () {
-      var i = index(), max = track.scrollWidth - track.clientWidth - 2, end = track.scrollLeft >= max;
+      var i = index(), max = track.scrollWidth - track.clientWidth - 2, end = track.scrollLeft >= max, w = cards[0].getBoundingClientRect().width, tl = track.getBoundingClientRect().left;
       dots.forEach(function (d, k) { d.classList.toggle('on', end ? k === cards.length - 1 : k === i); });
       track.classList.toggle('at-end', end);
       if (prev) prev.disabled = track.scrollLeft <= 2; if (next) next.disabled = end;
-    };
-    var raf; track.addEventListener('scroll', function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+      if (!reduce) cards.forEach(function (c) {
+        var left = c.getBoundingClientRect().left - tl, k = left < 0 ? Math.min(1, -left / w) : 0;
+        c.style.setProperty('--s', (1 - k * 0.06).toFixed(3)); c.style.setProperty('--o', (1 - k * 0.65).toFixed(3));
+      });
+      var pg = max > 0 ? Math.min(1, track.scrollLeft / max) : 1;
+      bar.firstChild.style.setProperty('--pg', (0.15 + pg * 0.85).toFixed(3));
+    };    var raf; track.addEventListener('scroll', function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', update);
     var stopped = reduce, hover = false, visible = false, timer;
     var user = function () { stopped = true; };
@@ -189,7 +210,7 @@
       var max = track.scrollWidth - track.clientWidth - 2;
       if (track.scrollLeft >= max) go(0); else go(index() + 1);
     };
-    var show = function () { root.classList.add('in'); };
+    var show = function () { root.classList.add('in'); setTimeout(function () { root.classList.add('ready'); }, 1200); };
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {
         es.forEach(function (e) { visible = e.isIntersecting; if (visible) show(); });

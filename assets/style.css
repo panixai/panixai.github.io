@@ -336,3 +336,12 @@ pre.json { border: 1px solid var(--line); border-radius: var(--r); background: v
 .tk-dots i.on { width: 22px; background: var(--acc); }
 @media (max-width: 720px) { .tk-head { align-items: flex-start; } .tk-nav { display: none; } }
 @media (prefers-reduced-motion: reduce) { .tk-card { opacity: 1; transform: none; } .tk-track { scroll-behavior: auto; } }
+/* Carousel motion: scroll-linked scale/fade, eased slide, progress bar */
+.tk-card { translate: 0 14px; scale: var(--s, 1); transform: none !important; transition: opacity .6s cubic-bezier(.2, .7, .2, 1), translate .6s cubic-bezier(.2, .7, .2, 1), border-color .2s, box-shadow .2s; transition-delay: calc(var(--i, 0) * 80ms), calc(var(--i, 0) * 80ms), 0s, 0s; transform-origin: 50% 60%; }
+.tk.in .tk-card { translate: 0 0; opacity: var(--o, 1); }
+.tk.in .tk-card:hover { translate: 0 -3px; transition-delay: 0s; }
+.tk.ready .tk-card { transition: translate .25s cubic-bezier(.2, .7, .2, 1), border-color .2s, box-shadow .2s; transition-delay: 0s; will-change: scale, opacity; }
+.tk-bar { height: 2px; margin: 14px auto 0; width: 120px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.tk-bar i { display: block; height: 100%; width: 100%; background: var(--acc); transform-origin: 0 50%; transform: scaleX(var(--pg, .2)); }
+.tk-dots { margin-top: 12px; }
+@media (prefers-reduced-motion: reduce) { .tk-card { translate: none; scale: none; opacity: 1 !important; } }
