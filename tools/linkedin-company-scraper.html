@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
-<link rel="stylesheet" href="/assets/style.css?v=mwmb0avc">
+<link rel="stylesheet" href="/assets/style.css?v=mwmd206a">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LinkedIn Company Scraper: Details, Posts & Similar Companies","description":"Scrape LinkedIn company pages without login from links, names, IDs or websites: industry, size, headcount, followers, HQ and office addresses, website, specialties, recent posts and similar companies. For lead generation, CRM enrichment, sales prospecting and market research.","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://apify.com/panix/linkedin-company-scraper","publisher":{"@type":"Organization","name":"Panix AI Labs","url":"https://panixai.github.io"},"offers":{"@type":"Offer","price":0.003,"priceCurrency":"USD"}}</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
@@ -38,7 +38,8 @@
       <p class="desc">Scrape LinkedIn company pages without login from links, names, IDs or websites: industry, size, headcount, followers, HQ and office addresses, website, specialties, recent posts and similar companies. For lead generation, CRM enrichment, sales prospecting and market research.</p>
     </div>
     <div class="tool-main">
-      
+      <section class="sec sec-video"><div class="video-wrap"><video class="video" data-autoplay src="/videos/linkedin-company-scraper.mp4" poster="/videos/linkedin-company-scraper.jpg" muted loop playsinline preload="none" aria-label="LinkedIn Company Scraper demo: input, output rows and match details"></video>
+<button class="video-btn" type="button" aria-label="Pause video"><span class="i-pause"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></span><span class="i-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button></div></section>
       <section class="sec"><h2>Example input</h2><p class="muted">Paste this into the Actor's JSON input, or send it with the API call below.</p>
         <pre class="json"><code>{
   &quot;companies&quot;: [
@@ -90,7 +91,7 @@ const { items } = await client.dataset(run.defaultDatasetId).listItems();
 console.log(items);</code></pre>
 </div></section>
       <section class="sec"><h2>Related tools</h2><div class="grid grid-3"><a class="card" href="/tools/ats-jobs-scraper.html" data-cat="jobs" data-q="ats jobs scraper: greenhouse, lever, workday +15 scrape every open job from company career sites on greenhouse, lever, ashby, workday, smartrecruiters, workable and 12 more ats. parsed salary, location, remote type and seniority in one schema. for job boards, recruiting, sales leads, hiring-trend research and new-job alerts. jobs &amp; hiring">
-  <div class="card-top"><img class="av" src="/assets/img/ats-jobs-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <div class="card-top"><img class="av" src="/assets/img/ats-jobs-scraper.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat"><span class="badge">Video</span>Jobs &amp; hiring</span></div>
   <h3>ATS Jobs Scraper</h3>
   <p>Greenhouse, Lever, Workday +15</p>
   <div class="card-foot"><span class="price">$1.50 / 1,000 jobs</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
@@ -100,7 +101,7 @@ console.log(items);</code></pre>
   <p>Salaries, Remote &amp; Only-New Jobs</p>
   <div class="card-foot"><span class="price">$1 / 1,000 jobs</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
 </a><a class="card" href="/tools/resume-cv-json-parser.html" data-cat="jobs" data-q="resume &amp; cv parser: pdf to markdown &amp; json parse pdf resumes and cvs into clean, llm-ready markdown that keeps every section: contact, summary, experience, education and skills. text pages are read directly and scanned pages get ocr. for recruiters, ats imports and ai candidate screening in n8n, make or zapier. failed files are free. jobs &amp; hiring">
-  <div class="card-top"><img class="av" src="/assets/img/resume-cv-json-parser.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat">Jobs &amp; hiring</span></div>
+  <div class="card-top"><img class="av" src="/assets/img/resume-cv-json-parser.png" width="40" height="40" alt="" loading="lazy" decoding="async"><span class="card-cat"><span class="badge">Video</span>Jobs &amp; hiring</span></div>
   <h3>Resume &amp; CV Parser</h3>
   <p>PDF to Markdown &amp; JSON</p>
   <div class="card-foot"><span class="price">$0.015 per resume</span><span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
@@ -128,5 +129,5 @@ console.log(items);</code></pre>
   <nav class="foot-links" aria-label="Footer"><a href="https://apify.com/panix" target="_blank" rel="noopener">Apify profile</a><a href="mailto:saoud.pro@gmail.com">saoud.pro@gmail.com</a><a href="/sitemap.xml">Sitemap</a></nav>
 </div></footer>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-<script src="/assets/app.js?v=mwmb0avc" defer></script>
+<script src="/assets/app.js?v=mwmd206a" defer></script>
 </body></html>
