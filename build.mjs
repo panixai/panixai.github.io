@@ -254,6 +254,7 @@ function card(a) {
 const VIDEO_META = {
   'amazon-product-scraper': { label: 'Amazon Product Scraper', len: '30 seconds', points: ['Search any product on any of 16 Amazon stores', 'Get price, rating, rank and units bought per month', 'See which Best Sellers earn the most', 'Build product research, price trackers or deal sites'] },
   'amazon-arbitrage-finder': { label: 'Amazon Arbitrage Finder', len: '30 seconds', points: ['Search Walmart or Target and compare with Amazon', 'See profit and ROI after Amazon fees and shipping', 'Buy, Maybe or Skip for every product', 'Build sourcing tools, deal alerts or reseller software'] },
+  'google-news-scraper': { label: 'Google News', len: '30 seconds', points: ['Type a topic, brand or person', 'Get headlines with the real publisher link and full text', 'Schedule it and receive only new articles', 'Build alerts, news feeds for AI agents or media monitoring'] },
   'booking-scraper': { len: '30 seconds', points: ['Type a city and pick your dates', 'Get every hotel with its real price', 'Find the cheapest dates with a price calendar', 'Build a travel SaaS, rate tracker or price alerts'] },
   'flashscore-scraper': { len: '30 seconds', points: ['Pick sports, days and extras', 'Get every match in the same fields', 'Add stats, incidents, form and odds', 'Build live score apps, odds models or fantasy tools'] },
 };
