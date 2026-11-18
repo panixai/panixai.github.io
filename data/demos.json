@@ -710,6 +710,49 @@
   ],
   "flow": "Weekly · new pins · Google Sheets"
  },
+ "upwork-jobs-scraper": {
+  "run": "icT4N6yHyjpvYCbdm",
+  "input": {
+   "searchQueries": [
+    "python"
+   ],
+   "maxJobs": 10,
+   "sortBy": "hiringScore"
+  },
+  "cols": [
+   "title",
+   "hiringScore",
+   "applicants"
+  ],
+  "rows": [
+   [
+    "Senior AI Engineer (Generative Im…",
+    "92 · excellent",
+    "4 proposals"
+   ],
+   [
+    "Senior / Staff Data Platform Engi…",
+    "82 · excellent",
+    "5 proposals"
+   ],
+   [
+    "Senior Full-Stack & AI Systems En…",
+    "81 · excellent",
+    "1 proposal"
+   ],
+   [
+    "Senior AI Engineer who has built…",
+    "81 · excellent",
+    "4 proposals"
+   ]
+  ],
+  "use": [
+   "Instant job alerts for freelancers",
+   "Agency lead pipelines",
+   "Auto-proposal drafts with AI agents"
+  ],
+  "flow": "Every 15 min · only new jobs · Discord"
+ },
  "threads-scraper": {
   "run": "zcsSmBHWoMGsg3QWV",
   "input": {
