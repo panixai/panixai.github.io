@@ -153,4 +153,49 @@
     });
     apply();
   }
+  // Ready-made tasks carousel: snap scroll, arrows, dots, drag, gentle autoplay while visible
+  document.querySelectorAll('[data-carousel]').forEach(function (root) {
+    var track = root.querySelector('.tk-track'), cards = [].slice.call(track.children);
+    var prev = document.querySelector('.tk-prev'), next = document.querySelector('.tk-next'), dotsEl = root.querySelector('.tk-dots');
+    cards.forEach(function (c, i) { c.style.setProperty('--i', i); });
+    var dots = cards.map(function (c, i) {
+      var d = document.createElement('i'); d.addEventListener('click', function () { go(i); user(); }); dotsEl.appendChild(d); return d;
+    });
+    var step = function () { return cards[0].getBoundingClientRect().width + 14; };
+    var index = function () { return Math.max(0, Math.min(cards.length - 1, Math.round(track.scrollLeft / step()))); };
+    var go = function (i) { track.scrollTo({ left: Math.max(0, Math.min(cards.length - 1, i)) * step(), behavior: reduce ? 'auto' : 'smooth' }); };
+    var update = function () {
+      var i = index(), max = track.scrollWidth - track.clientWidth - 2, end = track.scrollLeft >= max;
+      dots.forEach(function (d, k) { d.classList.toggle('on', end ? k === cards.length - 1 : k === i); });
+      track.classList.toggle('at-end', end);
+      if (prev) prev.disabled = track.scrollLeft <= 2; if (next) next.disabled = end;
+    };
+    var raf; track.addEventListener('scroll', function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    var stopped = reduce, hover = false, visible = false, timer;
+    var user = function () { stopped = true; };
+    if (prev) prev.addEventListener('click', function () { go(index() - 1); user(); });
+    if (next) next.addEventListener('click', function () { go(index() + 1); user(); });
+    track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { go(index() + 1); user(); e.preventDefault(); } if (e.key === 'ArrowLeft') { go(index() - 1); user(); e.preventDefault(); } });
+    // mouse drag
+    var down = false, sx = 0, sl = 0, moved = false;
+    track.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse' || e.target.closest('a')) return; down = true; moved = false; sx = e.clientX; sl = track.scrollLeft; });
+    window.addEventListener('pointermove', function (e) { if (!down) return; var dx = e.clientX - sx; if (Math.abs(dx) > 4) { moved = true; track.classList.add('drag'); } if (moved) track.scrollLeft = sl - dx; });
+    window.addEventListener('pointerup', function () { if (!down) return; down = false; if (moved) { track.classList.remove('drag'); go(index()); user(); } });
+    root.addEventListener('mouseenter', function () { hover = true; }); root.addEventListener('mouseleave', function () { hover = false; });
+    root.addEventListener('touchstart', user, { passive: true });
+    var tick = function () {
+      if (stopped || hover || !visible) return;
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (track.scrollLeft >= max) go(0); else go(index() + 1);
+    };
+    var show = function () { root.classList.add('in'); };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { visible = e.isIntersecting; if (visible) show(); });
+      }, { threshold: 0.25 }).observe(root);
+    } else { show(); visible = true; }
+    timer = setInterval(tick, 4500);
+    update();
+  });
 })();

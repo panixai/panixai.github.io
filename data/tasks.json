@@ -1,0 +1,636 @@
+{
+ "invoice-table-json-extractor": [
+  {
+   "name": "pdf-to-markdown-for-llm",
+   "title": "Convert PDF reports to Markdown for LLMs and RAG",
+   "desc": "Turn long PDF reports, papers and manuals into clean Markdown that keeps headings, reading order and tables, ready for ChatGPT, Claude or a RAG pipeline. Tables also come out as JSON. Digital pages are read without OCR; scanned pages get OCR automatically. The example converts the 9-page Docling technical report from arXiv.",
+   "url": "https://apify.com/panix/invoice-table-json-extractor/examples/pdf-to-markdown-for-llm"
+  },
+  {
+   "name": "invoice-to-json",
+   "title": "Extract invoice line items and totals to JSON",
+   "desc": "Turn a PDF invoice into JSON tables you can import into accounting software, an ERP or Google Sheets: every line item with quantity, unit price and amount, plus the whole invoice as Markdown with totals, tax and payment terms. Digital PDFs are read without OCR in a few seconds. The example parses a sample invoice with six line items.",
+   "url": "https://apify.com/panix/invoice-table-json-extractor/examples/invoice-to-json"
+  },
+  {
+   "name": "receipt-ocr-to-json",
+   "title": "Read receipt photos with OCR into text and tables",
+   "desc": "Send a photo or scan of a receipt and get the shop, items, prices, tax and total as clean text, with any tables as JSON. OCR runs inside the Actor, so no receipt is sent to an outside AI service. The example reads a phone photo of a cafe receipt; JPG, PNG, TIFF, BMP, WEBP and scanned PDFs all work.",
+   "url": "https://apify.com/panix/invoice-table-json-extractor/examples/receipt-ocr-to-json"
+  },
+  {
+   "name": "bank-statement-to-json",
+   "title": "Convert bank statement PDFs to JSON transactions",
+   "desc": "Extract the transaction table of a PDF bank statement as JSON rows with date, description, reference, debit, credit and balance, plus the summary and the whole statement as Markdown. Use it for bookkeeping, reconciliation and cash-flow analysis. The example parses a sample one-page business statement with 17 transactions.",
+   "url": "https://apify.com/panix/invoice-table-json-extractor/examples/bank-statement-to-json"
+  }
+ ],
+ "facebook-ads-library-scraper": [
+  {
+   "name": "competitor-facebook-ads",
+   "title": "Spy on a competitor's Facebook and Instagram ads",
+   "desc": "Get every active ad a competitor runs on Facebook, Instagram, Messenger and Audience Network, straight from the Meta Ad Library. Each row has the ad text, headline, images or video, call to action, landing page, start date and how many days the ad has been running. The example follows Gymshark in the United States; replace the Page URL with any brand.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/competitor-facebook-ads"
+  },
+  {
+   "name": "uk-skincare-facebook-ads",
+   "title": "Find UK skincare ads in the Facebook Ad Library",
+   "desc": "Search the Meta Ad Library by keyword and country and export every matching ad from Facebook and Instagram. This example finds active skincare ads shown in the United Kingdom, newest first, with the advertiser, ad copy, creatives, landing page and days running. Change the keyword and the country to research any market.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/uk-skincare-facebook-ads"
+  },
+  {
+   "name": "winning-facebook-ads",
+   "title": "Find winning Facebook ads that ran 30+ days",
+   "desc": "Advertisers stop ads that lose money, so ads that keep running are a good sign of a winning product or creative. This task searches the Meta Ad Library for active US ads that mention free shipping, keeps only ads running for at least 30 days, and returns one ad per advertiser with copy, creatives, landing page and days running.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/winning-facebook-ads"
+  },
+  {
+   "name": "facebook-video-ads",
+   "title": "Download Facebook video ads for creative research",
+   "desc": "Collect video ads from the Meta Ad Library for one keyword and country, with direct video links, video length, ad copy, call to action and landing page, one row per creative. Use it to build a swipe file, study hooks and formats, or brief your creative team. This example collects active meal kit video ads in the United States.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/facebook-video-ads"
+  },
+  {
+   "name": "facebook-political-ad-spend",
+   "title": "Track political ad spending on Facebook in the US",
+   "desc": "Export political and issue ads from the Meta Ad Library with spend and impression ranges, who paid for them, platforms and dates. Spend comes as Meta's text range plus lower and upper numbers, ready for charts. This example collects active and inactive US ads about climate. For journalists, researchers and campaign analysts.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/facebook-political-ad-spend"
+  },
+  {
+   "name": "new-facebook-ads-alerts",
+   "title": "Get alerts for new Facebook ads from a competitor",
+   "desc": "Run this task on a schedule, for example every morning, and each run returns only the ads a competitor launched since the last run. The first run returns the current ads; later runs skip ads you already have, and repeats are not charged. The example watches HelloFresh in the United States. Connect it to Slack, email or Google Sheets for alerts.",
+   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/new-facebook-ads-alerts"
+  }
+ ],
+ "flashscore-scraper": [
+  {
+   "name": "todays-football-scores",
+   "title": "Get today's football scores from the top leagues",
+   "desc": "Get today's football fixtures, live scores and results from the competitions Flashscore lists as top leagues, such as the Premier League, LaLiga and the Champions League. Each match has the teams, kick-off time, status, live minute, the score of each half and the winner. Days follow the time zone you set; the example uses UTC.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/todays-football-scores"
+  },
+  {
+   "name": "live-scores-football-tennis-basketball",
+   "title": "Live scores for football, tennis and basketball",
+   "desc": "Get every live and finished match of the day in football, tennis and basketball from Flashscore, with the score of each period, the live minute or tennis game score, the status and the winner. Schedule it every minute or two with Only new or changed matches to feed a live score app, a bot or a betting model.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/live-scores-football-tennis-basketball"
+  },
+  {
+   "name": "football-betting-odds",
+   "title": "Get betting odds for upcoming top football matches",
+   "desc": "Collect pre-match odds for the next three days of top football from Flashscore, such as the Premier League, LaLiga and the Champions League: 1X2, over/under and both teams to score, from the bookmakers shown in your chosen country, with opening prices and movement. Use it for odds tracking, value betting models and comparison sites.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/football-betting-odds"
+  },
+  {
+   "name": "premier-league-table-results",
+   "title": "Get the Premier League table, results and fixtures",
+   "desc": "Get the current Premier League table with points, goals and form, plus the latest results and upcoming fixtures, from one Flashscore league URL. Replace the URL with any league page on Flashscore, from LaLiga to the NBA, or with a past season such as premier-league-2024-2025.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/premier-league-table-results"
+  },
+  {
+   "name": "tennis-point-by-point",
+   "title": "Tennis results with point-by-point data",
+   "desc": "Get the finished ATP and WTA matches of the last two days from Flashscore with the score of every set and point-by-point data: every game with the server, the winner, breaks and the points in order, with break, set and match points counted. Use it for player analytics, betting models and match reports.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/tennis-point-by-point"
+  },
+  {
+   "name": "nba-results-team-stats",
+   "title": "Get last night's NBA results with team stats",
+   "desc": "Get yesterday's NBA games from Flashscore, in New York time, with the final score, the score of each quarter and the team statistics of each game. Schedule it every morning for a daily recap, a fantasy league or a betting model. Change the competition to follow another basketball league.",
+   "url": "https://apify.com/panix/flashscore-scraper/examples/nba-results-team-stats"
+  }
+ ],
+ "resume-cv-json-parser": [
+  {
+   "name": "resume-to-markdown-for-ai",
+   "title": "Convert PDF resumes to Markdown for AI screening",
+   "desc": "Turn a PDF resume into clean Markdown that keeps every section in reading order: contact, summary, experience, education, skills and certifications. Feed it to ChatGPT, Claude or your own LLM to score candidates, pull out fields or match them to a job. The example parses a one-page sample CV in about 20 seconds.",
+   "url": "https://apify.com/panix/resume-cv-json-parser/examples/resume-to-markdown-for-ai"
+  },
+  {
+   "name": "scanned-cv-ocr",
+   "title": "Parse scanned CVs and resumes with OCR",
+   "desc": "Many CVs arrive as scans saved as PDF, with no text to copy. This task finds pages without a text layer and reads them with OCR, keeping accents in names and places, then returns clean Markdown with every section in order. The example parses a scanned one-page CV of a mechanical engineer in Munich.",
+   "url": "https://apify.com/panix/resume-cv-json-parser/examples/scanned-cv-ocr"
+  },
+  {
+   "name": "batch-cv-parser-ats",
+   "title": "Batch-parse CVs into Markdown for an ATS import",
+   "desc": "Parse a whole folder of CVs in one run: send a list of PDF links and get one clean Markdown record per candidate, ready to import into your ATS or to send to an LLM for screening. Text-based, two-column and scanned CVs are handled in the same run, and broken links are free. The example parses three sample CVs with different layouts.",
+   "url": "https://apify.com/panix/resume-cv-json-parser/examples/batch-cv-parser-ats"
+  }
+ ],
+ "youtube-transcript-scraper": [
+  {
+   "name": "youtube-channel-transcripts",
+   "title": "Download transcripts from a YouTube channel",
+   "desc": "Get the transcripts of a channel's latest videos in one run, with title, publish date, language, word count and timestamped segments. Paste a channel URL or @handle; no YouTube API key is needed. The example takes the latest uploads of TED. Switch the channel mode to all to go back through the channel's whole history.",
+   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-channel-transcripts"
+  },
+  {
+   "name": "youtube-transcripts-for-rag",
+   "title": "Turn YouTube videos into RAG chunks for AI",
+   "desc": "Convert YouTube videos into LLM-ready Markdown and chapter-aware transcript chunks, ready to embed in a vector database such as Pinecone, Qdrant or Supabase. Each chunk has a timestamp, word count, chapter and a deep link to the exact moment in the video, so answers can cite their source. The example processes three well-known TED talks.",
+   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-transcripts-for-rag"
+  },
+  {
+   "name": "youtube-subtitles-srt-vtt",
+   "title": "Download YouTube subtitles as SRT and VTT files",
+   "desc": "Export YouTube captions as ready-to-use SRT and WebVTT subtitle text, plus the plain transcript and timestamped segments. Use them for video editing, translation, accessibility or reposting clips. The example exports subtitles for two popular TED talks; paste any video, Short, playlist or channel.",
+   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-subtitles-srt-vtt"
+  },
+  {
+   "name": "youtube-playlist-transcripts",
+   "title": "Get transcripts of every video in a YouTube playlist",
+   "desc": "Paste a public playlist and get the transcript of each video in playlist order, with title, channel, language, word count and timestamped segments. Good for online courses, lecture series and podcast archives. The example reads a short TED playlist; raise Maximum discovered videos for longer playlists.",
+   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-playlist-transcripts"
+  },
+  {
+   "name": "youtube-transcripts-any-language",
+   "title": "Get YouTube transcripts in Spanish, Hindi, Arabic and more",
+   "desc": "Get transcripts in each video's own language, not an English machine translation. The task picks the caption track that matches the spoken language and prefers human-made captions. The example covers Spanish, French, German, Hindi, Japanese and Arabic videos, with right-to-left text kept correct for Arabic.",
+   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-transcripts-any-language"
+  }
+ ],
+ "amazon-product-scraper": [
+  {
+   "name": "amazon-best-sellers",
+   "title": "Get Amazon Best Sellers with prices and sales rank",
+   "desc": "Export an Amazon Best Sellers list with each product's rank in the list, price, rating, review count, \"bought in past month\" number and Best Sellers Rank from the product page. The example reads the top 20 of Kitchen & Dining on amazon.com. Paste any Best Sellers, New Releases or Movers & Shakers link from any of 16 Amazon stores.",
+   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-best-sellers"
+  },
+  {
+   "name": "amazon-product-research",
+   "title": "Find Amazon products to sell with sales and rank data",
+   "desc": "Product research for Amazon FBA, dropshipping and private label. Search Amazon for a niche and keep only well-reviewed products, with price, rating, number of ratings, \"bought in past month\" sales, Best Sellers Rank, seller and whether Amazon fulfils the order. The example looks for yoga mats rated 4 stars or more with at least 500 ratings on amazon.com.",
+   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-product-research"
+  },
+  {
+   "name": "amazon-price-tracker",
+   "title": "Track Amazon prices and stock for a list of ASINs",
+   "desc": "Monitor a fixed list of Amazon products. Each run reads the current price, list price, coupon, stock, seller and rating of every ASIN and compares it with the previous run: the changes field shows the price before and after, the change in percent and stock changes. Schedule it daily and turn on Only changed products to receive just the products whose price or stock moved.",
+   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-price-tracker"
+  },
+  {
+   "name": "amazon-search-results-export",
+   "title": "Export Amazon search results to CSV or Excel",
+   "desc": "Fast, low-cost export of Amazon search results: title, price, list price, rating, number of ratings, \"bought in past month\", badges, Prime and product link for every result, read from the search pages only. The example exports the top 100 phone case results on amazon.com. Turn on Read product pages when you also need Best Sellers Rank, seller and specs.",
+   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-search-results-export"
+  },
+  {
+   "name": "amazon-germany-prices",
+   "title": "Get Amazon.de prices for a German delivery address",
+   "desc": "Read amazon.de prices, delivery dates and stock as a shopper in Germany sees them, with German VAT included, by setting a German delivery postcode (here Berlin, 10115). The example searches for coffee machines and returns price, list price, coupon, seller, Fulfilled by Amazon, availability and delivery date. Works the same for amazon.co.uk, .fr, .it, .es and the other stores.",
+   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-germany-prices"
+  }
+ ],
+ "ats-jobs-scraper": [
+  {
+   "name": "remote-ai-jobs-with-salary",
+   "title": "Find remote AI jobs with salary from company career pages",
+   "desc": "Export open remote jobs from AI company career pages (Greenhouse, Lever, Ashby and more) that list a salary. Each row has title, company, location, pay range, posting date and apply link. The example reads up to 30 jobs from the AI company list. Swap the list for fintech, health, dev-tools and other lists, or paste your own board links.",
+   "url": "https://apify.com/panix/ats-jobs-scraper/examples/remote-ai-jobs-with-salary"
+  },
+  {
+   "name": "visa-sponsorship-jobs",
+   "title": "Find tech jobs that offer visa sponsorship",
+   "desc": "List open tech jobs whose posting mentions visa sponsorship or relocation help, from startup career pages on Greenhouse, Lever, Ashby and more. The example checks the startups list and returns up to 30 jobs with company, location and apply link.",
+   "url": "https://apify.com/panix/ats-jobs-scraper/examples/visa-sponsorship-jobs"
+  },
+  {
+   "name": "new-job-alerts-ai-companies",
+   "title": "Get alerts for newly posted jobs at AI companies",
+   "desc": "Check AI company career pages for jobs posted in the last 7 days. Schedule this task daily with only new jobs switched on, and each run returns just the postings that appeared since the last run. The example returns up to 30 recent jobs.",
+   "url": "https://apify.com/panix/ats-jobs-scraper/examples/new-job-alerts-ai-companies"
+  }
+ ],
+ "aliexpress-scraper": [
+  {
+   "name": "aliexpress-best-selling-wireless-earbuds",
+   "title": "Find best-selling wireless earbuds on AliExpress",
+   "desc": "Search AliExpress for wireless earbuds and sort by number of orders to see what actually sells. Each row has the title, price, rating, orders sold, shipping and product link. The example keeps products rated 4.5 or higher. Replace the search term to research any product niche.",
+   "url": "https://apify.com/panix/aliexpress-scraper/examples/aliexpress-best-selling-wireless-earbuds"
+  },
+  {
+   "name": "aliexpress-free-shipping-phone-cases-under-5",
+   "title": "Find AliExpress phone cases under $5 with free shipping",
+   "desc": "List cheap AliExpress phone cases that ship free to the US. Each row has price, shipping, rating, orders and the product link, so you can spot low-cost items for a store or a gift list. Change the search term, price cap or destination country to match your market.",
+   "url": "https://apify.com/panix/aliexpress-scraper/examples/aliexpress-free-shipping-phone-cases-under-5"
+  },
+  {
+   "name": "aliexpress-dropshipping-price-watch",
+   "title": "Track AliExpress price changes for dropshipping products",
+   "desc": "Watch AliExpress prices for a product niche and flag changes since the last run. Schedule it daily and use the watchlist name to keep each niche separate. The example follows LED strip lights. Each row shows the current price and, from the second run, the price change.",
+   "url": "https://apify.com/panix/aliexpress-scraper/examples/aliexpress-dropshipping-price-watch"
+  }
+ ],
+ "youtube-scraper": [
+  {
+   "name": "youtube-python-tutorials-most-viewed-this-month",
+   "title": "Find the most viewed Python tutorials on YouTube this month",
+   "desc": "Search YouTube for Python tutorials uploaded this month and rank them by views. Each row has the title, channel, views, upload date, duration and link. Use it to see what topics are working before you plan a video. Change the search term to research any niche.",
+   "url": "https://apify.com/panix/youtube-scraper/examples/youtube-python-tutorials-most-viewed-this-month"
+  },
+  {
+   "name": "youtube-channel-latest-videos",
+   "title": "Export the latest videos of a YouTube channel",
+   "desc": "List the newest videos of any YouTube channel with views, likes, duration and publish date. The example reads the latest 20 videos of Veritasium. Paste a channel handle or link to analyze a competitor or build a content calendar.",
+   "url": "https://apify.com/panix/youtube-scraper/examples/youtube-channel-latest-videos"
+  },
+  {
+   "name": "youtube-shorts-ideas-for-a-niche",
+   "title": "Find popular YouTube Shorts ideas for any niche",
+   "desc": "Search YouTube Shorts for a topic and see which ones get views. Each row has the title, channel, views and link. The example searches home workout Shorts. Use it to find formats worth copying.",
+   "url": "https://apify.com/panix/youtube-scraper/examples/youtube-shorts-ideas-for-a-niche"
+  },
+  {
+   "name": "youtube-find-channels-in-a-niche",
+   "title": "Find YouTube channels in a niche for outreach",
+   "desc": "Search YouTube for channels about a topic and get their subscriber counts, video counts and links. The example looks for personal finance channels. Use it to build a creator list for sponsorships or partnerships.",
+   "url": "https://apify.com/panix/youtube-scraper/examples/youtube-find-channels-in-a-niche"
+  }
+ ],
+ "linkedin-jobs-scraper": [
+  {
+   "name": "remote-python-jobs-on-linkedin",
+   "title": "Find remote Python developer jobs posted on LinkedIn this week",
+   "desc": "Search LinkedIn for remote Python developer jobs from the past week. Each row has title, company, location, posting date, applicant count and the apply link. Change the job title, country or workplace type to match your own search.",
+   "url": "https://apify.com/panix/linkedin-jobs-scraper/examples/remote-python-jobs-on-linkedin"
+  },
+  {
+   "name": "linkedin-jobs-with-salary",
+   "title": "Find LinkedIn data analyst jobs that show a salary",
+   "desc": "Search LinkedIn for data analyst jobs in the United Kingdom and keep only the ones that list pay. Each row has the pay range, company, location and link. Swap the title and country to compare pay in your market.",
+   "url": "https://apify.com/panix/linkedin-jobs-scraper/examples/linkedin-jobs-with-salary"
+  },
+  {
+   "name": "entry-level-easy-apply-jobs-linkedin",
+   "title": "Find entry-level LinkedIn jobs with Easy Apply",
+   "desc": "List entry-level marketing jobs in Canada posted in the past week that use LinkedIn Easy Apply. Each row has title, company, location, date and link. Good for new graduates who want quick applications.",
+   "url": "https://apify.com/panix/linkedin-jobs-scraper/examples/entry-level-easy-apply-jobs-linkedin"
+  },
+  {
+   "name": "linkedin-new-product-manager-job-alerts",
+   "title": "Get alerts for new product manager jobs on LinkedIn",
+   "desc": "Check LinkedIn for product manager jobs posted in the last 24 hours. Schedule it every day with only new jobs switched on, so each run lists only jobs you have not seen. Pair it with an Apify integration to send the rows to Slack or email.",
+   "url": "https://apify.com/panix/linkedin-jobs-scraper/examples/linkedin-new-product-manager-job-alerts"
+  }
+ ],
+ "tiktok-scraper": [
+  {
+   "name": "tiktok-profile-latest-videos",
+   "title": "Export the latest videos of a TikTok account",
+   "desc": "Get the newest videos of any public TikTok account with views, likes, comments, shares and caption. The example reads the latest 20 videos of National Geographic. Paste any username to analyze a competitor or creator.",
+   "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-profile-latest-videos"
+  },
+  {
+   "name": "tiktok-video-transcripts",
+   "title": "Get the transcript of a TikTok video",
+   "desc": "Pull the spoken text of a TikTok video from its captions. Paste one or more video links and each row returns the transcript with the video's stats. Use it to repurpose content or search what creators say.",
+   "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-video-transcripts"
+  },
+  {
+   "name": "tiktok-creator-profile-stats",
+   "title": "Compare follower counts and stats of TikTok creators",
+   "desc": "Get followers, likes, video counts and bio for several TikTok creators in one run. The example compares NASA, National Geographic and Red Bull. Use it to shortlist creators for influencer outreach.",
+   "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-creator-profile-stats"
+  },
+  {
+   "name": "tiktok-viral-videos-over-100k-views",
+   "title": "Find a TikTok account's videos with over 100,000 views",
+   "desc": "Read the latest videos of a TikTok account and keep only those above 100,000 views. The example uses NASA. Use it to find which formats go viral for an account you follow.",
+   "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-viral-videos-over-100k-views"
+  }
+ ],
+ "linkedin-company-scraper": [
+  {
+   "name": "linkedin-company-data-enrichment",
+   "title": "Enrich a list of companies with LinkedIn data",
+   "desc": "Turn company names or LinkedIn links into rows with industry, size, headquarters, website, followers and description. The example enriches Stripe, HubSpot and Anthropic. Paste your own list to enrich a lead sheet.",
+   "url": "https://apify.com/panix/linkedin-company-scraper/examples/linkedin-company-data-enrichment"
+  },
+  {
+   "name": "linkedin-find-competitor-companies",
+   "title": "Find companies similar to a competitor on LinkedIn",
+   "desc": "Start from one LinkedIn company page and get the similar companies LinkedIn suggests. The example starts from HubSpot. Use it to map competitors in a market.",
+   "url": "https://apify.com/panix/linkedin-company-scraper/examples/linkedin-find-competitor-companies"
+  },
+  {
+   "name": "linkedin-company-recent-posts",
+   "title": "Read the recent LinkedIn posts of a company",
+   "desc": "Get the latest posts from a company's LinkedIn page with reactions and comment counts. The example reads Stripe. Use it to see what a competitor or customer is announcing.",
+   "url": "https://apify.com/panix/linkedin-company-scraper/examples/linkedin-company-recent-posts"
+  }
+ ],
+ "instagram-reel-transcript": [
+  {
+   "name": "instagram-reel-transcripts",
+   "title": "Get the transcript of an Instagram reel",
+   "desc": "Turn Instagram reels into text. Paste reel links and each row returns the transcript with timestamps, caption and engagement. Speech-to-text is built in, so reels without captions work too.",
+   "url": "https://apify.com/panix/instagram-reel-transcript/examples/instagram-reel-transcripts"
+  },
+  {
+   "name": "instagram-reel-translate-to-english",
+   "title": "Translate Instagram reels to English text",
+   "desc": "Transcribe reels in any supported language and get an English translation. The example takes one reel. Use it to study foreign-language creators or competitors.",
+   "url": "https://apify.com/panix/instagram-reel-transcript/examples/instagram-reel-translate-to-english"
+  }
+ ],
+ "walmart-scraper": [
+  {
+   "name": "walmart-best-selling-air-fryers",
+   "title": "Find best-selling air fryers on Walmart",
+   "desc": "Search Walmart for air fryers sorted by best seller and keep items in stock. Each row has price, rating, review count, seller and link. Change the search term to research any category.",
+   "url": "https://apify.com/panix/walmart-scraper/examples/walmart-best-selling-air-fryers"
+  },
+  {
+   "name": "walmart-deals-sold-by-walmart-under-50",
+   "title": "Find Walmart deals under $50 sold by Walmart",
+   "desc": "List highly rated wireless headphones under $50 that Walmart sells itself, not third-party sellers. Each row shows price, rating and offer details. Change the product and price cap to hunt other deals.",
+   "url": "https://apify.com/panix/walmart-scraper/examples/walmart-deals-sold-by-walmart-under-50"
+  },
+  {
+   "name": "walmart-product-reviews-export",
+   "title": "Export recent customer reviews of Walmart products",
+   "desc": "Pull the newest customer reviews for the top Walmart results of a search. The example reads 20 reviews each for two air fryers. Use it for product research and complaint mining.",
+   "url": "https://apify.com/panix/walmart-scraper/examples/walmart-product-reviews-export"
+  },
+  {
+   "name": "walmart-price-tracker-lego",
+   "title": "Track Walmart price changes on LEGO sets",
+   "desc": "Watch Walmart LEGO prices and see which products changed since the last run. Schedule it daily and use the monitor name to keep lists apart.",
+   "url": "https://apify.com/panix/walmart-scraper/examples/walmart-price-tracker-lego"
+  }
+ ],
+ "pinterest-scraper": [
+  {
+   "name": "pinterest-trending-boho-living-room-ideas",
+   "title": "Find popular boho living room ideas on Pinterest",
+   "desc": "Search Pinterest pins for boho living rooms and keep those with at least 100 saves. Each row has the image, title, saves, creator and link. Change the query to research any visual niche.",
+   "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-trending-boho-living-room-ideas"
+  },
+  {
+   "name": "pinterest-shoppable-linen-dresses",
+   "title": "Find shoppable linen dress pins on Pinterest",
+   "desc": "List Pinterest product pins for linen dresses with price and store link. Use it for trend research or to see which shops get saved.",
+   "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-shoppable-linen-dresses"
+  },
+  {
+   "name": "pinterest-keyword-ideas-meal-prep",
+   "title": "Get Pinterest keyword ideas for healthy meal prep",
+   "desc": "Get related search suggestions Pinterest shows for a topic, plus top pins. The example uses healthy meal prep. Use the suggestions to plan content and SEO.",
+   "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-keyword-ideas-meal-prep"
+  },
+  {
+   "name": "pinterest-workout-videos",
+   "title": "Find popular workout video pins on Pinterest",
+   "desc": "Search Pinterest for workout routine videos and see their saves and creators. Change the query to scout video ideas in any niche.",
+   "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-workout-videos"
+  }
+ ],
+ "youtube-comments-scraper": [
+  {
+   "name": "youtube-comments-export-to-csv",
+   "title": "Export YouTube video comments to CSV",
+   "desc": "Download the top comments of a YouTube video with author, likes, date and reply count. Paste any video link. The example exports 100 comments. Use it for sentiment checks or audience research.",
+   "url": "https://apify.com/panix/youtube-comments-scraper/examples/youtube-comments-export-to-csv"
+  },
+  {
+   "name": "youtube-comments-mentioning-battery-life",
+   "title": "Find YouTube comments about battery life in phone reviews",
+   "desc": "Search YouTube for phone review videos and keep only comments that mention battery. The example reads the top 3 videos. Swap the search and keyword to mine any product feedback.",
+   "url": "https://apify.com/panix/youtube-comments-scraper/examples/youtube-comments-mentioning-battery-life"
+  },
+  {
+   "name": "youtube-newest-comments-and-replies",
+   "title": "Read the newest comments and replies on a YouTube video",
+   "desc": "Get the newest comments and their replies for a video. Schedule it to watch a launch video or a competitor's video as it happens.",
+   "url": "https://apify.com/panix/youtube-comments-scraper/examples/youtube-newest-comments-and-replies"
+  }
+ ],
+ "airbnb-scraper": [
+  {
+   "name": "airbnb-entire-homes-lisbon-prices",
+   "title": "Compare Airbnb entire-home prices in Lisbon",
+   "desc": "List entire homes on Airbnb in Lisbon for two adults with nightly price, rating, reviews and link. Change the city to price any market for a rental or travel plan.",
+   "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-entire-homes-lisbon-prices"
+  },
+  {
+   "name": "airbnb-reviews-barcelona",
+   "title": "Export guest reviews of Airbnb listings in Barcelona",
+   "desc": "Collect recent guest reviews for the top Airbnb listings in Barcelona. The example reads 20 reviews each for 3 listings. Use it to find what guests praise or complain about.",
+   "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-reviews-barcelona"
+  },
+  {
+   "name": "airbnb-availability-calendar-paris",
+   "title": "Check Airbnb availability calendars in Paris",
+   "desc": "Read the availability and nightly prices for the next 3 months for top Paris listings. Use it to see how booked a market is.",
+   "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-availability-calendar-paris"
+  },
+  {
+   "name": "airbnb-investment-research-austin",
+   "title": "Research top-rated 2-bedroom Airbnbs in Austin",
+   "desc": "Find 2-bedroom listings in Austin rated 4.8 or higher, with prices and review counts. Use it to benchmark a short-term rental.",
+   "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-investment-research-austin"
+  }
+ ],
+ "video-transcript-scraper": [
+  {
+   "name": "youtube-video-transcript-from-captions",
+   "title": "Get a YouTube video transcript from its captions",
+   "desc": "Paste a YouTube link and get the full transcript as text. The task uses the video's own captions, which is the fastest and cheapest route. Works for many other video sites too.",
+   "url": "https://apify.com/panix/video-transcript-scraper/examples/youtube-video-transcript-from-captions"
+  },
+  {
+   "name": "video-transcript-with-timestamps-srt",
+   "title": "Get a timestamped video transcript with SRT subtitles",
+   "desc": "Get a transcript with start and end times for every line, plus an SRT subtitle file. Use it for captions, clips and quote lookup.",
+   "url": "https://apify.com/panix/video-transcript-scraper/examples/video-transcript-with-timestamps-srt"
+  },
+  {
+   "name": "video-transcript-markdown-chunks-for-ai",
+   "title": "Turn a video into Markdown chunks for AI and RAG",
+   "desc": "Convert a video transcript into Markdown split into 60 second chunks, ready for a vector database or an LLM prompt.",
+   "url": "https://apify.com/panix/video-transcript-scraper/examples/video-transcript-markdown-chunks-for-ai"
+  }
+ ],
+ "amazon-arbitrage-finder": [
+  {
+   "name": "amazon-vs-walmart-target-lego-arbitrage",
+   "title": "Find LEGO sets cheaper on Walmart and Target than on Amazon",
+   "desc": "Search Walmart for LEGO, match each set to its Amazon listing and compute profit and ROI after fees. Target prices are compared too. Change the search term to hunt other brands.",
+   "url": "https://apify.com/panix/amazon-arbitrage-finder/examples/amazon-vs-walmart-target-lego-arbitrage"
+  },
+  {
+   "name": "amazon-fba-board-games-from-target",
+   "title": "Find board games on Target to resell on Amazon FBA",
+   "desc": "Search Target for board games and check each against Amazon with FBA fees. Each row has a verdict, so you can see which ones are worth buying.",
+   "url": "https://apify.com/panix/amazon-arbitrage-finder/examples/amazon-fba-board-games-from-target"
+  },
+  {
+   "name": "amazon-uk-vs-germany-price-gap",
+   "title": "Find products cheaper on Amazon Germany than on Amazon UK",
+   "desc": "Search Amazon and compare the same product between Amazon UK and Germany and France, after cross-border costs. Use it to spot price gaps between markets.",
+   "url": "https://apify.com/panix/amazon-arbitrage-finder/examples/amazon-uk-vs-germany-price-gap"
+  }
+ ],
+ "google-ads-transparency-scraper": [
+  {
+   "name": "google-ads-transparency-nike-ads",
+   "title": "See the ads Nike runs on Google",
+   "desc": "Look up an advertiser in Google's Ads Transparency Center and list its ads with format, dates shown and ad text. The example uses Nike in the US. Use it for competitor ad research.",
+   "url": "https://apify.com/panix/google-ads-transparency-scraper/examples/google-ads-transparency-nike-ads"
+  },
+  {
+   "name": "google-ads-find-crm-competitor-advertisers",
+   "title": "Look up Google advertiser IDs of CRM competitors",
+   "desc": "Search the Ads Transparency Center for advertisers by name and get their IDs and ad counts. The example looks up HubSpot, Salesforce, Pipedrive and Zoho. Use the IDs to pull each competitor's ads in a second run.",
+   "url": "https://apify.com/panix/google-ads-transparency-scraper/examples/google-ads-find-crm-competitor-advertisers"
+  },
+  {
+   "name": "google-ads-hubspot-youtube-ads",
+   "title": "See the YouTube ads HubSpot runs",
+   "desc": "Look up a company by its domain and list only its YouTube ads. The example uses hubspot.com. Change the domain and platform to study any competitor.",
+   "url": "https://apify.com/panix/google-ads-transparency-scraper/examples/google-ads-hubspot-youtube-ads"
+  }
+ ],
+ "tiktok-ads-scraper": [
+  {
+   "name": "tiktok-top-ads-beauty-by-ctr",
+   "title": "Find the top TikTok beauty ads by click rate",
+   "desc": "List the best performing TikTok ads in Beauty & Personal Care in the US for the last 30 days, sorted by click-through rate. Use it to find creative angles that work.",
+   "url": "https://apify.com/panix/tiktok-ads-scraper/examples/tiktok-top-ads-beauty-by-ctr"
+  },
+  {
+   "name": "tiktok-ad-library-nike-ads-france",
+   "title": "See the ads Nike runs on TikTok in France",
+   "desc": "Search the TikTok Ad Library for an advertiser in France and list its ads with dates, format and reach. Change the brand or country to research competitors.",
+   "url": "https://apify.com/panix/tiktok-ads-scraper/examples/tiktok-ad-library-nike-ads-france"
+  },
+  {
+   "name": "tiktok-ads-ecommerce-best-converting",
+   "title": "Find the best converting TikTok e-commerce ads",
+   "desc": "List top TikTok ads from the E-Commerce industry in the US, for the last 6 months, sorted by conversion rate. Use it for product and creative research.",
+   "url": "https://apify.com/panix/tiktok-ads-scraper/examples/tiktok-ads-ecommerce-best-converting"
+  }
+ ],
+ "linkedin-ad-library-scraper": [
+  {
+   "name": "linkedin-ads-hubspot",
+   "title": "See the ads HubSpot runs on LinkedIn",
+   "desc": "Look up an advertiser in the LinkedIn Ad Library and list its ads with format, dates and impressions range. The example uses HubSpot. Change the name to research any competitor.",
+   "url": "https://apify.com/panix/linkedin-ad-library-scraper/examples/linkedin-ads-hubspot"
+  },
+  {
+   "name": "linkedin-video-ads-salesforce",
+   "title": "Find the LinkedIn video ads Salesforce runs",
+   "desc": "List only the video ads of an advertiser in the LinkedIn Ad Library. The example uses Salesforce. Use it to study competitor video creative.",
+   "url": "https://apify.com/panix/linkedin-ad-library-scraper/examples/linkedin-video-ads-salesforce"
+  },
+  {
+   "name": "linkedin-cybersecurity-ads-in-germany-france",
+   "title": "Find cybersecurity ads on LinkedIn in Germany and France",
+   "desc": "Search LinkedIn ads by keyword for cybersecurity shown in Germany and France, including EU targeting data. Use it to see who advertises in a market.",
+   "url": "https://apify.com/panix/linkedin-ad-library-scraper/examples/linkedin-cybersecurity-ads-in-germany-france"
+  }
+ ],
+ "google-news-scraper": [
+  {
+   "name": "google-news-ai-headlines-last-24-hours",
+   "title": "Get the latest AI news from the last 24 hours",
+   "desc": "Search Google News for artificial intelligence stories from the last day. Each row has the headline, source, publish time and the real article link. Change the query to track any topic.",
+   "url": "https://apify.com/panix/google-news-scraper/examples/google-news-ai-headlines-last-24-hours"
+  },
+  {
+   "name": "google-news-us-technology-and-business-headlines",
+   "title": "Get today's US technology and business headlines",
+   "desc": "Read the Google News Technology and Business sections for the US. Each row has the headline, source and link. Schedule it for a daily briefing.",
+   "url": "https://apify.com/panix/google-news-scraper/examples/google-news-us-technology-and-business-headlines"
+  },
+  {
+   "name": "google-news-brand-mention-monitor-openai",
+   "title": "Monitor news mentions of OpenAI",
+   "desc": "Watch Google News for mentions of a brand over the last 7 days and return only articles you have not seen. Schedule it and send new rows to Slack or email.",
+   "url": "https://apify.com/panix/google-news-scraper/examples/google-news-brand-mention-monitor-openai"
+  },
+  {
+   "name": "google-news-articles-with-full-text",
+   "title": "Get news articles with full text for climate change",
+   "desc": "Search Google News and also extract the readable text of each article. Use it for summaries, sentiment analysis or AI pipelines.",
+   "url": "https://apify.com/panix/google-news-scraper/examples/google-news-articles-with-full-text"
+  }
+ ],
+ "threads-scraper": [
+  {
+   "name": "threads-profile-latest-posts",
+   "title": "Export the latest Threads posts of an account",
+   "desc": "Get the newest posts of a public Threads account with likes, replies and reposts. The example reads Mark Zuckerberg. Paste any username to follow a creator or brand.",
+   "url": "https://apify.com/panix/threads-scraper/examples/threads-profile-latest-posts"
+  },
+  {
+   "name": "threads-search-posts-about-ai",
+   "title": "Find recent Threads posts about artificial intelligence",
+   "desc": "Search Threads for the newest posts about a topic. Each row has the post text, author, likes and link. Change the query for social listening.",
+   "url": "https://apify.com/panix/threads-scraper/examples/threads-search-posts-about-ai"
+  },
+  {
+   "name": "threads-compare-creator-profiles",
+   "title": "Compare followers of Threads creators",
+   "desc": "Get followers and bio for several Threads accounts at once. The example compares Zuckerberg, Mosseri and National Geographic. Use it to shortlist creators.",
+   "url": "https://apify.com/panix/threads-scraper/examples/threads-compare-creator-profiles"
+  }
+ ],
+ "booking-scraper": [
+  {
+   "name": "booking-hotels-lisbon-best-reviewed",
+   "title": "Find the best reviewed hotels in Lisbon on Booking.com",
+   "desc": "List Lisbon hotels for a 2 night stay starting in 14 days, sorted by review score, with price, rating and link. Change the city, dates and guests for your own trip.",
+   "url": "https://apify.com/panix/booking-scraper/examples/booking-hotels-lisbon-best-reviewed"
+  },
+  {
+   "name": "booking-rome-free-cancellation-breakfast",
+   "title": "Find Rome hotels with free cancellation and breakfast",
+   "desc": "Search Booking.com for 4-star and higher Rome hotels that include breakfast and allow free cancellation.",
+   "url": "https://apify.com/panix/booking-scraper/examples/booking-rome-free-cancellation-breakfast"
+  },
+  {
+   "name": "booking-paris-hotel-price-tracker",
+   "title": "Track Paris hotel price changes on Booking.com",
+   "desc": "Watch Paris hotel prices and flag changes since the last run. Schedule it daily and use the monitor name to keep trips apart.",
+   "url": "https://apify.com/panix/booking-scraper/examples/booking-paris-hotel-price-tracker"
+  },
+  {
+   "name": "booking-barcelona-cheapest-hostels",
+   "title": "Find the cheapest hostels in Barcelona on Booking.com",
+   "desc": "List hostels in Barcelona sorted by price. Use it for budget travel planning.",
+   "url": "https://apify.com/panix/booking-scraper/examples/booking-barcelona-cheapest-hostels"
+  }
+ ],
+ "upwork-jobs-scraper": [
+  {
+   "name": "upwork-python-jobs-best-hiring-score",
+   "title": "Find Upwork Python jobs most likely to hire",
+   "desc": "Search Upwork for Python jobs ranked by hiring score, which rates how likely the client is to hire. Each row has budget, proposals, client history and link.",
+   "url": "https://apify.com/panix/upwork-jobs-scraper/examples/upwork-python-jobs-best-hiring-score"
+  },
+  {
+   "name": "upwork-web-scraping-jobs-verified-big-spenders",
+   "title": "Find Upwork web scraping jobs from verified clients who spend",
+   "desc": "List web scraping jobs from clients with verified payment and over $5,000 spent. Each row shows client spend, hires and rating.",
+   "url": "https://apify.com/panix/upwork-jobs-scraper/examples/upwork-web-scraping-jobs-verified-big-spenders"
+  },
+  {
+   "name": "upwork-new-fixed-price-automation-jobs",
+   "title": "Find new fixed-price automation jobs on Upwork",
+   "desc": "List automation jobs posted in the last 24 hours with fixed price. Schedule it for fast job alerts.",
+   "url": "https://apify.com/panix/upwork-jobs-scraper/examples/upwork-new-fixed-price-automation-jobs"
+  },
+  {
+   "name": "upwork-expert-react-hourly-jobs",
+   "title": "Find expert-level React hourly jobs on Upwork",
+   "desc": "List expert React jobs paying at least $40 an hour. Each row has the rate, client and link.",
+   "url": "https://apify.com/panix/upwork-jobs-scraper/examples/upwork-expert-react-hourly-jobs"
+  }
+ ]
+}

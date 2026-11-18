@@ -70,6 +70,18 @@ function outputFields(ds) {
 const store = readJson(path.join(ROOT, 'data', 'store.json'));
 if (!store) throw new Error('data/store.json missing. Run: node scripts/fetch-assets.mjs');
 
+// Public Apify tasks per Actor (data/tasks.json, refresh with `python scripts/fetch-tasks.py`)
+const TASKS = readJson(path.join(ROOT, 'data', 'tasks.json')) || {};
+const tasksHtml = a => {
+  const list = TASKS[a.slug] || [];
+  if (!list.length) return '';
+  const first = s => { const m = String(s).match(/^.*?[.!?](\s|$)/); return m ? m[0].trim() : s; };
+  return `<section class="sec" id="tasks"><div class="tk-head"><div><h2>Ready-made tasks</h2><p class="muted">${list.length} pre-configured ${list.length === 1 ? 'task' : 'tasks'} for real use cases. Pick one, press Try for free, and it opens on Apify with the same settings in your own account.</p></div>
+  <div class="tk-nav"><button class="icon-btn tk-prev" type="button" aria-label="Previous tasks"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><button class="icon-btn tk-next" type="button" aria-label="Next tasks"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div></div>
+  <div class="tk" data-carousel><div class="tk-track" tabindex="0" role="group" aria-label="${esc(a.short)} tasks">${list.map((t, i) => `<article class="tk-card"><span class="tk-n">${String(i + 1).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}</span><h3>${esc(t.title)}</h3><p>${esc(first(t.desc))}</p><a class="btn tk-cta" href="${esc(t.url)}" target="_blank" rel="noopener" aria-label="Try for free: ${esc(t.title)}">Try for free ${ICON.arrow}</a></article>`).join('')}</div>
+  <div class="tk-dots" aria-hidden="true"></div></div></section>`;
+};
+
 const local = {};
 for (const d of fs.readdirSync(SRC)) {
   const dir = path.join(SRC, d, '.actor');
@@ -214,6 +226,7 @@ for (const a of actors) {
     </div>
     <div class="tool-main">
       ${video}
+      ${tasksHtml(a)}
       <section class="sec"><h2>Example input</h2><p class="muted">Paste this into the Actor's JSON input, or send it with the API call below.</p>
         <pre class="json"><code>${esc(JSON.stringify(a.input, null, 2))}</code></pre></section>
       ${a.fields.length ? `<section class="sec"><h2>Output fields</h2><p class="muted">Every row has the same fields. Export as JSON, CSV, Excel or XML.</p>
