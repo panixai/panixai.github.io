@@ -48,6 +48,8 @@ const C = {
     use: ['Visual trend research', 'Find products and outbound links', 'Board and creator analysis'], flow: 'Weekly · new pins · Google Sheets' },
   'upwork-jobs-scraper': { pick: 0, keep: ['searchQueries', 'maxJobs', 'sortBy'], filter: r => r.type === 'job', cols: [['title', r => cut(r.title, 34)], ['hiringScore', r => `${r.hiringScore} · ${r.hiringScoreLabel}`], ['applicants', r => `${r.applicants} proposal${r.applicants === 1 ? "" : "s"}`]],
     use: ['Instant job alerts for freelancers', 'Agency lead pipelines', 'Auto-proposal drafts with AI agents'], flow: 'Every 15 min · only new jobs · Discord' },
+  'espn-sports-scraper': { pick: 0, keep: ['leagues', 'dateFrom', 'dateTo', 'gameStatus'], filter: r => r.type === 'game', cols: [['name', r => cut(r.name.replace(' at ', ' @ '), 38)], ['scoreLine', r => r.scoreLine], ['winner', r => cut(r.winner, 22)]],
+    use: ['Betting models with odds and box scores', 'Injury alerts for fantasy players', 'Daily recap newsletters and dashboards'], flow: 'Every morning · only new or changed rows · Slack' },
   'threads-scraper': { pick: 0, keep: ['profiles', 'searchQueries'], filter: r => r.type === 'post', cols: [['text', r => cut(r.text, 38)], ['username', r => '@' + r.username], ['likes', r => short(r.likes)]],
     use: ['Social listening', 'Creator and brand monitoring', 'Posts for AI analysis'], flow: 'Hourly · only new posts · Slack' },
   'youtube-transcript-scraper': { pick: 1, keep: ['playlistUrls', 'maxVideos'], filter: r => r.status === 'ok', cols: [['title', r => cut(r.title, 36)], ['duration', r => dur(r.durationSeconds)], ['words', r => num(r.wordCount)]],

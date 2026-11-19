@@ -19,7 +19,7 @@ const CATS = [
   ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
   ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper']],
   ['transcripts', 'Transcripts', ['youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript']],
-  ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper']],
+  ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper', 'espn-sports-scraper']],
   ['docs', 'Documents', ['invoice-table-json-extractor']]
 ];
 const catOf = n => CATS.find(c => c[2].includes(n)) || ['more', 'Other', []];
@@ -274,6 +274,7 @@ const VIDEO_META = {
   'upwork-jobs-scraper': { label: 'Upwork Jobs', len: '30 seconds', points: ['Type keywords or paste an Upwork search link', 'Get every job with client spend, hires and proposals', 'See a hiring score from 0 to 100 and why', 'Build job alerts, lead pipelines or auto-proposal drafts'] },
   'booking-scraper': { len: '30 seconds', points: ['Type a city and pick your dates', 'Get every hotel with its real price', 'Find the cheapest dates with a price calendar', 'Build a travel SaaS, rate tracker or price alerts'] },
   'flashscore-scraper': { len: '30 seconds', points: ['Pick sports, days and extras', 'Get every match in the same fields', 'Add stats, incidents, form and odds', 'Build live score apps, odds models or fantasy tools'] },
+  'espn-sports-scraper': { label: 'ESPN', len: '30 seconds', points: ['Pick the leagues and the days', 'Get scores, closing spread and total for every game', 'Add box scores, player stats and opening and closing odds', 'Build betting models, injury alerts, fantasy tools or a recap newsletter'] },
   'linkedin-company-scraper': { label: "LinkedIn Company", len: '30 seconds', points: ["Paste company names, websites or links","Get size, followers, industry and headquarters","Add recent posts, engagement and similar pages","Build CRM enrichment, lead scoring or market research"] },
   'ats-jobs-scraper': { label: "ATS Jobs", len: '30 seconds', points: ["Paste any company career page","Get jobs and pay ranges straight from the employer","Works with Greenhouse, Lever, Ashby, Workday and more","Build job boards, hiring alerts or salary data"] },
   'walmart-scraper': { label: "Walmart", len: '30 seconds', points: ["Search products or paste a deals page","Get price, was-price, discount, seller and stock","Catch clearance and rollback prices","Build price alerts, reseller sourcing or deal sites"] },
@@ -317,7 +318,7 @@ const CONNECT = [
   ['AI agents', brandSvg('modelcontextprotocol')],
   ['REST API', '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>']
 ];
-const PG_FIRST = ['booking-scraper', 'google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
+const PG_FIRST = ['booking-scraper', 'google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'espn-sports-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
 const pgRank = a => { const i = PG_FIRST.indexOf(a.slug); return i < 0 ? 100 + actors.indexOf(a) : i; };
 const pgItems = actors.filter(a => DEMOS[a.slug]).sort((x, y) => pgRank(x) - pgRank(y)).map(a => ({ slug: a.slug, label: tabLabel(a), name: a.short, icon: a.icon, page: `/tools/${a.slug}.html`, price: a.price.line, ...DEMOS[a.slug] }));
 const jsonHtml = obj => esc(JSON.stringify(obj, null, 2)).split('\n').map(line => `<span class="ln">${line

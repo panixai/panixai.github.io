@@ -753,6 +753,52 @@
   ],
   "flow": "Every 15 min · only new jobs · Discord"
  },
+ "espn-sports-scraper": {
+  "run": "WB5waey4lbeCxfmrq",
+  "input": {
+   "leagues": [
+    "nba",
+    "nhl",
+    "nfl"
+   ],
+   "dateFrom": "-3",
+   "dateTo": "+3",
+   "gameStatus": "all"
+  },
+  "cols": [
+   "name",
+   "scoreLine",
+   "winner"
+  ],
+  "rows": [
+   [
+    "Orlando Magic @ Boston Celtics",
+    "ORL 115 - 105 BOS",
+    "Orlando Magic"
+   ],
+   [
+    "Chicago Bulls @ Cleveland Cavaliers",
+    "CHI 115 - 126 CLE",
+    "Cleveland Cavaliers"
+   ],
+   [
+    "Memphis Grizzlies @ Washington Wizards",
+    "MEM 136 - 120 WSH",
+    "Memphis Grizzlies"
+   ],
+   [
+    "Philadelphia 76ers @ Brooklyn Nets",
+    "PHI 135 - 123 BKN",
+    "Philadelphia 76ers"
+   ]
+  ],
+  "use": [
+   "Betting models with odds and box scores",
+   "Injury alerts for fantasy players",
+   "Daily recap newsletters and dashboards"
+  ],
+  "flow": "Every morning · only new or changed rows · Slack"
+ },
  "threads-scraper": {
   "run": "zcsSmBHWoMGsg3QWV",
   "input": {

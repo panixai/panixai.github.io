@@ -4,22 +4,22 @@
     "name": "amazon-product-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 10,
-      "totalRuns": 121,
+      "totalBuilds": 15,
+      "totalRuns": 144,
       "totalUsers": 7,
       "totalUsers7Days": 1,
       "totalUsers30Days": 3,
       "totalUsers90Days": 3,
-      "lastRunStartedAt": "2026-11-18T09:50:34.266Z",
+      "lastRunStartedAt": "2026-11-19T09:52:32.213Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 2,
-        "SUCCEEDED": 62,
+        "SUCCEEDED": 87,
         "TIMED-OUT": 1,
-        "TOTAL": 65
+        "TOTAL": 90
       }
     },
     "description": "Scrape Amazon products without login: price, Best Sellers Rank, bought in past month, seller, stock, specs, variants, images and review summary from searches, Best Sellers, ASINs or links in 16 stores. Local delivery postcode and price tracking. For sellers, price monitoring and market research.",
@@ -115,21 +115,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 69,
-      "totalUsers": 5,
-      "totalUsers7Days": 5,
-      "totalUsers30Days": 5,
-      "totalUsers90Days": 5,
-      "lastRunStartedAt": "2026-11-18T09:36:40.552Z",
+      "totalRuns": 84,
+      "totalUsers": 6,
+      "totalUsers7Days": 6,
+      "totalUsers30Days": 6,
+      "totalUsers90Days": 6,
+      "lastRunStartedAt": "2026-11-19T10:03:46.498Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 32,
+        "FAILED": 4,
+        "SUCCEEDED": 40,
         "TIMED-OUT": 0,
-        "TOTAL": 32
+        "TOTAL": 44
       }
     },
     "description": "Scrape the Meta Ad Library by keyword, Facebook Page or Ad Library URL: ad copy, media, start dates, days running, platforms, landing pages, EU reach and political spend. For competitor research, ad spying and brand monitoring, with only-new-ads alerts. No login, no browser.",
@@ -231,21 +231,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 1570,
+      "totalRuns": 1799,
       "totalUsers": 3,
       "totalUsers7Days": 2,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T07:05:01.453Z",
+      "lastRunStartedAt": "2026-11-19T05:35:01.303Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 1461,
+        "SUCCEEDED": 1722,
         "TIMED-OUT": 0,
-        "TOTAL": 1461
+        "TOTAL": 1722
       }
     },
     "description": "Scrape Flashscore for 29 sports: fixtures, live scores and results with every period, plus goals, cards, stats, lineups, injuries, odds, head-to-head, tennis point-by-point and league tables. For betting models, odds tracking, live score apps and fantasy. Only-changed mode for live polling.",
@@ -361,381 +361,26 @@
     "url": "https://apify.com/panix/flashscore-scraper"
   },
   {
-    "title": "Video & Podcast Transcript: Any Link, MP3 or RSS to Text",
-    "name": "video-transcript-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 8,
-      "totalRuns": 49,
-      "totalUsers": 3,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-17T18:04:35.632Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 10,
-        "TIMED-OUT": 0,
-        "TOTAL": 10
-      }
-    },
-    "description": "Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.",
-    "categories": [
-      "AI",
-      "VIDEOS",
-      "AUTOMATION"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/LrI57uN1fraif-ha6onoSaRBYDNKoHc6i4OR2cO3naA/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItaThOWU5OQnpNeWJrMDZ2UWgtaThzR09lOGROMS1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzhlYXJyMDhlYXJyMDhlYXIuanBn.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-08T17:41:16.360Z",
-      "startedAt": "2026-11-08T17:41:15.354Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Price update.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "transcript": {
-            "eventTitle": "Transcript",
-            "eventDescription": "One video, audio file or podcast episode delivered as a transcript: full text, timed segments, language and the item's title, author, date, length and stats, plus optional SRT/VTT subtitles, Markdown and RAG chunks. When captions or the podcast's own transcript exist, this is the only charge. Items without speech, unsupported or missing links and duplicates are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0025
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0018
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0016
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0016
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0016
-              }
-            }
-          },
-          "speech-minute": {
-            "eventTitle": "Speech-to-text minute",
-            "eventDescription": "Only when there are no captions (or Transcript source is Speech-to-text always): each started minute of detected speech transcribed with the built-in Whisper model. Music and silence are not counted.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.009
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.007
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.006
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.006
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.006
-              }
-            }
-          },
-          "high-accuracy-minute": {
-            "eventTitle": "High accuracy minute",
-            "eventDescription": "Only with Speech-to-text accuracy = High (Whisper small model): added to each speech-to-text minute.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.024
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.02
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.018
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.016
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.016
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.016
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "i8NYNNBzMybk06vQh",
-    "url": "https://apify.com/panix/video-transcript-scraper"
-  },
-  {
-    "title": "Amazon Arbitrage Finder: Walmart, Target & Global Price Gaps",
-    "name": "amazon-arbitrage-finder",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 7,
-      "totalRuns": 49,
-      "totalUsers": 3,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-17T19:06:33.073Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 9,
-        "TIMED-OUT": 0,
-        "TOTAL": 9
-      }
-    },
-    "description": "Find products to resell on Amazon. Compares Amazon with Walmart, Target and other Amazon countries by barcode, adds FBA fees, profit, ROI and sales per month, and ranks products best first with a Buy, Maybe or Skip answer. For online arbitrage and FBA sellers. No login.",
-    "categories": [
-      "ECOMMERCE",
-      "AUTOMATION",
-      "BUSINESS"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/FtyEBz1QQYTsIfjivWgDOGrLJRrjSztXV1NrFPV00Xw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTFlSaGU1eGZGSXNuRHFWS04tMWc3a0ZsemJjbi1TaG9wcGluZ19CYWdfVHJhbnNmZXJfSWNvbi5wbmc.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-10T18:26:20.724Z",
-      "startedAt": "2026-11-10T18:26:19.834Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing (lower price for products with no match).",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "product-compared": {
-            "eventTitle": "Comparison",
-            "eventDescription": "One product found on your Amazon store and in at least one other store (Walmart, Target or another Amazon country), with prices, Amazon fees, profit, ROI, sales signals, score and a Buy / Maybe / Skip verdict.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.007
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.006
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.005
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.005
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.005
-              }
-            }
-          },
-          "product-checked": {
-            "eventTitle": "Product checked, no match",
-            "eventDescription": "One product that was looked up in every store you chose but was not found on your Amazon store or in any other store (delivered as a Skip row). Products whose stores were all blocked, duplicates and products outside your price range are free.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0011
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.001
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "LYRhe5xfFIsnDqVKN",
-    "url": "https://apify.com/panix/amazon-arbitrage-finder"
-  },
-  {
-    "title": "LinkedIn Jobs Scraper: Salaries, Remote & Only-New Jobs",
-    "name": "linkedin-jobs-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 8,
-      "totalRuns": 75,
-      "totalUsers": 3,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T07:07:36.051Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 23,
-        "TIMED-OUT": 1,
-        "TOTAL": 24
-      }
-    },
-    "description": "Scrape LinkedIn jobs without login: full description, salary, employment type, experience level, applicants, remote/hybrid, skills. Exact filters LinkedIn dropped and only-new mode for daily job alerts. For recruiting, lead generation, job boards and salary research.",
-    "categories": [
-      "JOBS",
-      "LEAD_GENERATION",
-      "AUTOMATION"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/pnjlBBw-JazeGqdEzyHGbTekP0b5CdcGLW0gw7mt890/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItV0NmOXU4bFlMZmtSemd4UUQtUTF1UFpYNlZ3eS1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2UybjVwc2UybjVwc2UybjUuanBn.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-05T19:55:48.647Z",
-      "startedAt": "2026-11-05T19:55:47.753Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "job": {
-            "eventTitle": "Job",
-            "eventDescription": "One LinkedIn job with its job page read: full description, employment type, experience level, industries, applicants, salary, Easy Apply, workplace type and skills. Jobs left out by filters, duplicates, removed jobs and jobs already delivered in earlier runs (only-new mode) are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0008
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0006
-              }
-            }
-          },
-          "job-basic": {
-            "eventTitle": "Job (search card only)",
-            "eventDescription": "One job from the search results when Read job pages is off: title, company, location, posted date, badges and link.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00025
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0002
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0002
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0002
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "WCf9u8lYLfkRzgxQD",
-    "url": "https://apify.com/panix/linkedin-jobs-scraper"
-  },
-  {
     "title": "TikTok Scraper: Profiles, Videos & Transcripts",
     "name": "tiktok-scraper",
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 44,
+      "totalRuns": 49,
       "totalUsers": 3,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T09:54:36.729Z",
+      "lastRunStartedAt": "2026-11-19T09:56:37.284Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 16,
+        "SUCCEEDED": 20,
         "TIMED-OUT": 0,
-        "TOTAL": 16
+        "TOTAL": 20
       }
     },
     "description": "Scrape TikTok profiles, videos, photo posts and transcripts without login: followers, views, likes, comments, shares, engagement rate, hashtags, sounds and the spoken text with timestamps. Free date and view filters, only-new-video monitoring. For influencer research, social listening and AI.",
@@ -851,17 +496,237 @@
     "url": "https://apify.com/panix/tiktok-scraper"
   },
   {
+    "title": "LinkedIn Jobs Scraper: Salaries, Remote & Only-New Jobs",
+    "name": "linkedin-jobs-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 8,
+      "totalRuns": 80,
+      "totalUsers": 3,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-18T20:36:36.551Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 26,
+        "TIMED-OUT": 1,
+        "TOTAL": 27
+      }
+    },
+    "description": "Scrape LinkedIn jobs without login: full description, salary, employment type, experience level, applicants, remote/hybrid, skills. Exact filters LinkedIn dropped and only-new mode for daily job alerts. For recruiting, lead generation, job boards and salary research.",
+    "categories": [
+      "JOBS",
+      "LEAD_GENERATION",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/pnjlBBw-JazeGqdEzyHGbTekP0b5CdcGLW0gw7mt890/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItV0NmOXU4bFlMZmtSemd4UUQtUTF1UFpYNlZ3eS1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2UybjVwc2UybjVwc2UybjUuanBn.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-05T19:55:48.647Z",
+      "startedAt": "2026-11-05T19:55:47.753Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "job": {
+            "eventTitle": "Job",
+            "eventDescription": "One LinkedIn job with its job page read: full description, employment type, experience level, industries, applicants, salary, Easy Apply, workplace type and skills. Jobs left out by filters, duplicates, removed jobs and jobs already delivered in earlier runs (only-new mode) are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0006
+              }
+            }
+          },
+          "job-basic": {
+            "eventTitle": "Job (search card only)",
+            "eventDescription": "One job from the search results when Read job pages is off: title, company, location, posted date, badges and link.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00025
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0002
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0002
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0002
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "WCf9u8lYLfkRzgxQD",
+    "url": "https://apify.com/panix/linkedin-jobs-scraper"
+  },
+  {
+    "title": "Threads Scraper & Monitor: Profiles, Posts, Search, No Login",
+    "name": "threads-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 4,
+      "totalRuns": 25,
+      "totalUsers": 3,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-19T08:56:32.439Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 4,
+        "TIMED-OUT": 0,
+        "TOTAL": 4
+      }
+    },
+    "description": "Scrape Meta Threads without login: profiles with followers and engagement, full post histories, keyword and hashtag search, single posts. Likes, replies, reposts, media, links, hashtags. Only new posts mode for scheduled monitoring, brand tracking, social listening and AI agents.",
+    "categories": [
+      "SOCIAL_MEDIA",
+      "FOR_CREATORS",
+      "MARKETING"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/SmYp9Vbk70fK3aJ5w3d_Vq8uIymxxC7bNinCGCMGArQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItRmVjbERYOURjcFJ3MGYydUwtUlVOQzl2Yk5hRy1UaHJlYWRfU3Bvb2xfQ2hhdF9JY29uLnBuZw.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-17T08:32:19.789Z",
+      "startedAt": "2026-11-17T08:32:18.855Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "post": {
+            "eventTitle": "Post",
+            "eventDescription": "One Threads post: text, author, date, likes, replies, reposts, quotes, shares, engagement rate, images and videos, links, hashtags, mentions, quoted post and topic. Filtered, duplicate and already-seen posts and missing links are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0017
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0013
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0013
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0013
+              }
+            }
+          },
+          "profile": {
+            "eventTitle": "Profile",
+            "eventDescription": "One Threads profile: name, bio, bio links, followers, verified, topics, picture, and average likes, replies, reposts, engagement rate and posts per week of the newest posts. Missing profiles are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.003
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0022
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.002
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "FeclDX9DcpRw0f2uL",
+    "url": "https://apify.com/panix/threads-scraper"
+  },
+  {
     "title": "Invoice, Receipt & PDF Table to JSON/Markdown OCR",
     "name": "invoice-table-json-extractor",
     "username": "panix",
     "stats": {
       "totalBuilds": 16,
-      "totalRuns": 54,
+      "totalRuns": 55,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T16:24:32.360Z",
+      "lastRunStartedAt": "2026-11-18T16:26:30.850Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -967,12 +832,12 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 54,
+      "totalRuns": 55,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T17:56:36.928Z",
+      "lastRunStartedAt": "2026-11-18T17:58:43.212Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -1053,21 +918,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 27,
-      "totalRuns": 105,
+      "totalRuns": 106,
       "totalUsers": 2,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-17T19:08:41.735Z",
+      "lastRunStartedAt": "2026-11-18T19:10:37.867Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 31,
+        "SUCCEEDED": 32,
         "TIMED-OUT": 0,
-        "TOTAL": 31
+        "TOTAL": 32
       }
     },
     "description": "Extract transcripts from YouTube videos, Shorts, playlists, and channels—no YouTube API key. Get clean text, timestamps, SRT, VTT, Markdown, metadata, and RAG-ready chunks for AI agents and automation. Original-language output; failed videos are free.",
@@ -1139,21 +1004,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 44,
+      "totalRuns": 49,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T09:44:33.241Z",
+      "lastRunStartedAt": "2026-11-19T09:44:38.191Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 5,
+        "SUCCEEDED": 6,
         "TIMED-OUT": 0,
-        "TOTAL": 5
+        "TOTAL": 6
       }
     },
     "description": "See the TikTok ads any brand runs: ad videos, ad text, landing pages, dates, reach and targeting from the TikTok Ad Library (Europe, UK, Turkey, Brazil), plus the best-performing Top Ads with CTR and likes for the US and 27 more countries. No login.",
@@ -1269,33 +1134,33 @@
     "url": "https://apify.com/panix/tiktok-ads-scraper"
   },
   {
-    "title": "Google Ads Transparency Scraper & Ad Monitor",
+    "title": "Google Ads Transparency Center Scraper & API",
     "name": "google-ads-transparency-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 6,
-      "totalRuns": 55,
+      "totalBuilds": 7,
+      "totalRuns": 61,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T06:32:33.247Z",
+      "lastRunStartedAt": "2026-11-19T06:34:32.411Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 6,
+        "SUCCEEDED": 8,
         "TIMED-OUT": 0,
-        "TOTAL": 6
+        "TOTAL": 8
       }
     },
     "description": "See the ads any company runs on Google Search, YouTube, Shopping, Maps and Play. Get ad text, YouTube video links, landing pages, dates, countries, EU reach and targeting. For competitor ad research, ad checks and new-ad alerts. No login.",
     "categories": [
-      "MARKETING",
       "LEAD_GENERATION",
-      "SEO_TOOLS"
+      "AGENTS",
+      "INTEGRATIONS"
     ],
     "pictureUrl": "https://images.apifyusercontent.com/1X6BkkXiYp15wlo70engplii1L4_Hja601_ttKZRt3M/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItQ0dTd2U5SFNJVTV3V3dFUzAtTjNQN1c5Q0g3MS1CbHVlX01hZ25pZmllcl9BZF9JY29uLnBuZw.webp",
     "notice": "NONE",
@@ -1309,10 +1174,10 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-11T05:54:50.149Z",
-      "startedAt": "2026-11-11T05:54:49.467Z",
+      "createdAt": "2026-11-19T17:11:47.436Z",
+      "startedAt": "2026-11-19T17:11:46.624Z",
       "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
+      "reasonForChange": "Price aligned with the market leader.",
       "pricingPerEvent": {
         "actorChargeEvents": {
           "apify-actor-start": {
@@ -1328,22 +1193,22 @@
             "isOneTimeEvent": false,
             "eventTieredPricingUsd": {
               "FREE": {
-                "tieredEventPriceUsd": 0.0012
+                "tieredEventPriceUsd": 0.0025
               },
               "BRONZE": {
-                "tieredEventPriceUsd": 0.001
+                "tieredEventPriceUsd": 0.0022
               },
               "SILVER": {
-                "tieredEventPriceUsd": 0.0009
+                "tieredEventPriceUsd": 0.002
               },
               "GOLD": {
-                "tieredEventPriceUsd": 0.0008
+                "tieredEventPriceUsd": 0.002
               },
               "PLATINUM": {
-                "tieredEventPriceUsd": 0.0008
+                "tieredEventPriceUsd": 0.002
               },
               "DIAMOND": {
-                "tieredEventPriceUsd": 0.0008
+                "tieredEventPriceUsd": 0.002
               }
             }
           },
@@ -1429,111 +1294,26 @@
     "url": "https://apify.com/panix/google-ads-transparency-scraper"
   },
   {
-    "title": "Booking.com Scraper & Hotel Price Tracker",
-    "name": "booking-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 6,
-      "totalRuns": 17,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T17:18:34.492Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 1,
-        "TIMED-OUT": 0,
-        "TOTAL": 1
-      }
-    },
-    "description": "Scrape Booking.com hotels with the real price for your dates: cities, search links or hotel links, thousands per city. Stars, reviews, room, free cancellation, deals, location. Price calendars over many dates and price-change alerts for hotel revenue, travel and price monitoring.",
-    "categories": [
-      "TRAVEL",
-      "REAL_ESTATE",
-      "ECOMMERCE"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/5B_IiundrDj03460b6lM3GM9I6i-Kfn0RDJJRBvAx8g/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItQmk3N2ZWZUFDblFic3c4c28tOTF2S1lhSHZURy1Ib3RlbF9Cb29raW5nX0tleV9JY29uLnBuZw.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-17T16:57:23.049Z",
-      "startedAt": "2026-11-17T16:57:21.974Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "hotel": {
-            "eventTitle": "Hotel",
-            "eventDescription": "One hotel (or other property) with its price for one stay: total and per-night price, discount, room, free cancellation, meal plan, stars, review score, location, photo and link; with price tracking also the previous price and the change. Each check-in date is one row. Error rows, not-bookable hotels, unchanged prices you chose to skip and duplicates are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0025
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0018
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0015
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "Bi77fVeACnQbsw8so",
-    "url": "https://apify.com/panix/booking-scraper"
-  },
-  {
     "title": "Upwork Jobs Scraper & Job Alerts",
     "name": "upwork-jobs-scraper",
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 26,
+      "totalRuns": 31,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T20:43:30.938Z",
+      "lastRunStartedAt": "2026-11-18T20:44:31.003Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 1,
+        "SUCCEEDED": 2,
         "TIMED-OUT": 0,
-        "TOTAL": 1
+        "TOTAL": 2
       }
     },
     "description": "Scrape new Upwork jobs with exact proposal counts, client spend, hires, rating and payment verified, plus a hiring score per job. All Upwork filters, only-new mode for schedules, alerts to Discord, Slack, Telegram or any webhook. For freelancers, agencies and lead generation.",
@@ -1624,35 +1404,35 @@
     "url": "https://apify.com/panix/upwork-jobs-scraper"
   },
   {
-    "title": "Threads Scraper & Monitor: Profiles, Posts, Search, No Login",
-    "name": "threads-scraper",
+    "title": "Booking.com Scraper & Hotel Price Tracker",
+    "name": "booking-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 4,
-      "totalRuns": 20,
+      "totalBuilds": 6,
+      "totalRuns": 22,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T09:20:44.473Z",
+      "lastRunStartedAt": "2026-11-18T17:20:35.468Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 1,
+        "SUCCEEDED": 2,
         "TIMED-OUT": 0,
-        "TOTAL": 1
+        "TOTAL": 2
       }
     },
-    "description": "Scrape Meta Threads without login: profiles with followers and engagement, full post histories, keyword and hashtag search, single posts. Likes, replies, reposts, media, links, hashtags. Only new posts mode for scheduled monitoring, brand tracking, social listening and AI agents.",
+    "description": "Scrape Booking.com hotels with the real price for your dates: cities, search links or hotel links, thousands per city. Stars, reviews, room, free cancellation, deals, location. Price calendars over many dates and price-change alerts for hotel revenue, travel and price monitoring.",
     "categories": [
-      "SOCIAL_MEDIA",
-      "FOR_CREATORS",
-      "MARKETING"
+      "TRAVEL",
+      "REAL_ESTATE",
+      "ECOMMERCE"
     ],
-    "pictureUrl": "https://images.apifyusercontent.com/SmYp9Vbk70fK3aJ5w3d_Vq8uIymxxC7bNinCGCMGArQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItRmVjbERYOURjcFJ3MGYydUwtUlVOQzl2Yk5hRy1UaHJlYWRfU3Bvb2xfQ2hhdF9JY29uLnBuZw.webp",
+    "pictureUrl": "https://images.apifyusercontent.com/5B_IiundrDj03460b6lM3GM9I6i-Kfn0RDJJRBvAx8g/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItQmk3N2ZWZUFDblFic3c4c28tOTF2S1lhSHZURy1Ib3RlbF9Cb29raW5nX0tleV9JY29uLnBuZw.webp",
     "notice": "NONE",
     "bookmarkCount": 0,
     "actorReviewRating": 0,
@@ -1664,8 +1444,8 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-17T08:32:19.789Z",
-      "startedAt": "2026-11-17T08:32:18.855Z",
+      "createdAt": "2026-11-17T16:57:23.049Z",
+      "startedAt": "2026-11-17T16:57:21.974Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
       "pricingPerEvent": {
@@ -1676,172 +1456,37 @@
             "isOneTimeEvent": true,
             "eventPriceUsd": 0.001
           },
-          "post": {
-            "eventTitle": "Post",
-            "eventDescription": "One Threads post: text, author, date, likes, replies, reposts, quotes, shares, engagement rate, images and videos, links, hashtags, mentions, quoted post and topic. Filtered, duplicate and already-seen posts and missing links are free.",
+          "hotel": {
+            "eventTitle": "Hotel",
+            "eventDescription": "One hotel (or other property) with its price for one stay: total and per-night price, discount, room, free cancellation, meal plan, stars, review score, location, photo and link; with price tracking also the previous price and the change. Each check-in date is one row. Error rows, not-bookable hotels, unchanged prices you chose to skip and duplicates are free.",
             "isPrimaryEvent": true,
             "isOneTimeEvent": false,
             "eventTieredPricingUsd": {
               "FREE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0017
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0013
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0013
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0013
-              }
-            }
-          },
-          "profile": {
-            "eventTitle": "Profile",
-            "eventDescription": "One Threads profile: name, bio, bio links, followers, verified, topics, picture, and average likes, replies, reposts, engagement rate and posts per week of the newest posts. Missing profiles are free.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.003
-              },
-              "BRONZE": {
                 "tieredEventPriceUsd": 0.0025
               },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.002
+              },
               "SILVER": {
-                "tieredEventPriceUsd": 0.0022
+                "tieredEventPriceUsd": 0.0018
               },
               "GOLD": {
-                "tieredEventPriceUsd": 0.002
+                "tieredEventPriceUsd": 0.0015
               },
               "PLATINUM": {
-                "tieredEventPriceUsd": 0.002
+                "tieredEventPriceUsd": 0.0015
               },
               "DIAMOND": {
-                "tieredEventPriceUsd": 0.002
+                "tieredEventPriceUsd": 0.0015
               }
             }
           }
         }
       }
     },
-    "id": "FeclDX9DcpRw0f2uL",
-    "url": "https://apify.com/panix/threads-scraper"
-  },
-  {
-    "title": "LinkedIn Ad Library Scraper: Ads, Impressions & Targeting",
-    "name": "linkedin-ad-library-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 4,
-      "totalRuns": 26,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T16:00:34.312Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 6,
-        "TIMED-OUT": 0,
-        "TOTAL": 6
-      }
-    },
-    "description": "See every ad a company runs on LinkedIn: ad text, images, videos, click-through links with UTM campaign tags and who paid, from the official LinkedIn Ad Library. EU ads add run dates, impressions, countries and targeting. Track new competitor ads. No login.",
-    "categories": [
-      "MARKETING",
-      "LEAD_GENERATION",
-      "SOCIAL_MEDIA"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/IxH2ClWa8lgKwD0yCVq739UeQ6srsN4jsYfP78h8D4c/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItaklYZmVWeWJVYnRKWnI3c2UtUmdvcVRKTDdEMC1MaW5rZWRJbl9BZF9BbmFseXRpY3NfU2VhcmNoX0ljb24ucG5n.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-13T12:00:19.431Z",
-      "startedAt": "2026-11-13T12:00:18.678Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.002
-          },
-          "ad": {
-            "eventTitle": "Ad",
-            "eventDescription": "One LinkedIn ad from the Ad Library: advertiser, format, ad text preview, headline, image, ad link. Error rows, 'no ads' rows, duplicates and ads left out by filters are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0005
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0003
-              }
-            }
-          },
-          "ad-details": {
-            "eventTitle": "Ad details",
-            "eventDescription": "With 'Add ad details' (on by default) and for single ad links: full ad text, click-through link with UTM tags, call to action, video file, carousel cards, company ID and who paid; for EU ads also run dates, impressions, countries and targeting. Failed lookups are free.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0005
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0003
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "jIXfeVybUbtJZr7se",
-    "url": "https://apify.com/panix/linkedin-ad-library-scraper"
+    "id": "Bi77fVeACnQbsw8so",
+    "url": "https://apify.com/panix/booking-scraper"
   },
   {
     "title": "Google News Scraper & Monitor: Real Links, Text, New Only",
@@ -1849,21 +1494,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 77,
+      "totalRuns": 82,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T16:42:39.165Z",
+      "lastRunStartedAt": "2026-11-18T16:51:43.473Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 3,
+        "SUCCEEDED": 4,
         "TIMED-OUT": 0,
-        "TOTAL": 3
+        "TOTAL": 4
       }
     },
     "description": "Get Google News articles by keyword, topic or place with the real publisher link, source, date and related coverage. Add article text, or get only new articles since your last run. Schedule it for news alerts and AI agents. No login.",
@@ -1954,896 +1599,26 @@
     "url": "https://apify.com/panix/google-news-scraper"
   },
   {
-    "title": "AliExpress Search Scraper: Prices, Sold Counts & Ratings",
-    "name": "aliexpress-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 8,
-      "totalRuns": 89,
-      "totalUsers": 2,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T09:38:36.220Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 1,
-        "SUCCEEDED": 15,
-        "TIMED-OUT": 0,
-        "TOTAL": 16
-      }
-    },
-    "description": "Scrape AliExpress search results and categories: price, discount, exact sold count, rating, delivery estimate, ships-from, Choice and sponsored flags, rank and listing date, for 60 countries. For dropshipping product research, price tracking and trend analysis.",
-    "categories": [
-      "ECOMMERCE",
-      "LEAD_GENERATION",
-      "AUTOMATION"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/B4Kbo9Bn62U1WE2CSUFRs0vDq29WDq59uVONfn9QBgM/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItUUZiQjhnbHRJSUpmMHlYeEgtN2dFNXRabUR3dC1FY29tbWVyY2VfQW5hbHl0aWNzX1Nob3BwaW5nX0JhZ19JY29uLnBuZw.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-05T08:42:33.476Z",
-      "startedAt": "2026-11-05T08:42:32.678Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "product": {
-            "eventTitle": "Product",
-            "eventDescription": "One AliExpress product from a search or category page: title, link, price, price before discount, exact sold count, rating, ships-from country, delivery estimate, Choice and sponsored flags, listing date, rank and images. Products left out by filters, duplicates, unchanged watchlist products and failed searches are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0018
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0012
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "QFbB8gltIIJf0yXxH",
-    "url": "https://apify.com/panix/aliexpress-scraper"
-  },
-  {
-    "title": "ATS Jobs Scraper: Greenhouse, Lever, Workday +15",
-    "name": "ats-jobs-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 8,
-      "totalRuns": 68,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T21:58:32.896Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 15,
-        "TIMED-OUT": 0,
-        "TOTAL": 15
-      }
-    },
-    "description": "Scrape every open job from company career sites on Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Workable and 12 more ATS. Parsed salary, location, remote type and seniority in one schema. For job boards, recruiting, sales leads, hiring-trend research and new-job alerts.",
-    "categories": [
-      "JOBS",
-      "LEAD_GENERATION",
-      "AUTOMATION"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/rnPqBODr-wPA5QZsKpXBF2tEwErdqxDj2IX4vH0nS5o/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTXBjMWp6V3d4MGR5TjRoZjItWG9NajVHbE1sai1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX3JsZ2VrMXJsZ2VrMXJsZ2UuanBn.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-01T19:12:58.761Z",
-      "startedAt": "2026-11-01T19:12:56.748Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "job": {
-            "eventTitle": "Job",
-            "eventDescription": "One job delivered with title, company, link, location (city, region, country, coordinates), workplace type, employment type, seniority, job function, salary, dates and the full description with skills. Filtered, duplicate and unchanged jobs, closed-job rows, jobs whose page could not be read and failed companies are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0008
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0008
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0008
-              }
-            }
-          },
-          "company-summary": {
-            "eventTitle": "Company summary",
-            "eventDescription": "Only when 'Rows to return' includes company summaries: one hiring summary per company (open jobs, jobs posted in the last 7 and 30 days, mix by function, seniority and location, pay ranges, leadership roles).",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.004
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.003
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0025
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.002
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "Mpc1jzWwx0dyN4hf2",
-    "url": "https://apify.com/panix/ats-jobs-scraper"
-  },
-  {
-    "title": "Walmart Scraper: Products, Prices, Reviews & Price Tracker",
-    "name": "walmart-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 6,
-      "totalRuns": 47,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T17:40:35.807Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 10,
-        "TIMED-OUT": 0,
-        "TOTAL": 10
-      }
-    },
-    "description": "Scrape Walmart products and reviews without login: price, was-price, seller, stock, UPC, specs, every variant with its price, rating breakdown, store aisle, pickup and delivery. From searches, categories, deals, item IDs or links. Price tracking for sellers, brands and price monitoring.",
-    "categories": [
-      "ECOMMERCE",
-      "LEAD_GENERATION",
-      "AUTOMATION"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/YkN4MwrK2yrXHCds1CYVhOF-gu_8oO7DDiZ3_pJ0HsM/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTTNscGM0bzFPMTJxcGZIM0YtQjc0UnpMeGVNRy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX3lpOGcyOXlpOGcyOXlpOGcuanBn.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-07T17:25:56.916Z",
-      "startedAt": "2026-11-07T17:25:56.186Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing (product price covers residential retries when Walmart blocks).",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "product": {
-            "eventTitle": "Product",
-            "eventDescription": "One Walmart product with its product page read: price, was-price, unit price, seller, stock, UPC, specifications, description, all variants with prices, rating breakdown, review highlights, pickup and delivery, store aisle and return policy. Products left out by filters, duplicates, missing items and unchanged products (only-changed mode) are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.003
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0025
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0022
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.002
-              }
-            }
-          },
-          "product-basic": {
-            "eventTitle": "Product (search data only)",
-            "eventDescription": "One product from search, category or deals pages when Read product pages is off: title, price, was-price, rating, reviews count, badges, seller, stock, image and link.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0005
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00045
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0004
-              }
-            }
-          },
-          "review": {
-            "eventTitle": "Review",
-            "eventDescription": "One customer review: stars, title, text, date, reviewer nickname, verified purchase, helpful votes, photos and the reviewed variant.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0005
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0004
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00035
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0003
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "M3lpc4o1O12qpfH3F",
-    "url": "https://apify.com/panix/walmart-scraper"
-  },
-  {
-    "title": "Instagram Reel Transcript: Speech-to-Text, Subtitles & Stats",
-    "name": "instagram-reel-transcript",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 10,
-      "totalRuns": 49,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T07:05:36.814Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 16,
-        "TIMED-OUT": 0,
-        "TOTAL": 16
-      }
-    },
-    "description": "Transcribe public Instagram reels to text without login or API key: spoken words, hook, language, timed segments, SRT/VTT subtitles, free English translation, plus plays, likes and caption. For content research, influencer marketing, social listening and AI/RAG pipelines.",
-    "categories": [
-      "SOCIAL_MEDIA",
-      "AI",
-      "VIDEOS"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/CENIRIC3NURRNtfhwYGaTPgpvCPIt_7q_F6d0ulSCcw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItSm14OTFocmh0TmF2dUcxcDktbHZiVUhpd1VNRi1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzJxMWJzeDJxMWJzeDJxMWIuanBn.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-07T15:02:46.783Z",
-      "startedAt": "2026-11-07T15:02:46.380Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "reel": {
-            "eventTitle": "Reel transcript",
-            "eventDescription": "One public Instagram reel or video transcribed (up to 90 seconds): full spoken text, opening line, language, timed segments, optional SRT/VTT subtitles, word timestamps and English translation, plus plays, likes, comments, caption and audio track. Music-only reels, photo posts, missing or private reels and duplicates are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.012
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.01
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.009
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.008
-              }
-            }
-          },
-          "extra-minute": {
-            "eventTitle": "Extra minute",
-            "eventDescription": "Each started minute of a transcribed video after its first 90 seconds (a 2-minute reel has one, a 3-minute reel two).",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.005
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.004
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0036
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0032
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0032
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0032
-              }
-            }
-          },
-          "high-accuracy": {
-            "eventTitle": "High accuracy minute",
-            "eventDescription": "Only with Accuracy = High (Whisper small model): each started minute of a transcribed video.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.012
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.01
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.009
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.008
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.008
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "Jmx91hrhtNavuG1p9",
-    "url": "https://apify.com/panix/instagram-reel-transcript"
-  },
-  {
-    "title": "Pinterest Scraper: Pins, Boards, Profiles & Search",
-    "name": "pinterest-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 7,
-      "totalRuns": 35,
-      "totalUsers": 2,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T07:30:34.806Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 12,
-        "TIMED-OUT": 0,
-        "TOTAL": 12
-      }
-    },
-    "description": "Scrape Pinterest pins, video pins, boards and profiles by keyword or link, no login: real pin links, saves, outbound links, product prices, monthly views, keyword suggestions. Free date, saves and domain filters, only-new-pins monitoring. For e-commerce, SEO and social media marketing.",
-    "categories": [
-      "SOCIAL_MEDIA",
-      "FOR_CREATORS",
-      "MARKETING"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/Utq3Y0fKvk_UlzCap6hhmPSFqY4jrnqM0cIkEqHGScQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItcVB0UHhqTzZESk5zQW5aZEYtc3VNVThlMjRycC1SZWRfTG9jYXRpb25fR2FsbGVyeV9JY29uLnBuZw.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-07T22:08:50.219Z",
-      "startedAt": "2026-11-07T22:08:49.333Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Price update.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "pin": {
-            "eventTitle": "Pin",
-            "eventDescription": "One Pinterest pin: title, description, full-size image, outbound link and domain, date, saves, reactions, comments, video stream, product price, topics, creator and board, with the real pin link looked up when Pinterest hides it. Filtered, duplicate and already delivered pins are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0018
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0012
-              }
-            }
-          },
-          "profile": {
-            "eventTitle": "Profile",
-            "eventDescription": "One Pinterest profile: name, about, followers, following, monthly views and reach, pin and board counts, website, verified-merchant flag, account age and last save. Missing profiles are free.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0018
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0015
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0012
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0012
-              }
-            }
-          },
-          "board": {
-            "eventTitle": "Board",
-            "eventDescription": "One Pinterest board: name, description, pin count, followers, sections, owner, cover image, last pinned date and related topics. Missing boards are free.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0009
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00075
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0006
-              }
-            }
-          },
-          "keyword-suggestion": {
-            "eventTitle": "Keyword suggestion",
-            "eventDescription": "One related search Pinterest suggests for your keyword (autocomplete), with its rank and search link. Only when keyword suggestions are turned on.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0003
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.00025
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0002
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.00015
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.00015
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.00015
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "qPtPxjO6DJNsAnZdF",
-    "url": "https://apify.com/panix/pinterest-scraper"
-  },
-  {
-    "title": "YouTube Comments Scraper: Replies, Shorts & Channels",
-    "name": "youtube-comments-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 5,
-      "totalRuns": 43,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T13:46:36.516Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 9,
-        "TIMED-OUT": 0,
-        "TOTAL": 9
-      }
-    },
-    "description": "Scrape YouTube comments and replies from videos, Shorts, channels, playlists or searches: likes, pinned and creator-heart flags, authors, video title. Keyword, likes and date filters, only-new monitoring. No API key. For brand monitoring, sentiment analysis and research.",
-    "categories": [
-      "SOCIAL_MEDIA",
-      "VIDEOS",
-      "FOR_CREATORS"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/lL751k-vV3qrm1U1O3TjrfJQfimoe7RA7cRssMSLO6Q/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3Itamp2ZVVPZ0xjNmQwT09VcHotUXdiRFJPeVBNSS1IZWFydF9fQ2hhdF9fYW5kX1Bpbl9JY29uLnBuZw.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-08T13:04:49.007Z",
-      "startedAt": "2026-11-08T13:04:48.321Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "comment": {
-            "eventTitle": "Comment",
-            "eventDescription": "One YouTube comment or reply with text, author, likes, reply count, pinned and creator-heart flags, date and the video's title, channel and comment count. Comments left out by filters, duplicates, comments delivered in earlier only-new runs and error rows for videos with comments turned off are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0008
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0006
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "jjveUOgLc6d0OOUpz",
-    "url": "https://apify.com/panix/youtube-comments-scraper"
-  },
-  {
-    "title": "Airbnb Scraper: Listings, Prices, Reviews & Calendar",
-    "name": "airbnb-scraper",
-    "username": "panix",
-    "stats": {
-      "totalBuilds": 3,
-      "totalRuns": 34,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T15:14:39.011Z",
-      "actorReviewCount": 0,
-      "actorReviewRating": 0,
-      "bookmarkCount": 0,
-      "publicActorRunStats30Days": {
-        "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 9,
-        "TIMED-OUT": 0,
-        "TOTAL": 9
-      }
-    },
-    "description": "Scrape Airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. Splits big cities into map areas for thousands of listings. For short-term rental market research, pricing and travel apps.",
-    "categories": [
-      "TRAVEL",
-      "REAL_ESTATE",
-      "ECOMMERCE"
-    ],
-    "pictureUrl": "https://images.apifyusercontent.com/cASU03bPVbJyxoQelsmd74hPuKWGjtgdo5oCuAPjlWY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItQVl6dUp6S2JIMjlZVFhrbVQtTGUybTY2czRjOS1Ib21lX1BsYW5uaW5nX0ljb24ucG5n.webp",
-    "notice": "NONE",
-    "bookmarkCount": 0,
-    "actorReviewRating": 0,
-    "actorReviewCount": 0,
-    "badge": null,
-    "isWhiteListedForAgenticPayments": true,
-    "userFullName": "PANIX AI LAB",
-    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
-    "currentPricingInfo": {
-      "pricingModel": "PAY_PER_EVENT",
-      "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-08T14:33:23.101Z",
-      "startedAt": "2026-11-08T14:33:21.996Z",
-      "minimalMaxTotalChargeUsd": null,
-      "reasonForChange": "Launch pricing.",
-      "pricingPerEvent": {
-        "actorChargeEvents": {
-          "apify-actor-start": {
-            "eventTitle": "Actor Start",
-            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
-            "isOneTimeEvent": true,
-            "eventPriceUsd": 0.001
-          },
-          "listing": {
-            "eventTitle": "Listing",
-            "eventDescription": "One Airbnb listing from search results: name, type, price for your dates (total, per night, discount, fees), rating, review count, bedrooms, beds, baths, coordinates, photos and badges. Listings left out by filters, duplicates and failed pages are free.",
-            "isPrimaryEvent": true,
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.00125
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00085
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0007
-              }
-            }
-          },
-          "listing-details": {
-            "eventTitle": "Listing with details",
-            "eventDescription": "One listing with its listing page read (charged instead of Listing): everything in Listing plus description, all amenities, host, house rules, rating per category, sleeping arrangements and all photos. Listing links (/rooms/...) are charged this way.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0025
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.002
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.0017
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0014
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0014
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0014
-              }
-            }
-          },
-          "calendar": {
-            "eventTitle": "Availability calendar",
-            "eventDescription": "Add-on per listing when the availability calendar is requested: day-by-day availability, minimum and maximum nights and an occupancy summary for up to 12 months.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.0006
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.0005
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00045
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.00035
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.00035
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.00035
-              }
-            }
-          },
-          "review": {
-            "eventTitle": "Review",
-            "eventDescription": "One guest review: text, star rating, date, language, reviewer first name and the host's response.",
-            "isOneTimeEvent": false,
-            "eventTieredPricingUsd": {
-              "FREE": {
-                "tieredEventPriceUsd": 0.00125
-              },
-              "BRONZE": {
-                "tieredEventPriceUsd": 0.001
-              },
-              "SILVER": {
-                "tieredEventPriceUsd": 0.00085
-              },
-              "GOLD": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "PLATINUM": {
-                "tieredEventPriceUsd": 0.0007
-              },
-              "DIAMOND": {
-                "tieredEventPriceUsd": 0.0007
-              }
-            }
-          }
-        }
-      }
-    },
-    "id": "AYzuJzKbH29YTXkmT",
-    "url": "https://apify.com/panix/airbnb-scraper"
-  },
-  {
     "title": "YouTube Scraper: Search, Channels, Shorts & Video Details",
     "name": "youtube-scraper",
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 53,
+      "totalRuns": 67,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T19:24:33.007Z",
+      "lastRunStartedAt": "2026-11-19T09:02:02.972Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 12,
+        "SUCCEEDED": 13,
         "TIMED-OUT": 0,
-        "TOTAL": 12
+        "TOTAL": 13
       }
     },
     "description": "Scrape YouTube search, channels, Shorts, live streams, playlists and hashtags with likes, exact views, upload date, duration, tags, category, chapters, comments count and subscribers. No API key or quota. For influencer research, SEO, competitor tracking and datasets.",
@@ -2984,17 +1759,592 @@
     "url": "https://apify.com/panix/youtube-scraper"
   },
   {
-    "title": "LinkedIn Company Scraper: Details, Posts & Similar Companies",
-    "name": "linkedin-company-scraper",
+    "title": "AliExpress Search Scraper: Prices, Sold Counts & Ratings",
+    "name": "aliexpress-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 5,
-      "totalRuns": 29,
-      "totalUsers": 1,
+      "totalBuilds": 8,
+      "totalRuns": 93,
+      "totalUsers": 2,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-19T09:40:35.284Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 1,
+        "SUCCEEDED": 16,
+        "TIMED-OUT": 0,
+        "TOTAL": 17
+      }
+    },
+    "description": "Scrape AliExpress search results and categories: price, discount, exact sold count, rating, delivery estimate, ships-from, Choice and sponsored flags, rank and listing date, for 60 countries. For dropshipping product research, price tracking and trend analysis.",
+    "categories": [
+      "ECOMMERCE",
+      "LEAD_GENERATION",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/B4Kbo9Bn62U1WE2CSUFRs0vDq29WDq59uVONfn9QBgM/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItUUZiQjhnbHRJSUpmMHlYeEgtN2dFNXRabUR3dC1FY29tbWVyY2VfQW5hbHl0aWNzX1Nob3BwaW5nX0JhZ19JY29uLnBuZw.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-05T08:42:33.476Z",
+      "startedAt": "2026-11-05T08:42:32.678Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "product": {
+            "eventTitle": "Product",
+            "eventDescription": "One AliExpress product from a search or category page: title, link, price, price before discount, exact sold count, rating, ships-from country, delivery estimate, Choice and sponsored flags, listing date, rank and images. Products left out by filters, duplicates, unchanged watchlist products and failed searches are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0012
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "QFbB8gltIIJf0yXxH",
+    "url": "https://apify.com/panix/aliexpress-scraper"
+  },
+  {
+    "title": "ATS Jobs Scraper: Greenhouse, Lever, Workday +15",
+    "name": "ats-jobs-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 8,
+      "totalRuns": 74,
+      "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-17T10:50:35.334Z",
+      "lastRunStartedAt": "2026-11-18T22:00:33.967Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 18,
+        "TIMED-OUT": 0,
+        "TOTAL": 18
+      }
+    },
+    "description": "Scrape every open job from company career sites on Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Workable and 12 more ATS. Parsed salary, location, remote type and seniority in one schema. For job boards, recruiting, sales leads, hiring-trend research and new-job alerts.",
+    "categories": [
+      "JOBS",
+      "LEAD_GENERATION",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/rnPqBODr-wPA5QZsKpXBF2tEwErdqxDj2IX4vH0nS5o/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTXBjMWp6V3d4MGR5TjRoZjItWG9NajVHbE1sai1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX3JsZ2VrMXJsZ2VrMXJsZ2UuanBn.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-01T19:12:58.761Z",
+      "startedAt": "2026-11-01T19:12:56.748Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "job": {
+            "eventTitle": "Job",
+            "eventDescription": "One job delivered with title, company, link, location (city, region, country, coordinates), workplace type, employment type, seniority, job function, salary, dates and the full description with skills. Filtered, duplicate and unchanged jobs, closed-job rows, jobs whose page could not be read and failed companies are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0008
+              }
+            }
+          },
+          "company-summary": {
+            "eventTitle": "Company summary",
+            "eventDescription": "Only when 'Rows to return' includes company summaries: one hiring summary per company (open jobs, jobs posted in the last 7 and 30 days, mix by function, seniority and location, pay ranges, leadership roles).",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.003
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.002
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "Mpc1jzWwx0dyN4hf2",
+    "url": "https://apify.com/panix/ats-jobs-scraper"
+  },
+  {
+    "title": "Airbnb Scraper: Listings, Prices, Reviews & Calendar",
+    "name": "airbnb-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 3,
+      "totalRuns": 39,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-18T16:49:31.429Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 10,
+        "TIMED-OUT": 0,
+        "TOTAL": 10
+      }
+    },
+    "description": "Scrape Airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. Splits big cities into map areas for thousands of listings. For short-term rental market research, pricing and travel apps.",
+    "categories": [
+      "TRAVEL",
+      "REAL_ESTATE",
+      "ECOMMERCE"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/cASU03bPVbJyxoQelsmd74hPuKWGjtgdo5oCuAPjlWY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItQVl6dUp6S2JIMjlZVFhrbVQtTGUybTY2czRjOS1Ib21lX1BsYW5uaW5nX0ljb24ucG5n.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-08T14:33:23.101Z",
+      "startedAt": "2026-11-08T14:33:21.996Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "listing": {
+            "eventTitle": "Listing",
+            "eventDescription": "One Airbnb listing from search results: name, type, price for your dates (total, per night, discount, fees), rating, review count, bedrooms, beds, baths, coordinates, photos and badges. Listings left out by filters, duplicates and failed pages are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.00125
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00085
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0007
+              }
+            }
+          },
+          "listing-details": {
+            "eventTitle": "Listing with details",
+            "eventDescription": "One listing with its listing page read (charged instead of Listing): everything in Listing plus description, all amenities, host, house rules, rating per category, sleeping arrangements and all photos. Listing links (/rooms/...) are charged this way.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0017
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0014
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0014
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0014
+              }
+            }
+          },
+          "calendar": {
+            "eventTitle": "Availability calendar",
+            "eventDescription": "Add-on per listing when the availability calendar is requested: day-by-day availability, minimum and maximum nights and an occupancy summary for up to 12 months.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00045
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.00035
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.00035
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.00035
+              }
+            }
+          },
+          "review": {
+            "eventTitle": "Review",
+            "eventDescription": "One guest review: text, star rating, date, language, reviewer first name and the host's response.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.00125
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00085
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0007
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "AYzuJzKbH29YTXkmT",
+    "url": "https://apify.com/panix/airbnb-scraper"
+  },
+  {
+    "title": "YouTube Comments Scraper: Replies, Shorts & Channels",
+    "name": "youtube-comments-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 5,
+      "totalRuns": 47,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-18T16:49:26.985Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 10,
+        "TIMED-OUT": 0,
+        "TOTAL": 10
+      }
+    },
+    "description": "Scrape YouTube comments and replies from videos, Shorts, channels, playlists or searches: likes, pinned and creator-heart flags, authors, video title. Keyword, likes and date filters, only-new monitoring. No API key. For brand monitoring, sentiment analysis and research.",
+    "categories": [
+      "SOCIAL_MEDIA",
+      "VIDEOS",
+      "FOR_CREATORS"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/lL751k-vV3qrm1U1O3TjrfJQfimoe7RA7cRssMSLO6Q/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3Itamp2ZVVPZ0xjNmQwT09VcHotUXdiRFJPeVBNSS1IZWFydF9fQ2hhdF9fYW5kX1Bpbl9JY29uLnBuZw.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-08T13:04:49.007Z",
+      "startedAt": "2026-11-08T13:04:48.321Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "comment": {
+            "eventTitle": "Comment",
+            "eventDescription": "One YouTube comment or reply with text, author, likes, reply count, pinned and creator-heart flags, date and the video's title, channel and comment count. Comments left out by filters, duplicates, comments delivered in earlier only-new runs and error rows for videos with comments turned off are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0006
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "jjveUOgLc6d0OOUpz",
+    "url": "https://apify.com/panix/youtube-comments-scraper"
+  },
+  {
+    "title": "Instagram Reel Transcript: Speech-to-Text, Subtitles & Stats",
+    "name": "instagram-reel-transcript",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 10,
+      "totalRuns": 52,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-18T16:47:41.371Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 17,
+        "TIMED-OUT": 0,
+        "TOTAL": 17
+      }
+    },
+    "description": "Transcribe public Instagram reels to text without login or API key: spoken words, hook, language, timed segments, SRT/VTT subtitles, free English translation, plus plays, likes and caption. For content research, influencer marketing, social listening and AI/RAG pipelines.",
+    "categories": [
+      "SOCIAL_MEDIA",
+      "AI",
+      "VIDEOS"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/CENIRIC3NURRNtfhwYGaTPgpvCPIt_7q_F6d0ulSCcw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItSm14OTFocmh0TmF2dUcxcDktbHZiVUhpd1VNRi1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzJxMWJzeDJxMWJzeDJxMWIuanBn.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-07T15:02:46.783Z",
+      "startedAt": "2026-11-07T15:02:46.380Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "reel": {
+            "eventTitle": "Reel transcript",
+            "eventDescription": "One public Instagram reel or video transcribed (up to 90 seconds): full spoken text, opening line, language, timed segments, optional SRT/VTT subtitles, word timestamps and English translation, plus plays, likes, comments, caption and audio track. Music-only reels, photo posts, missing or private reels and duplicates are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.012
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.01
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.009
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.008
+              }
+            }
+          },
+          "extra-minute": {
+            "eventTitle": "Extra minute",
+            "eventDescription": "Each started minute of a transcribed video after its first 90 seconds (a 2-minute reel has one, a 3-minute reel two).",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.005
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0036
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0032
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0032
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0032
+              }
+            }
+          },
+          "high-accuracy": {
+            "eventTitle": "High accuracy minute",
+            "eventDescription": "Only with Accuracy = High (Whisper small model): each started minute of a transcribed video.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.012
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.01
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.009
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.008
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "Jmx91hrhtNavuG1p9",
+    "url": "https://apify.com/panix/instagram-reel-transcript"
+  },
+  {
+    "title": "Walmart Scraper: Products, Prices, Reviews & Price Tracker",
+    "name": "walmart-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 6,
+      "totalRuns": 52,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-18T17:42:33.803Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -3004,6 +2354,411 @@
         "SUCCEEDED": 11,
         "TIMED-OUT": 0,
         "TOTAL": 11
+      }
+    },
+    "description": "Scrape Walmart products and reviews without login: price, was-price, seller, stock, UPC, specs, every variant with its price, rating breakdown, store aisle, pickup and delivery. From searches, categories, deals, item IDs or links. Price tracking for sellers, brands and price monitoring.",
+    "categories": [
+      "ECOMMERCE",
+      "LEAD_GENERATION",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/YkN4MwrK2yrXHCds1CYVhOF-gu_8oO7DDiZ3_pJ0HsM/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTTNscGM0bzFPMTJxcGZIM0YtQjc0UnpMeGVNRy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX3lpOGcyOXlpOGcyOXlpOGcuanBn.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-07T17:25:56.916Z",
+      "startedAt": "2026-11-07T17:25:56.186Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing (product price covers residential retries when Walmart blocks).",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "product": {
+            "eventTitle": "Product",
+            "eventDescription": "One Walmart product with its product page read: price, was-price, unit price, seller, stock, UPC, specifications, description, all variants with prices, rating breakdown, review highlights, pickup and delivery, store aisle and return policy. Products left out by filters, duplicates, missing items and unchanged products (only-changed mode) are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.003
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0022
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.002
+              }
+            }
+          },
+          "product-basic": {
+            "eventTitle": "Product (search data only)",
+            "eventDescription": "One product from search, category or deals pages when Read product pages is off: title, price, was-price, rating, reviews count, badges, seller, stock, image and link.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00045
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0004
+              }
+            }
+          },
+          "review": {
+            "eventTitle": "Review",
+            "eventDescription": "One customer review: stars, title, text, date, reviewer nickname, verified purchase, helpful votes, photos and the reviewed variant.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00035
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0003
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "M3lpc4o1O12qpfH3F",
+    "url": "https://apify.com/panix/walmart-scraper"
+  },
+  {
+    "title": "Pinterest Scraper: Pins, Boards, Profiles & Search",
+    "name": "pinterest-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 7,
+      "totalRuns": 40,
+      "totalUsers": 2,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-18T22:36:32.800Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 14,
+        "TIMED-OUT": 0,
+        "TOTAL": 14
+      }
+    },
+    "description": "Scrape Pinterest pins, video pins, boards and profiles by keyword or link, no login: real pin links, saves, outbound links, product prices, monthly views, keyword suggestions. Free date, saves and domain filters, only-new-pins monitoring. For e-commerce, SEO and social media marketing.",
+    "categories": [
+      "SOCIAL_MEDIA",
+      "FOR_CREATORS",
+      "MARKETING"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/Utq3Y0fKvk_UlzCap6hhmPSFqY4jrnqM0cIkEqHGScQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItcVB0UHhqTzZESk5zQW5aZEYtc3VNVThlMjRycC1SZWRfTG9jYXRpb25fR2FsbGVyeV9JY29uLnBuZw.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-07T22:08:50.219Z",
+      "startedAt": "2026-11-07T22:08:49.333Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Price update.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "pin": {
+            "eventTitle": "Pin",
+            "eventDescription": "One Pinterest pin: title, description, full-size image, outbound link and domain, date, saves, reactions, comments, video stream, product price, topics, creator and board, with the real pin link looked up when Pinterest hides it. Filtered, duplicate and already delivered pins are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0012
+              }
+            }
+          },
+          "profile": {
+            "eventTitle": "Profile",
+            "eventDescription": "One Pinterest profile: name, about, followers, following, monthly views and reach, pin and board counts, website, verified-merchant flag, account age and last save. Missing profiles are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0012
+              }
+            }
+          },
+          "board": {
+            "eventTitle": "Board",
+            "eventDescription": "One Pinterest board: name, description, pin count, followers, sections, owner, cover image, last pinned date and related topics. Missing boards are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0009
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00075
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0006
+              }
+            }
+          },
+          "keyword-suggestion": {
+            "eventTitle": "Keyword suggestion",
+            "eventDescription": "One related search Pinterest suggests for your keyword (autocomplete), with its rank and search link. Only when keyword suggestions are turned on.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.00025
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0002
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.00015
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.00015
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.00015
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "qPtPxjO6DJNsAnZdF",
+    "url": "https://apify.com/panix/pinterest-scraper"
+  },
+  {
+    "title": "LinkedIn Ad Library Scraper: Ads, Impressions & Targeting",
+    "name": "linkedin-ad-library-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 4,
+      "totalRuns": 32,
+      "totalUsers": 1,
+      "totalUsers7Days": 0,
+      "totalUsers30Days": 0,
+      "totalUsers90Days": 0,
+      "lastRunStartedAt": "2026-11-18T16:50:42.542Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 9,
+        "TIMED-OUT": 0,
+        "TOTAL": 9
+      }
+    },
+    "description": "See every ad a company runs on LinkedIn: ad text, images, videos, click-through links with UTM campaign tags and who paid, from the official LinkedIn Ad Library. EU ads add run dates, impressions, countries and targeting. Track new competitor ads. No login.",
+    "categories": [
+      "MARKETING",
+      "LEAD_GENERATION",
+      "SOCIAL_MEDIA"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/IxH2ClWa8lgKwD0yCVq739UeQ6srsN4jsYfP78h8D4c/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItaklYZmVWeWJVYnRKWnI3c2UtUmdvcVRKTDdEMC1MaW5rZWRJbl9BZF9BbmFseXRpY3NfU2VhcmNoX0ljb24ucG5n.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-13T12:00:19.431Z",
+      "startedAt": "2026-11-13T12:00:18.678Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.002
+          },
+          "ad": {
+            "eventTitle": "Ad",
+            "eventDescription": "One LinkedIn ad from the Ad Library: advertiser, format, ad text preview, headline, image, ad link. Error rows, 'no ads' rows, duplicates and ads left out by filters are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0003
+              }
+            }
+          },
+          "ad-details": {
+            "eventTitle": "Ad details",
+            "eventDescription": "With 'Add ad details' (on by default) and for single ad links: full ad text, click-through link with UTM tags, call to action, video file, carousel cards, company ID and who paid; for EU ads also run dates, impressions, countries and targeting. Failed lookups are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0003
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "jIXfeVybUbtJZr7se",
+    "url": "https://apify.com/panix/linkedin-ad-library-scraper"
+  },
+  {
+    "title": "LinkedIn Company Scraper: Details, Posts & Similar Companies",
+    "name": "linkedin-company-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 5,
+      "totalRuns": 33,
+      "totalUsers": 1,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-18T16:47:31.157Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 12,
+        "TIMED-OUT": 0,
+        "TOTAL": 12
       }
     },
     "description": "Scrape LinkedIn company pages without login from links, names, IDs or websites: industry, size, headcount, followers, HQ and office addresses, website, specialties, recent posts and similar companies. For lead generation, CRM enrichment, sales prospecting and market research.",
@@ -3067,5 +2822,347 @@
     },
     "id": "kaXC3YScDGZWcInKV",
     "url": "https://apify.com/panix/linkedin-company-scraper"
+  },
+  {
+    "title": "Video & Podcast Transcript: Any Link, MP3 or RSS to Text",
+    "name": "video-transcript-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 8,
+      "totalRuns": 53,
+      "totalUsers": 1,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-18T18:06:33.113Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 11,
+        "TIMED-OUT": 0,
+        "TOTAL": 11
+      }
+    },
+    "description": "Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.",
+    "categories": [
+      "AI",
+      "VIDEOS",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/LrI57uN1fraif-ha6onoSaRBYDNKoHc6i4OR2cO3naA/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItaThOWU5OQnpNeWJrMDZ2UWgtaThzR09lOGROMS1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzhlYXJyMDhlYXJyMDhlYXIuanBn.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-08T17:41:16.360Z",
+      "startedAt": "2026-11-08T17:41:15.354Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Price update.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "transcript": {
+            "eventTitle": "Transcript",
+            "eventDescription": "One video, audio file or podcast episode delivered as a transcript: full text, timed segments, language and the item's title, author, date, length and stats, plus optional SRT/VTT subtitles, Markdown and RAG chunks. When captions or the podcast's own transcript exist, this is the only charge. Items without speech, unsupported or missing links and duplicates are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0016
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0016
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0016
+              }
+            }
+          },
+          "speech-minute": {
+            "eventTitle": "Speech-to-text minute",
+            "eventDescription": "Only when there are no captions (or Transcript source is Speech-to-text always): each started minute of detected speech transcribed with the built-in Whisper model. Music and silence are not counted.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.009
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.007
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.006
+              }
+            }
+          },
+          "high-accuracy-minute": {
+            "eventTitle": "High accuracy minute",
+            "eventDescription": "Only with Speech-to-text accuracy = High (Whisper small model): added to each speech-to-text minute.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.024
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.02
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.018
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.016
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.016
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.016
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "i8NYNNBzMybk06vQh",
+    "url": "https://apify.com/panix/video-transcript-scraper"
+  },
+  {
+    "title": "Amazon Arbitrage Finder: Walmart, Target & Global Price Gaps",
+    "name": "amazon-arbitrage-finder",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 7,
+      "totalRuns": 54,
+      "totalUsers": 1,
+      "totalUsers7Days": 0,
+      "totalUsers30Days": 0,
+      "totalUsers90Days": 0,
+      "lastRunStartedAt": "2026-11-18T19:08:30.914Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 10,
+        "TIMED-OUT": 0,
+        "TOTAL": 10
+      }
+    },
+    "description": "Find products to resell on Amazon. Compares Amazon with Walmart, Target and other Amazon countries by barcode, adds FBA fees, profit, ROI and sales per month, and ranks products best first with a Buy, Maybe or Skip answer. For online arbitrage and FBA sellers. No login.",
+    "categories": [
+      "ECOMMERCE",
+      "AUTOMATION",
+      "BUSINESS"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/FtyEBz1QQYTsIfjivWgDOGrLJRrjSztXV1NrFPV00Xw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItTFlSaGU1eGZGSXNuRHFWS04tMWc3a0ZsemJjbi1TaG9wcGluZ19CYWdfVHJhbnNmZXJfSWNvbi5wbmc.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-10T18:26:20.724Z",
+      "startedAt": "2026-11-10T18:26:19.834Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing (lower price for products with no match).",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "product-compared": {
+            "eventTitle": "Comparison",
+            "eventDescription": "One product found on your Amazon store and in at least one other store (Walmart, Target or another Amazon country), with prices, Amazon fees, profit, ROI, sales signals, score and a Buy / Maybe / Skip verdict.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.007
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.005
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.005
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.005
+              }
+            }
+          },
+          "product-checked": {
+            "eventTitle": "Product checked, no match",
+            "eventDescription": "One product that was looked up in every store you chose but was not found on your Amazon store or in any other store (delivered as a Skip row). Products whose stores were all blocked, duplicates and products outside your price range are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0011
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.001
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "LYRhe5xfFIsnDqVKN",
+    "url": "https://apify.com/panix/amazon-arbitrage-finder"
+  },
+  {
+    "title": "ESPN Scraper: Scores, Standings, Injuries, Odds & Stats",
+    "name": "espn-sports-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 2,
+      "totalRuns": 50,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-19T17:59:20.044Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0
+    },
+    "description": "Get ESPN scores, betting odds, box scores, standings, rosters, injury reports with return dates, news and player game logs for 50+ leagues: NFL, NBA, MLB, NHL, soccer, college, F1, tennis, golf and UFC. Only-new mode for alerts. No login.",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-19T17:34:36.179Z",
+      "startedAt": "2026-11-19T17:34:35.387Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "result": {
+            "eventTitle": "Result row",
+            "eventDescription": "One delivered row: a game, standings line, team, player, injury, news article, ranking line or player game-log line. Note and error rows are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0013
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0011
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0011
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0011
+              }
+            }
+          },
+          "game-details": {
+            "eventTitle": "Game details",
+            "eventDescription": "Only with 'Add box score, player stats and odds': team stats, every player's stats, betting lines with opening and closing numbers, officials, injuries and the recap of one game. Charged only when ESPN had details for the game; games without details are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0035
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.003
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0025
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "02ydXgJtjtKjBab1o",
+    "url": "https://apify.com/panix/espn-sports-scraper"
   }
 ]

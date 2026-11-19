@@ -33,12 +33,6 @@
    "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/competitor-facebook-ads"
   },
   {
-   "name": "uk-skincare-facebook-ads",
-   "title": "Find UK skincare ads in the Facebook Ad Library",
-   "desc": "Search the Meta Ad Library by keyword and country and export every matching ad from Facebook and Instagram. This example finds active skincare ads shown in the United Kingdom, newest first, with the advertiser, ad copy, creatives, landing page and days running. Change the keyword and the country to research any market.",
-   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/uk-skincare-facebook-ads"
-  },
-  {
    "name": "winning-facebook-ads",
    "title": "Find winning Facebook ads that ran 30+ days",
    "desc": "Advertisers stop ads that lose money, so ads that keep running are a good sign of a winning product or creative. This task searches the Meta Ad Library for active US ads that mention free shipping, keeps only ads running for at least 30 days, and returns one ad per advertiser with copy, creatives, landing page and days running.",
@@ -71,12 +65,6 @@
    "url": "https://apify.com/panix/flashscore-scraper/examples/todays-football-scores"
   },
   {
-   "name": "live-scores-football-tennis-basketball",
-   "title": "Live scores for football, tennis and basketball",
-   "desc": "Get every live and finished match of the day in football, tennis and basketball from Flashscore, with the score of each period, the live minute or tennis game score, the status and the winner. Schedule it every minute or two with Only new or changed matches to feed a live score app, a bot or a betting model.",
-   "url": "https://apify.com/panix/flashscore-scraper/examples/live-scores-football-tennis-basketball"
-  },
-  {
    "name": "football-betting-odds",
    "title": "Get betting odds for upcoming top football matches",
    "desc": "Collect pre-match odds for the next three days of top football from Flashscore, such as the Premier League, LaLiga and the Champions League: 1X2, over/under and both teams to score, from the bookmakers shown in your chosen country, with opening prices and movement. Use it for odds tracking, value betting models and comparison sites.",
@@ -93,12 +81,6 @@
    "title": "Tennis results with point-by-point data",
    "desc": "Get the finished ATP and WTA matches of the last two days from Flashscore with the score of every set and point-by-point data: every game with the server, the winner, breaks and the points in order, with break, set and match points counted. Use it for player analytics, betting models and match reports.",
    "url": "https://apify.com/panix/flashscore-scraper/examples/tennis-point-by-point"
-  },
-  {
-   "name": "nba-results-team-stats",
-   "title": "Get last night's NBA results with team stats",
-   "desc": "Get yesterday's NBA games from Flashscore, in New York time, with the final score, the score of each quarter and the team statistics of each game. Schedule it every morning for a daily recap, a fantasy league or a betting model. Change the competition to follow another basketball league.",
-   "url": "https://apify.com/panix/flashscore-scraper/examples/nba-results-team-stats"
   }
  ],
  "resume-cv-json-parser": [
@@ -145,12 +127,6 @@
    "title": "Get transcripts of every video in a YouTube playlist",
    "desc": "Paste a public playlist and get the transcript of each video in playlist order, with title, channel, language, word count and timestamped segments. Good for online courses, lecture series and podcast archives. The example reads a short TED playlist; raise Maximum discovered videos for longer playlists.",
    "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-playlist-transcripts"
-  },
-  {
-   "name": "youtube-transcripts-any-language",
-   "title": "Get YouTube transcripts in Spanish, Hindi, Arabic and more",
-   "desc": "Get transcripts in each video's own language, not an English machine translation. The task picks the caption track that matches the spoken language and prefers human-made captions. The example covers Spanish, French, German, Hindi, Japanese and Arabic videos, with right-to-left text kept correct for Arabic.",
-   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-transcripts-any-language"
   }
  ],
  "amazon-product-scraper": [
@@ -177,12 +153,6 @@
    "title": "Export Amazon search results to CSV or Excel",
    "desc": "Fast, low-cost export of Amazon search results: title, price, list price, rating, number of ratings, \"bought in past month\", badges, Prime and product link for every result, read from the search pages only. The example exports the top 100 phone case results on amazon.com. Turn on Read product pages when you also need Best Sellers Rank, seller and specs.",
    "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-search-results-export"
-  },
-  {
-   "name": "amazon-germany-prices",
-   "title": "Get Amazon.de prices for a German delivery address",
-   "desc": "Read amazon.de prices, delivery dates and stock as a shopper in Germany sees them, with German VAT included, by setting a German delivery postcode (here Berlin, 10115). The example searches for coffee machines and returns price, list price, coupon, seller, Fulfilled by Amazon, availability and delivery date. Works the same for amazon.co.uk, .fr, .it, .es and the other stores.",
-   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-germany-prices"
   }
  ],
  "ats-jobs-scraper": [
@@ -631,6 +601,56 @@
    "title": "Find expert-level React hourly jobs on Upwork",
    "desc": "List expert React jobs paying at least $40 an hour. Each row has the rate, client and link.",
    "url": "https://apify.com/panix/upwork-jobs-scraper/examples/upwork-expert-react-hourly-jobs"
+  }
+ ],
+ "espn-sports-scraper": [
+  {
+   "name": "espn-scores-and-schedules",
+   "title": "Get today's sports scores and schedules from ESPN",
+   "desc": "Export yesterday's results, live games and tomorrow's schedule for NBA, NFL, MLB, NHL and the Premier League: teams, score, status, venue, TV channel and the betting line when ESPN lists one. Change the leagues or dates to cover any of 50+ leagues.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-scores-and-schedules"
+  },
+  {
+   "name": "espn-box-scores-and-odds",
+   "title": "Get ESPN box scores, player stats and betting odds",
+   "desc": "Export finished games of the last three days with the full box score: team stats, every player's stats, spread, total and moneyline with opening and closing numbers, officials and the recap. The example reads NBA, NHL, MLB and NFL games.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-box-scores-and-odds"
+  },
+  {
+   "name": "espn-injury-report",
+   "title": "Get the NFL, NBA, MLB and NHL injury report from ESPN",
+   "desc": "Export the current injury list with player, team, status, injury, body part, side, expected return date and the analyst note. The example reads NBA, NHL and WNBA; add NFL, MLB or college football. Turn on Only new to get just the changes each morning.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-injury-report"
+  },
+  {
+   "name": "espn-standings-tables",
+   "title": "Get league standings from ESPN",
+   "desc": "Export the current standings for the NFL, NBA, MLB, NHL and the Premier League by conference, division or table: rank, team, wins, losses, points, win percentage, streak and home and away records.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-standings-tables"
+  },
+  {
+   "name": "espn-team-rosters",
+   "title": "Get NBA team rosters with player details from ESPN",
+   "desc": "Export team rosters with every player's position, jersey number, age, height, weight, college, birthplace and ESPN athlete id. The example reads the Lakers and Celtics; leave Teams empty for the whole league or pick NFL, MLB, NHL or soccer clubs.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-team-rosters"
+  },
+  {
+   "name": "espn-college-rankings",
+   "title": "Get college football and basketball polls from ESPN",
+   "desc": "Export the latest AP, Coaches and CFP polls for college football and men's and women's college basketball: rank, last week's rank, record, points and first-place votes. Add ATP, WTA or UFC for tennis and fighter rankings.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-college-rankings"
+  },
+  {
+   "name": "espn-sports-news",
+   "title": "Get the latest sports headlines from ESPN",
+   "desc": "Export the newest ESPN headlines for the NFL, NBA, MLB, NHL, the Premier League and F1: headline, summary, author, publish time, image and link. Set News articles per league for more.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-sports-news"
+  },
+  {
+   "name": "espn-player-game-logs",
+   "title": "Get NBA player game logs with stats per game from ESPN",
+   "desc": "Export game-by-game stats for players: date, opponent, home or away, result, score, minutes, points, rebounds, assists and shooting. The example reads LeBron James and Stephen Curry; paste any ESPN athlete ids.",
+   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-player-game-logs"
   }
  ]
 }
