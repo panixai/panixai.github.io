@@ -266,7 +266,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-10-30T18:39:09Z",
+      "createdAt": "2026-10-30T18:39:09.000Z",
       "startedAt": "2026-10-30T18:39:07.997Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
@@ -726,7 +726,7 @@
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:26:30.85Z",
+      "lastRunStartedAt": "2026-11-18T16:26:30.850Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -954,7 +954,7 @@
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
       "createdAt": "2026-10-26T20:13:10.874Z",
-      "startedAt": "2026-10-26T20:13:10.16Z",
+      "startedAt": "2026-10-26T20:13:10.160Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Simpler pricing: one event per delivered transcript with all formats included, and playlist and channel input. Lower prices for paid tiers. Timed-caption and translation events are removed.",
       "pricingPerEvent": {
@@ -1639,7 +1639,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-05T17:47:37.66Z",
+      "createdAt": "2026-11-05T17:47:37.660Z",
       "startedAt": "2026-11-05T17:47:36.833Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
@@ -2240,7 +2240,7 @@
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
       "createdAt": "2026-11-07T15:02:46.783Z",
-      "startedAt": "2026-11-07T15:02:46.38Z",
+      "startedAt": "2026-11-07T15:02:46.380Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
       "pricingPerEvent": {
@@ -2479,7 +2479,7 @@
       "totalUsers7Days": 2,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T22:36:32.8Z",
+      "lastRunStartedAt": "2026-11-18T22:36:32.800Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -2864,7 +2864,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-08T17:41:16.36Z",
+      "createdAt": "2026-11-08T17:41:16.360Z",
       "startedAt": "2026-11-08T17:41:15.354Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Price update.",
@@ -3069,17 +3069,177 @@
     "url": "https://apify.com/panix/amazon-arbitrage-finder"
   },
   {
+    "title": "Telegram Channel Scraper & Monitor: Posts, Search, No Login",
+    "name": "telegram-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 3,
+      "totalRuns": 37,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-19T18:55:24.577Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 1,
+        "TIMED-OUT": 0,
+        "TOTAL": 1
+      }
+    },
+    "description": "Scrape public Telegram channels without login or API key: full post history, views, reactions, media, comments, subscribers and channel stats. Search all of Telegram by keyword. Only-new-posts monitoring for news, crypto, brand tracking and AI agents.",
+    "categories": [
+      "SOCIAL_MEDIA",
+      "NEWS",
+      "AUTOMATION"
+    ],
+    "pictureUrl": "https://images.apifyusercontent.com/E_N7AB7Xeu4yzJoNmaPt5eV7-eMhliC7D_haIV3IqyA/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3Itb3Z3MFExSWxuanVTUEY2Qk0tNkNZajU2OElrSC1NZWdhcGhvbmVfQW5hbHl0aWNzX0NoYXRfSWNvbi5wbmc.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-19T18:35:35.114Z",
+      "startedAt": "2026-11-19T18:35:34.265Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Price update.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "post": {
+            "eventTitle": "Post",
+            "eventDescription": "One public Telegram post: text, date, views, reactions, media (photos, videos, voice, files, polls, stickers), link preview, links, hashtags, mentions, forwarded-from and reply-to. Filtered, duplicate and already-seen posts and missing channels are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0006
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0004
+              }
+            }
+          },
+          "comment": {
+            "eventTitle": "Comment",
+            "eventDescription": "One public comment under a channel post (only when Add public comments is on): text, date, reactions, reply-to and media.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0005
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00035
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0003
+              }
+            }
+          },
+          "channel": {
+            "eventTitle": "Channel",
+            "eventDescription": "One channel or group row: title, description, links, subscribers or members, verified, media counts, and average views, view rate, reaction rate and posts per day. Missing channels and personal accounts are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0013
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.001
+              }
+            }
+          },
+          "search": {
+            "eventTitle": "Keyword search",
+            "eventDescription": "One keyword searched across Telegram: finding the public channels that discuss it, then searching inside them. Charged once per keyword when channels are found for it (also on only-new-posts checks). Keywords with no channels found are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.01
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.008
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.007
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.006
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "ovw0Q1IlnjuSPF6BM",
+    "url": "https://apify.com/panix/telegram-scraper"
+  },
+  {
     "title": "Google Trends API: Interest, Related Queries, Trending Now",
     "name": "google-trends-api",
     "username": "panix",
     "stats": {
-      "totalBuilds": 9,
-      "totalRuns": 17,
+      "totalBuilds": 10,
+      "totalRuns": 21,
       "totalUsers": 1,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-19T18:28:52.191Z",
+      "lastRunStartedAt": "2026-11-19T18:38:44.381Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0
@@ -3106,7 +3266,7 @@
             "eventTitle": "Actor Start",
             "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
             "isOneTimeEvent": true,
-            "eventPriceUsd": 5E-05
+            "eventPriceUsd": 0.00005
           },
           "trend-report": {
             "eventTitle": "Trends report",

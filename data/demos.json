@@ -841,6 +841,50 @@
   ],
   "flow": "Call live over HTTP or MCP · or weekly batch · Sheets"
  },
+ "telegram-scraper": {
+  "run": "wtTyA29wlGePqGnkP",
+  "input": {
+   "channels": [
+    "WatcherGuru",
+    "cointelegraph",
+    "whale_alert_io"
+   ],
+   "maxPostsPerChannel": 30
+  },
+  "cols": [
+   "text",
+   "views",
+   "reactions"
+  ],
+  "rows": [
+   [
+    "Over 400 Anthropic employees are now…",
+    "31.9K",
+    "914"
+   ],
+   [
+    "BREAKING: Claude AI developer Anthrop…",
+    "40.7K",
+    "587"
+   ],
+   [
+    "Hackers leak personal data of thousan…",
+    "53.3K",
+    "806"
+   ],
+   [
+    "GTA 6 sets new record as the highest-…",
+    "55.2K",
+    "1K"
+   ]
+  ],
+  "use": [
+   "Crypto and news feeds",
+   "Brand mentions across Telegram",
+   "Channel stats for ad buying"
+  ],
+  "flow": "Hourly · only new posts · Slack"
+ },
  "threads-scraper": {
   "run": "zcsSmBHWoMGsg3QWV",
   "input": {

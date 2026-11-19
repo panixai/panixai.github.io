@@ -45,12 +45,6 @@
    "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/facebook-video-ads"
   },
   {
-   "name": "facebook-political-ad-spend",
-   "title": "Track political ad spending on Facebook in the US",
-   "desc": "Export political and issue ads from the Meta Ad Library with spend and impression ranges, who paid for them, platforms and dates. Spend comes as Meta's text range plus lower and upper numbers, ready for charts. This example collects active and inactive US ads about climate. For journalists, researchers and campaign analysts.",
-   "url": "https://apify.com/panix/facebook-ads-library-scraper/examples/facebook-political-ad-spend"
-  },
-  {
    "name": "new-facebook-ads-alerts",
    "title": "Get alerts for new Facebook ads from a competitor",
    "desc": "Run this task on a schedule, for example every morning, and each run returns only the ads a competitor launched since the last run. The first run returns the current ads; later runs skip ads you already have, and repeats are not charged. The example watches HelloFresh in the United States. Connect it to Slack, email or Google Sheets for alerts.",
@@ -115,12 +109,6 @@
    "title": "Turn YouTube videos into RAG chunks for AI",
    "desc": "Convert YouTube videos into LLM-ready Markdown and chapter-aware transcript chunks, ready to embed in a vector database such as Pinecone, Qdrant or Supabase. Each chunk has a timestamp, word count, chapter and a deep link to the exact moment in the video, so answers can cite their source. The example processes three well-known TED talks.",
    "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-transcripts-for-rag"
-  },
-  {
-   "name": "youtube-playlist-transcripts",
-   "title": "Get transcripts of every video in a YouTube playlist",
-   "desc": "Paste a public playlist and get the transcript of each video in playlist order, with title, channel, language, word count and timestamped segments. Good for online courses, lecture series and podcast archives. The example reads a short TED playlist; raise Maximum discovered videos for longer playlists.",
-   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-playlist-transcripts"
   }
  ],
  "amazon-product-scraper": [
@@ -141,12 +129,6 @@
    "title": "Track Amazon prices and stock for a list of ASINs",
    "desc": "Monitor a fixed list of Amazon products. Each run reads the current price, list price, coupon, stock, seller and rating of every ASIN and compares it with the previous run: the changes field shows the price before and after, the change in percent and stock changes. Schedule it daily and turn on Only changed products to receive just the products whose price or stock moved.",
    "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-price-tracker"
-  },
-  {
-   "name": "amazon-search-results-export",
-   "title": "Export Amazon search results to CSV or Excel",
-   "desc": "Fast, low-cost export of Amazon search results: title, price, list price, rating, number of ratings, \"bought in past month\", badges, Prime and product link for every result, read from the search pages only. The example exports the top 100 phone case results on amazon.com. Turn on Read product pages when you also need Best Sellers Rank, seller and specs.",
-   "url": "https://apify.com/panix/amazon-product-scraper/examples/amazon-search-results-export"
   }
  ],
  "ats-jobs-scraper": [
@@ -345,12 +327,6 @@
    "title": "Get Pinterest keyword ideas for healthy meal prep",
    "desc": "Get related search suggestions Pinterest shows for a topic, plus top pins. The example uses healthy meal prep. Use the suggestions to plan content and SEO.",
    "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-keyword-ideas-meal-prep"
-  },
-  {
-   "name": "pinterest-workout-videos",
-   "title": "Find popular workout video pins on Pinterest",
-   "desc": "Search Pinterest for workout routine videos and see their saves and creators. Change the query to scout video ideas in any niche.",
-   "url": "https://apify.com/panix/pinterest-scraper/examples/pinterest-workout-videos"
   }
  ],
  "youtube-comments-scraper": [
@@ -621,12 +597,6 @@
    "title": "Get league standings from ESPN",
    "desc": "Export the current standings for the NFL, NBA, MLB, NHL and the Premier League by conference, division or table: rank, team, wins, losses, points, win percentage, streak and home and away records.",
    "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-standings-tables"
-  },
-  {
-   "name": "espn-player-game-logs",
-   "title": "Get NBA player game logs with stats per game from ESPN",
-   "desc": "Export game-by-game stats for players: date, opponent, home or away, result, score, minutes, points, rebounds, assists and shooting. The example reads LeBron James and Stephen Curry; paste any ESPN athlete ids.",
-   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-player-game-logs"
   }
  ],
  "google-trends-api": [
@@ -653,6 +623,38 @@
    "title": "Check seasonal search demand for products over 5 years",
    "desc": "See when demand for each product peaks during the year. The example checks sunscreen, christmas lights and halloween costumes in the US over the last 5 years and returns weekly interest and the peak week for each product, so you know when to stock and advertise.",
    "url": "https://apify.com/panix/google-trends-api/examples/google-trends-seasonal-demand-by-product"
+  }
+ ],
+ "telegram-scraper": [
+  {
+   "name": "telegram-crypto-news-channels",
+   "title": "Export crypto news from Telegram channels",
+   "desc": "Get the latest posts of popular crypto news channels with views, reactions, photos and links, plus a channel row with subscribers and average views. Replace the channels with any public ones and schedule it for a live feed.",
+   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-crypto-news-channels"
+  },
+  {
+   "name": "telegram-keyword-search",
+   "title": "Search all of Telegram for a keyword or brand",
+   "desc": "Find the newest Telegram posts that mention a keyword, brand or topic across public channels, with views, reactions and the channel each one came from. The example searches ChatGPT and OpenAI over the last 30 days.",
+   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-keyword-search"
+  },
+  {
+   "name": "telegram-channel-stats-for-ads",
+   "title": "Compare Telegram channels before buying ads",
+   "desc": "Get one row per channel with subscribers, average and median views, view rate (views as a % of subscribers), reaction rate, posts per day and last post time. Paste the channels you are thinking of buying a post in.",
+   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-channel-stats-for-ads"
+  },
+  {
+   "name": "telegram-posts-with-comments",
+   "title": "Export Telegram posts with their comments",
+   "desc": "Get posts of channels that have a public discussion group together with the comments under each post: text, date, reactions and reply-to. Good for sentiment analysis of what a community says.",
+   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-posts-with-comments"
+  },
+  {
+   "name": "telegram-remote-job-posts",
+   "title": "Find remote job posts on Telegram",
+   "desc": "Search Telegram job channels for remote roles and get the newest posts with the job text, links and the channel it came from. The example searches remote Python and remote React jobs from the last 14 days.",
+   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-remote-job-posts"
   }
  ]
 }

@@ -52,6 +52,8 @@ const C = {
     use: ['Betting models with odds and box scores', 'Injury alerts for fantasy players', 'Daily recap newsletters and dashboards'], flow: 'Every morning · only new or changed rows · Slack' },
   'google-trends-api': { pick: 0, keep: ['keywords', 'geos', 'timeRange'], short: { timeRange: 'past_5_years' }, filter: r => r.type === 'trends', cols: [['keyword', r => cut(r.keyword, 22)], ['peakDate', r => r.peakDate], ['direction', r => r.direction]],
     use: ['Seasonal demand and keyword research', 'Trend dashboards and alerts', 'Live search data for AI agents'], flow: 'Call live over HTTP or MCP · or weekly batch · Sheets' },
+  'telegram-scraper': { pick: 0, keep: ['channels', 'maxPostsPerChannel'], filter: r => r.type === 'post' && r.channel === 'WatcherGuru', cols: [['text', r => cut((r.text || '').replace(/^JUST IN:\s*/, ''), 38)], ['views', r => short(r.views)], ['reactions', r => short(r.reactionsTotal)]],
+    use: ['Crypto and news feeds', 'Brand mentions across Telegram', 'Channel stats for ad buying'], flow: 'Hourly · only new posts · Slack' },
   'threads-scraper': { pick: 0, keep: ['profiles', 'searchQueries'], filter: r => r.type === 'post', cols: [['text', r => cut(r.text, 38)], ['username', r => '@' + r.username], ['likes', r => short(r.likes)]],
     use: ['Social listening', 'Creator and brand monitoring', 'Posts for AI analysis'], flow: 'Hourly · only new posts · Slack' },
   'youtube-transcript-scraper': { pick: 1, keep: ['playlistUrls', 'maxVideos'], filter: r => r.status === 'ok', cols: [['title', r => cut(r.title, 36)], ['duration', r => dur(r.durationSeconds)], ['words', r => num(r.wordCount)]],

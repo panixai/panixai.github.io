@@ -17,7 +17,7 @@ const CATS = [
   ['jobs', 'Jobs & hiring', ['ats-jobs-scraper', 'linkedin-jobs-scraper', 'upwork-jobs-scraper', 'linkedin-company-scraper', 'resume-cv-json-parser']],
   ['ads', 'Ad intelligence', ['facebook-ads-library-scraper', 'google-ads-transparency-scraper', 'linkedin-ad-library-scraper', 'tiktok-ads-scraper']],
   ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
-  ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper']],
+  ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper', 'telegram-scraper']],
   ['transcripts', 'Transcripts', ['youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript']],
   ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper', 'espn-sports-scraper', 'google-trends-api']],
   ['docs', 'Documents', ['invoice-table-json-extractor']]
@@ -287,6 +287,7 @@ const VIDEO_META = {
   'instagram-reel-transcript': { label: "Instagram Reel Transcript", len: '30 seconds', points: ["Paste reel links or profile names","Get what the reel says plus likes and captions","Pay only for reels that were transcribed","Build content research, repurposing or brand monitoring"] },
   'airbnb-scraper': { label: "Airbnb", len: '30 seconds', points: ["Type a city and pick your dates","Get every listing with its real price and rating","Splits big cities into map tiles for more results","Build host pricing tools, ROI research or travel apps"] },
   'tiktok-scraper': { label: "TikTok", len: '30 seconds', points: ["Type a profile name or paste a video link","Get views, likes, shares, saves and engagement","Add the spoken transcript of every video","Build trend research, influencer vetting or reports"] },
+  'telegram-scraper': { label: 'Telegram', len: '30 seconds', points: ['Type public channels or a keyword to search all of Telegram', 'Get every post with views, reactions, media and links', 'See channel stats: real average views and view rate', 'Build crypto news feeds, brand alerts, ad research or AI agents'] },
   'threads-scraper': { label: "Threads", len: '30 seconds', points: ["Type a profile name or a search","Get posts with likes, replies and reposts","Get only new posts on a schedule","Build brand alerts, social listening or sentiment tools"] },
   'google-ads-transparency-scraper': { label: "Google Ads", len: '30 seconds', points: ["Type a brand or advertiser name","Get every ad with its headline, text and dates","See how many days each ad has been shown","Build competitor research, agency audits or ad alerts"] },
   'linkedin-ad-library-scraper': { label: "LinkedIn Ads", len: '30 seconds', points: ["Type a company name or paste its link","Get every ad with copy, impressions and targeting","See where each ad runs and for how long","Build B2B competitor research or new-campaign alerts"] },
@@ -319,7 +320,7 @@ const CONNECT = [
   ['AI agents', brandSvg('modelcontextprotocol')],
   ['REST API', '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>']
 ];
-const PG_FIRST = ['booking-scraper', 'google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'espn-sports-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
+const PG_FIRST = ['booking-scraper', 'google-news-scraper', 'linkedin-jobs-scraper', 'amazon-product-scraper', 'facebook-ads-library-scraper', 'youtube-transcript-scraper', 'flashscore-scraper', 'espn-sports-scraper', 'telegram-scraper', 'tiktok-scraper', 'ats-jobs-scraper'];
 const pgRank = a => { const i = PG_FIRST.indexOf(a.slug); return i < 0 ? 100 + actors.indexOf(a) : i; };
 const pgItems = actors.filter(a => DEMOS[a.slug]).sort((x, y) => pgRank(x) - pgRank(y)).map(a => ({ slug: a.slug, label: tabLabel(a), name: a.short, icon: a.icon, page: `/tools/${a.slug}.html`, price: a.price.line, ...DEMOS[a.slug] }));
 const jsonHtml = obj => esc(JSON.stringify(obj, null, 2)).split('\n').map(line => `<span class="ln">${line
