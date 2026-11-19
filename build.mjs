@@ -19,7 +19,7 @@ const CATS = [
   ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
   ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper']],
   ['transcripts', 'Transcripts', ['youtube-transcript-scraper', 'video-transcript-scraper', 'instagram-reel-transcript']],
-  ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper', 'espn-sports-scraper']],
+  ['more', 'Travel, news & sports', ['booking-scraper', 'airbnb-scraper', 'google-news-scraper', 'flashscore-scraper', 'espn-sports-scraper', 'google-trends-api']],
   ['docs', 'Documents', ['invoice-table-json-extractor']]
 ];
 const catOf = n => CATS.find(c => c[2].includes(n)) || ['more', 'Other', []];
@@ -274,6 +274,7 @@ const VIDEO_META = {
   'upwork-jobs-scraper': { label: 'Upwork Jobs', len: '30 seconds', points: ['Type keywords or paste an Upwork search link', 'Get every job with client spend, hires and proposals', 'See a hiring score from 0 to 100 and why', 'Build job alerts, lead pipelines or auto-proposal drafts'] },
   'booking-scraper': { len: '30 seconds', points: ['Type a city and pick your dates', 'Get every hotel with its real price', 'Find the cheapest dates with a price calendar', 'Build a travel SaaS, rate tracker or price alerts'] },
   'flashscore-scraper': { len: '30 seconds', points: ['Pick sports, days and extras', 'Get every match in the same fields', 'Add stats, incidents, form and odds', 'Build live score apps, odds models or fantasy tools'] },
+  'google-trends-api': { label: 'Google Trends API', len: '30 seconds', points: ['Type your keywords, pick a country and a time range', 'Compare up to 5 keywords and see the leader in every region', 'Get rising searches with Breakout flags and a trend summary', 'Call it live over HTTP or MCP, or run a keyword list as a batch'] },
   'espn-sports-scraper': { label: 'ESPN', len: '30 seconds', points: ['Pick the leagues and the days', 'Get scores, closing spread and total for every game', 'Add box scores, player stats and opening and closing odds', 'Build betting models, injury alerts, fantasy tools or a recap newsletter'] },
   'linkedin-company-scraper': { label: "LinkedIn Company", len: '30 seconds', points: ["Paste company names, websites or links","Get size, followers, industry and headquarters","Add recent posts, engagement and similar pages","Build CRM enrichment, lead scoring or market research"] },
   'ats-jobs-scraper': { label: "ATS Jobs", len: '30 seconds', points: ["Paste any company career page","Get jobs and pay ranges straight from the employer","Works with Greenhouse, Lever, Ashby, Workday and more","Build job boards, hiring alerts or salary data"] },

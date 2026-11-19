@@ -117,12 +117,6 @@
    "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-transcripts-for-rag"
   },
   {
-   "name": "youtube-subtitles-srt-vtt",
-   "title": "Download YouTube subtitles as SRT and VTT files",
-   "desc": "Export YouTube captions as ready-to-use SRT and WebVTT subtitle text, plus the plain transcript and timestamped segments. Use them for video editing, translation, accessibility or reposting clips. The example exports subtitles for two popular TED talks; paste any video, Short, playlist or channel.",
-   "url": "https://apify.com/panix/youtube-transcript-scraper/examples/youtube-subtitles-srt-vtt"
-  },
-  {
    "name": "youtube-playlist-transcripts",
    "title": "Get transcripts of every video in a YouTube playlist",
    "desc": "Paste a public playlist and get the transcript of each video in playlist order, with title, channel, language, word count and timestamped segments. Good for online courses, lecture series and podcast archives. The example reads a short TED playlist; raise Maximum discovered videos for longer playlists.",
@@ -629,28 +623,36 @@
    "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-standings-tables"
   },
   {
-   "name": "espn-team-rosters",
-   "title": "Get NBA team rosters with player details from ESPN",
-   "desc": "Export team rosters with every player's position, jersey number, age, height, weight, college, birthplace and ESPN athlete id. The example reads the Lakers and Celtics; leave Teams empty for the whole league or pick NFL, MLB, NHL or soccer clubs.",
-   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-team-rosters"
-  },
-  {
-   "name": "espn-college-rankings",
-   "title": "Get college football and basketball polls from ESPN",
-   "desc": "Export the latest AP, Coaches and CFP polls for college football and men's and women's college basketball: rank, last week's rank, record, points and first-place votes. Add ATP, WTA or UFC for tennis and fighter rankings.",
-   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-college-rankings"
-  },
-  {
-   "name": "espn-sports-news",
-   "title": "Get the latest sports headlines from ESPN",
-   "desc": "Export the newest ESPN headlines for the NFL, NBA, MLB, NHL, the Premier League and F1: headline, summary, author, publish time, image and link. Set News articles per league for more.",
-   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-sports-news"
-  },
-  {
    "name": "espn-player-game-logs",
    "title": "Get NBA player game logs with stats per game from ESPN",
    "desc": "Export game-by-game stats for players: date, opponent, home or away, result, score, minutes, points, rebounds, assists and shooting. The example reads LeBron James and Stephen Curry; paste any ESPN athlete ids.",
    "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-player-game-logs"
+  }
+ ],
+ "google-trends-api": [
+  {
+   "name": "google-trends-compare-keywords",
+   "title": "Compare Google Trends interest for up to 5 keywords",
+   "desc": "Compare how much people search for up to 5 keywords on one 0-100 scale. The example compares ChatGPT, Gemini and Claude in the US over the last 12 months and returns the weekly interest, the leading keyword per US state, rising related searches and a summary (average, peak, latest, rising or falling) for each keyword. Change the keywords, country and time range.",
+   "url": "https://apify.com/panix/google-trends-api/examples/google-trends-compare-keywords"
+  },
+  {
+   "name": "google-trends-trending-now-by-country",
+   "title": "See what is trending on Google right now by country",
+   "desc": "Get the searches that are trending on Google right now in several countries, with the approximate number of searches, when each started and the news stories behind it. The example reads the United States, the United Kingdom and Germany. Add any country code.",
+   "url": "https://apify.com/panix/google-trends-api/examples/google-trends-trending-now-by-country"
+  },
+  {
+   "name": "google-trends-rising-related-searches",
+   "title": "Find rising Google searches related to your keyword",
+   "desc": "Find what people search for next to your keyword, and which of those searches are growing fastest. The example looks at \"electric bike\" in the US over the last 90 days and returns the top and rising related queries (with Breakout flags) and the top and rising related topics.",
+   "url": "https://apify.com/panix/google-trends-api/examples/google-trends-rising-related-searches"
+  },
+  {
+   "name": "google-trends-seasonal-demand-by-product",
+   "title": "Check seasonal search demand for products over 5 years",
+   "desc": "See when demand for each product peaks during the year. The example checks sunscreen, christmas lights and halloween costumes in the US over the last 5 years and returns weekly interest and the peak week for each product, so you know when to stock and advertise.",
+   "url": "https://apify.com/panix/google-trends-api/examples/google-trends-seasonal-demand-by-product"
   }
  ]
 }

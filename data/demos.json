@@ -799,6 +799,48 @@
   ],
   "flow": "Every morning · only new or changed rows · Slack"
  },
+ "google-trends-api": {
+  "run": "LxFoZinYlYLaTVhUm",
+  "input": {
+   "keywords": [
+    "sunscreen",
+    "christmas lights",
+    "halloween costumes"
+   ],
+   "geos": [
+    "US"
+   ],
+   "timeRange": "past_5_years"
+  },
+  "cols": [
+   "keyword",
+   "peakDate",
+   "direction"
+  ],
+  "rows": [
+   [
+    "sunscreen",
+    "2026-06-07",
+    "rising"
+   ],
+   [
+    "halloween costumes",
+    "2022-10-23",
+    "falling"
+   ],
+   [
+    "christmas lights",
+    "2021-11-28",
+    "falling"
+   ]
+  ],
+  "use": [
+   "Seasonal demand and keyword research",
+   "Trend dashboards and alerts",
+   "Live search data for AI agents"
+  ],
+  "flow": "Call live over HTTP or MCP · or weekly batch · Sheets"
+ },
  "threads-scraper": {
   "run": "zcsSmBHWoMGsg3QWV",
   "input": {

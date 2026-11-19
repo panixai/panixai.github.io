@@ -266,7 +266,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-10-30T18:39:09.000Z",
+      "createdAt": "2026-10-30T18:39:09Z",
       "startedAt": "2026-10-30T18:39:07.997Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
@@ -726,7 +726,7 @@
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:26:30.850Z",
+      "lastRunStartedAt": "2026-11-18T16:26:30.85Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -954,7 +954,7 @@
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
       "createdAt": "2026-10-26T20:13:10.874Z",
-      "startedAt": "2026-10-26T20:13:10.160Z",
+      "startedAt": "2026-10-26T20:13:10.16Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Simpler pricing: one event per delivered transcript with all formats included, and playlist and channel input. Lower prices for paid tiers. Timed-caption and translation events are removed.",
       "pricingPerEvent": {
@@ -1639,7 +1639,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-05T17:47:37.660Z",
+      "createdAt": "2026-11-05T17:47:37.66Z",
       "startedAt": "2026-11-05T17:47:36.833Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
@@ -2240,7 +2240,7 @@
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
       "createdAt": "2026-11-07T15:02:46.783Z",
-      "startedAt": "2026-11-07T15:02:46.380Z",
+      "startedAt": "2026-11-07T15:02:46.38Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Launch pricing.",
       "pricingPerEvent": {
@@ -2479,7 +2479,7 @@
       "totalUsers7Days": 2,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T22:36:32.800Z",
+      "lastRunStartedAt": "2026-11-18T22:36:32.8Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -2864,7 +2864,7 @@
     "currentPricingInfo": {
       "pricingModel": "PAY_PER_EVENT",
       "apifyMarginPercentage": 0.2,
-      "createdAt": "2026-11-08T17:41:16.360Z",
+      "createdAt": "2026-11-08T17:41:16.36Z",
       "startedAt": "2026-11-08T17:41:15.354Z",
       "minimalMaxTotalChargeUsd": null,
       "reasonForChange": "Price update.",
@@ -3067,6 +3067,103 @@
     },
     "id": "LYRhe5xfFIsnDqVKN",
     "url": "https://apify.com/panix/amazon-arbitrage-finder"
+  },
+  {
+    "title": "Google Trends API: Interest, Related Queries, Trending Now",
+    "name": "google-trends-api",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 9,
+      "totalRuns": 17,
+      "totalUsers": 1,
+      "totalUsers7Days": 0,
+      "totalUsers30Days": 0,
+      "totalUsers90Days": 0,
+      "lastRunStartedAt": "2026-11-19T18:28:52.191Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0
+    },
+    "description": "Google Trends as a live API. Search interest over time and by region, related queries and topics, up to 5 keywords compared, trending searches and suggestions. No Google account or key. Call it over HTTP in about a second, or run it as a batch.",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": false,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-19T18:11:01.707Z",
+      "startedAt": "2026-11-19T18:11:00.856Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 5E-05
+          },
+          "trend-report": {
+            "eventTitle": "Trends report",
+            "eventDescription": "One report for one keyword, or one comparison of up to 5 keywords: interest over time, interest by region, related queries and topics, with a summary. Empty answers (Google has no data) and errors are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.006
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.005
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0045
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.004
+              }
+            }
+          },
+          "lookup": {
+            "eventTitle": "Lookup",
+            "eventDescription": "One trending-now list for a country, or one topic-suggestions lookup. Empty answers are free.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0025
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.002
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0018
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0015
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "KVBOy5AOdL5gyiDEF",
+    "url": "https://apify.com/panix/google-trends-api"
   },
   {
     "title": "ESPN Scraper: Scores, Standings, Injuries, Odds & Stats",

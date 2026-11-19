@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const env = fs.readFileSync('d:/PANIX/.env', 'utf8');
+const token = env.match(/^APIFY_TOKEN=(.*)$/m)[1].trim().replace(/^"|"$/g, '');
+const H = { Authorization: `Bearer ${token}` };
+const run = 'LxFoZinYlYLaTVhUm';
+const r = (await (await fetch(`https://api.apify.com/v2/actor-runs/${run}`, { headers: H })).json()).data;
+const items = await (await fetch(`https://api.apify.com/v2/datasets/${r.defaultDatasetId}/items?clean=1&limit=8`, { headers: H })).json();
+const input = await (await fetch(`https://api.apify.com/v2/key-value-stores/${r.defaultKeyValueStoreId}/records/INPUT`, { headers: H })).json();
+const flat = items.map(i => { const k = i.keywords[0]; const s = i.summary[k]; return { type: 'trends', keyword: k, geo: i.geo, peakDate: s.peakDate.slice(0, 10), peak: s.peak, latest: s.latest, direction: s.direction }; });
+const raw = JSON.parse(fs.readFileSync('data/demos.raw.json', 'utf8'));
+raw['google-trends-api'] = [{ run, startedAt: r.startedAt, input, items: flat }];
+fs.writeFileSync('data/demos.raw.json', JSON.stringify(raw, null, 1));
+console.log(JSON.stringify(flat), JSON.stringify(input));
