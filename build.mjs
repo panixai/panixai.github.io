@@ -14,7 +14,7 @@ const EMAIL = 'saoud.pro@gmail.com';
 const V = Date.now().toString(36); // cache-busting for css/js
 
 const CATS = [
-  ['jobs', 'Jobs & hiring', ['ats-jobs-scraper', 'linkedin-jobs-scraper', 'upwork-jobs-scraper', 'linkedin-company-scraper', 'resume-cv-json-parser']],
+  ['jobs', 'Jobs & hiring', ['ats-jobs-scraper', 'linkedin-jobs-scraper', 'remote-jobs-scraper', 'upwork-jobs-scraper', 'linkedin-company-scraper', 'resume-cv-json-parser']],
   ['ads', 'Ad intelligence', ['facebook-ads-library-scraper', 'google-ads-transparency-scraper', 'linkedin-ad-library-scraper', 'tiktok-ads-scraper']],
   ['commerce', 'E-commerce', ['amazon-product-scraper', 'amazon-arbitrage-finder', 'walmart-scraper', 'aliexpress-scraper']],
   ['social', 'Social & video', ['youtube-scraper', 'youtube-comments-scraper', 'tiktok-scraper', 'pinterest-scraper', 'threads-scraper', 'telegram-scraper']],
@@ -287,6 +287,7 @@ const VIDEO_META = {
   'instagram-reel-transcript': { label: "Instagram Reel Transcript", len: '30 seconds', points: ["Paste reel links or profile names","Get what the reel says plus likes and captions","Pay only for reels that were transcribed","Build content research, repurposing or brand monitoring"] },
   'airbnb-scraper': { label: "Airbnb", len: '30 seconds', points: ["Type a city and pick your dates","Get every listing with its real price and rating","Splits big cities into map tiles for more results","Build host pricing tools, ROI research or travel apps"] },
   'tiktok-scraper': { label: "TikTok", len: '30 seconds', points: ["Type a profile name or paste a video link","Get views, likes, shares, saves and engagement","Add the spoken transcript of every video","Build trend research, influencer vetting or reports"] },
+  'remote-jobs-scraper': { label: 'Remote Jobs', len: '30 seconds', points: ['Type a role and the country you live in', 'Get remote jobs from 9 boards, duplicates merged', 'Keep only jobs you can apply for: worldwide, your region or country', 'Build daily job alerts, remote job boards or salary research'] },
   'telegram-scraper': { label: 'Telegram', len: '30 seconds', points: ['Type public channels or a keyword to search all of Telegram', 'Get every post with views, reactions, media and links', 'See channel stats: real average views and view rate', 'Build crypto news feeds, brand alerts, ad research or AI agents'] },
   'threads-scraper': { label: "Threads", len: '30 seconds', points: ["Type a profile name or a search","Get posts with likes, replies and reposts","Get only new posts on a schedule","Build brand alerts, social listening or sentiment tools"] },
   'google-ads-transparency-scraper': { label: "Google Ads", len: '30 seconds', points: ["Type a brand or advertiser name","Get every ad with its headline, text and dates","See how many days each ad has been shown","Build competitor research, agency audits or ad alerts"] },

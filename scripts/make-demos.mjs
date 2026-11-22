@@ -16,6 +16,8 @@ const C = {
     use: ['Brand and competitor alerts', 'News feeds for AI agents and RAG', 'Market and PR monitoring'], flow: 'Every hour · only new articles · Slack' },
   'linkedin-jobs-scraper': { pick: 1, keep: ['searchTerms', 'locations', 'maxJobsPerSearch'], cols: [['title', r => cut(r.title, 34)], ['company', r => r.company], ['location', r => cut(r.location, 20)]],
     use: ['Job boards and job alerts', 'Hiring signals for sales leads', 'Salary and labor market research'], flow: 'Daily · only new jobs · Google Sheets' },
+  'remote-jobs-scraper': { pick: 0, keep: ['keywords', 'applyFrom'], filter: r => r.type === 'job', cols: [['title', r => cut(r.title, 32)], ['company', r => cut(r.company || '', 18)], ['whoCanApply', r => r.worldwide ? 'Worldwide' : cut(r.location || '', 20)]],
+    use: ['Jobs you can apply for from your country', 'Daily remote job alerts', 'Remote job board feeds'], flow: 'Daily · only new jobs · Telegram' },
   'ats-jobs-scraper': { pick: 0, keep: ['companies'], filter: r => r.rowType === 'job' && r.salaryAnnualMin, cols: [['title', r => cut(r.title, 32)], ['companyName', r => r.companyName], ['salary', r => r.salaryAnnualMin ? `${short(r.salaryAnnualMin)}–${short(r.salaryAnnualMax)}` : r.workplaceType || '']],
     use: ['Career-page job feeds', 'Track who is hiring for what', 'Recruiting and sourcing tools'], flow: 'Daily · only new jobs · webhook' },
   'linkedin-company-scraper': { pick: 0, keep: ['companies', 'includePosts'], cols: [['name', r => r.name], ['companySize', r => r.companySize?.replace(' employees', '')], ['followers', r => short(r.followers)]],

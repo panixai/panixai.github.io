@@ -89,6 +89,49 @@
   ],
   "flow": "Daily · only new jobs · Google Sheets"
  },
+ "remote-jobs-scraper": {
+  "run": "3zX6BEJMU8GQbeb4a",
+  "input": {
+   "keywords": [
+    "developer",
+    "designer"
+   ],
+   "applyFrom": "Pakistan"
+  },
+  "cols": [
+   "title",
+   "company",
+   "whoCanApply"
+  ],
+  "rows": [
+   [
+    "Graphic and Editorial Design Ex…",
+    "micro1",
+    "Worldwide"
+   ],
+   [
+    "AI App Developer (ChatGPT, Clau…",
+    "Elvoro",
+    "Worldwide"
+   ],
+   [
+    "Freelance Engineer",
+    "Clera",
+    "Worldwide"
+   ],
+   [
+    "Outsystems Developer II",
+    "BlackStone eIT",
+    "Asia, South Asia, A…"
+   ]
+  ],
+  "use": [
+   "Jobs you can apply for from your country",
+   "Daily remote job alerts",
+   "Remote job board feeds"
+  ],
+  "flow": "Daily · only new jobs · Telegram"
+ },
  "ats-jobs-scraper": {
   "run": "16UpzKQyEfxyASRND",
   "input": {

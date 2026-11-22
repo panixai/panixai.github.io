@@ -5,21 +5,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 15,
-      "totalRuns": 144,
-      "totalUsers": 7,
+      "totalRuns": 164,
+      "totalUsers": 8,
       "totalUsers7Days": 1,
-      "totalUsers30Days": 3,
-      "totalUsers90Days": 3,
-      "lastRunStartedAt": "2026-11-19T09:52:32.213Z",
+      "totalUsers30Days": 4,
+      "totalUsers90Days": 4,
+      "lastRunStartedAt": "2026-11-22T09:54:39.410Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 2,
-        "SUCCEEDED": 87,
+        "SUCCEEDED": 106,
         "TIMED-OUT": 1,
-        "TOTAL": 90
+        "TOTAL": 109
       }
     },
     "description": "Scrape Amazon products without login: price, Best Sellers Rank, bought in past month, seller, stock, specs, variants, images and review summary from searches, Best Sellers, ASINs or links in 16 stores. Local delivery postcode and price tracking. For sellers, price monitoring and market research.",
@@ -115,21 +115,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 84,
-      "totalUsers": 6,
-      "totalUsers7Days": 6,
+      "totalRuns": 206,
+      "totalUsers": 8,
+      "totalUsers7Days": 2,
       "totalUsers30Days": 6,
       "totalUsers90Days": 6,
-      "lastRunStartedAt": "2026-11-19T10:03:46.498Z",
+      "lastRunStartedAt": "2026-11-22T09:59:27.108Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 4,
-        "SUCCEEDED": 40,
+        "SUCCEEDED": 163,
         "TIMED-OUT": 0,
-        "TOTAL": 44
+        "TOTAL": 167
       }
     },
     "description": "Scrape the Meta Ad Library by keyword, Facebook Page or Ad Library URL: ad copy, media, start dates, days running, platforms, landing pages, EU reach and political spend. For competitor research, ad spying and brand monitoring, with only-new-ads alerts. No login, no browser.",
@@ -231,21 +231,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 1799,
+      "totalRuns": 2609,
       "totalUsers": 3,
-      "totalUsers7Days": 2,
+      "totalUsers7Days": 1,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-19T05:35:01.303Z",
+      "lastRunStartedAt": "2026-11-22T05:39:00.819Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 1722,
+        "SUCCEEDED": 2532,
         "TIMED-OUT": 0,
-        "TOTAL": 1722
+        "TOTAL": 2532
       }
     },
     "description": "Scrape Flashscore for 29 sports: fixtures, live scores and results with every period, plus goals, cards, stats, lineups, injuries, odds, head-to-head, tennis point-by-point and league tables. For betting models, odds tracking, live score apps and fantasy. Only-changed mode for live polling.",
@@ -366,21 +366,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 49,
+      "totalRuns": 52,
       "totalUsers": 3,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T09:56:37.284Z",
+      "lastRunStartedAt": "2026-11-22T10:02:33.813Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 20,
+        "SUCCEEDED": 23,
         "TIMED-OUT": 0,
-        "TOTAL": 20
+        "TOTAL": 23
       }
     },
     "description": "Scrape TikTok profiles, videos, photo posts and transcripts without login: followers, views, likes, comments, shares, engagement rate, hashtags, sounds and the spoken text with timestamps. Free date and view filters, only-new-video monitoring. For influencer research, social listening and AI.",
@@ -501,21 +501,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 80,
+      "totalRuns": 87,
       "totalUsers": 3,
       "totalUsers7Days": 1,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T20:36:36.551Z",
+      "lastRunStartedAt": "2026-11-21T20:42:32.563Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 26,
+        "SUCCEEDED": 33,
         "TIMED-OUT": 1,
-        "TOTAL": 27
+        "TOTAL": 34
       }
     },
     "description": "Scrape LinkedIn jobs without login: full description, salary, employment type, experience level, applicants, remote/hybrid, skills. Exact filters LinkedIn dropped and only-new mode for daily job alerts. For recruiting, lead generation, job boards and salary research.",
@@ -611,21 +611,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 4,
-      "totalRuns": 25,
-      "totalUsers": 3,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-19T08:56:32.439Z",
+      "totalRuns": 34,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-22T09:00:43.522Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 4,
+        "SUCCEEDED": 13,
         "TIMED-OUT": 0,
-        "TOTAL": 4
+        "TOTAL": 13
       }
     },
     "description": "Scrape Meta Threads without login: profiles with followers and engagement, full post histories, keyword and hashtag search, single posts. Likes, replies, reposts, media, links, hashtags. Only new posts mode for scheduled monitoring, brand tracking, social listening and AI agents.",
@@ -721,12 +721,12 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 16,
-      "totalRuns": 55,
+      "totalRuns": 58,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:26:30.850Z",
+      "lastRunStartedAt": "2026-11-21T16:28:35.589Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -832,12 +832,12 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 55,
+      "totalRuns": 58,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T17:58:43.212Z",
+      "lastRunStartedAt": "2026-11-21T18:04:31.618Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
@@ -918,21 +918,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 27,
-      "totalRuns": 106,
+      "totalRuns": 109,
       "totalUsers": 2,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-18T19:10:37.867Z",
+      "lastRunStartedAt": "2026-11-21T19:16:37.497Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 32,
+        "SUCCEEDED": 29,
         "TIMED-OUT": 0,
-        "TOTAL": 32
+        "TOTAL": 29
       }
     },
     "description": "Extract transcripts from YouTube videos, Shorts, playlists, and channels—no YouTube API key. Get clean text, timestamps, SRT, VTT, Markdown, metadata, and RAG-ready chunks for AI agents and automation. Original-language output; failed videos are free.",
@@ -1003,22 +1003,22 @@
     "name": "tiktok-ads-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 5,
-      "totalRuns": 49,
-      "totalUsers": 2,
+      "totalBuilds": 6,
+      "totalRuns": 74,
+      "totalUsers": 1,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T09:44:38.191Z",
+      "lastRunStartedAt": "2026-11-22T09:50:33.600Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
-        "FAILED": 0,
-        "SUCCEEDED": 6,
+        "FAILED": 3,
+        "SUCCEEDED": 8,
         "TIMED-OUT": 0,
-        "TOTAL": 6
+        "TOTAL": 11
       }
     },
     "description": "See the TikTok ads any brand runs: ad videos, ad text, landing pages, dates, reach and targeting from the TikTok Ad Library (Europe, UK, Turkey, Brazil), plus the best-performing Top Ads with CTR and likes for the US and 27 more countries. No login.",
@@ -1139,21 +1139,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 7,
-      "totalRuns": 61,
+      "totalRuns": 64,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T06:34:32.411Z",
+      "lastRunStartedAt": "2026-11-22T06:38:31.228Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 8,
+        "SUCCEEDED": 10,
         "TIMED-OUT": 0,
-        "TOTAL": 8
+        "TOTAL": 10
       }
     },
     "description": "See the ads any company runs on Google Search, YouTube, Shopping, Maps and Play. Get ad text, YouTube video links, landing pages, dates, countries, EU reach and targeting. For competitor ad research, ad checks and new-ad alerts. No login.",
@@ -1288,7 +1288,8 @@
             }
           }
         }
-      }
+      },
+      "notifiedAboutChangeAt": "2026-11-19T17:30:39.580Z"
     },
     "id": "CGSwe9HSIU5wWwES0",
     "url": "https://apify.com/panix/google-ads-transparency-scraper"
@@ -1299,21 +1300,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 31,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T20:44:31.003Z",
+      "totalRuns": 2928,
+      "totalUsers": 3,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-22T10:22:02.156Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
-        "ABORTED": 0,
+        "ABORTED": 1,
         "FAILED": 0,
-        "SUCCEEDED": 2,
+        "SUCCEEDED": 2696,
         "TIMED-OUT": 0,
-        "TOTAL": 2
+        "TOTAL": 2697
       }
     },
     "description": "Scrape new Upwork jobs with exact proposal counts, client spend, hires, rating and payment verified, plus a hiring score per job. All Upwork filters, only-new mode for schedules, alerts to Discord, Slack, Telegram or any webhook. For freelancers, agencies and lead generation.",
@@ -1409,21 +1410,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 22,
+      "totalRuns": 25,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T17:20:35.468Z",
+      "lastRunStartedAt": "2026-11-21T17:24:36.379Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 2,
+        "SUCCEEDED": 5,
         "TIMED-OUT": 0,
-        "TOTAL": 2
+        "TOTAL": 5
       }
     },
     "description": "Scrape Booking.com hotels with the real price for your dates: cities, search links or hotel links, thousands per city. Stars, reviews, room, free cancellation, deals, location. Price calendars over many dates and price-change alerts for hotel revenue, travel and price monitoring.",
@@ -1494,21 +1495,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 82,
+      "totalRuns": 85,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:51:43.473Z",
+      "lastRunStartedAt": "2026-11-21T16:50:38.173Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 4,
+        "SUCCEEDED": 7,
         "TIMED-OUT": 0,
-        "TOTAL": 4
+        "TOTAL": 7
       }
     },
     "description": "Get Google News articles by keyword, topic or place with the real publisher link, source, date and related coverage. Add article text, or get only new articles since your last run. Schedule it for news alerts and AI agents. No login.",
@@ -1604,21 +1605,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 67,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T09:02:02.972Z",
+      "totalRuns": 71,
+      "totalUsers": 3,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-22T03:13:49.023Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 13,
+        "SUCCEEDED": 17,
         "TIMED-OUT": 0,
-        "TOTAL": 13
+        "TOTAL": 17
       }
     },
     "description": "Scrape YouTube search, channels, Shorts, live streams, playlists and hashtags with likes, exact views, upload date, duration, tags, category, chapters, comments count and subscribers. No API key or quota. For influencer research, SEO, competitor tracking and datasets.",
@@ -1764,21 +1765,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 93,
-      "totalUsers": 2,
-      "totalUsers7Days": 2,
-      "totalUsers30Days": 2,
-      "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-19T09:40:35.284Z",
+      "totalRuns": 100,
+      "totalUsers": 3,
+      "totalUsers7Days": 3,
+      "totalUsers30Days": 3,
+      "totalUsers90Days": 3,
+      "lastRunStartedAt": "2026-11-22T09:46:33.276Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 1,
-        "SUCCEEDED": 16,
+        "SUCCEEDED": 23,
         "TIMED-OUT": 0,
-        "TOTAL": 17
+        "TOTAL": 24
       }
     },
     "description": "Scrape AliExpress search results and categories: price, discount, exact sold count, rating, delivery estimate, ships-from, Choice and sponsored flags, rank and listing date, for 60 countries. For dropshipping product research, price tracking and trend analysis.",
@@ -1849,21 +1850,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 74,
+      "totalRuns": 77,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T22:00:33.967Z",
+      "lastRunStartedAt": "2026-11-21T22:04:33.416Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 18,
+        "SUCCEEDED": 21,
         "TIMED-OUT": 0,
-        "TOTAL": 18
+        "TOTAL": 21
       }
     },
     "description": "Scrape every open job from company career sites on Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Workable and 12 more ATS. Parsed salary, location, remote type and seniority in one schema. For job boards, recruiting, sales leads, hiring-trend research and new-job alerts.",
@@ -1959,21 +1960,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 3,
-      "totalRuns": 39,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:49:31.429Z",
+      "totalRuns": 142,
+      "totalUsers": 3,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-21T15:26:38.143Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 10,
+        "SUCCEEDED": 113,
         "TIMED-OUT": 0,
-        "TOTAL": 10
+        "TOTAL": 113
       }
     },
     "description": "Scrape Airbnb listings without login: price for your dates, rating, beds, location, photos, host, amenities, house rules, availability calendar and guest reviews. Splits big cities into map areas for thousands of listings. For short-term rental market research, pricing and travel apps.",
@@ -2119,21 +2120,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 47,
+      "totalRuns": 50,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:49:26.985Z",
+      "lastRunStartedAt": "2026-11-21T13:54:35.626Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 10,
+        "SUCCEEDED": 13,
         "TIMED-OUT": 0,
-        "TOTAL": 10
+        "TOTAL": 13
       }
     },
     "description": "Scrape YouTube comments and replies from videos, Shorts, channels, playlists or searches: likes, pinned and creator-heart flags, authors, video title. Keyword, likes and date filters, only-new monitoring. No API key. For brand monitoring, sentiment analysis and research.",
@@ -2204,21 +2205,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 10,
-      "totalRuns": 52,
+      "totalRuns": 55,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T16:47:41.371Z",
+      "lastRunStartedAt": "2026-11-21T15:48:33.973Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 17,
+        "SUCCEEDED": 20,
         "TIMED-OUT": 0,
-        "TOTAL": 17
+        "TOTAL": 20
       }
     },
     "description": "Transcribe public Instagram reels to text without login or API key: spoken words, hook, language, timed segments, SRT/VTT subtitles, free English translation, plus plays, likes and caption. For content research, influencer marketing, social listening and AI/RAG pipelines.",
@@ -2339,21 +2340,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 6,
-      "totalRuns": 52,
+      "totalRuns": 55,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T17:42:33.803Z",
+      "lastRunStartedAt": "2026-11-21T17:48:32.686Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 11,
+        "SUCCEEDED": 14,
         "TIMED-OUT": 0,
-        "TOTAL": 11
+        "TOTAL": 14
       }
     },
     "description": "Scrape Walmart products and reviews without login: price, was-price, seller, stock, UPC, specs, every variant with its price, rating breakdown, store aisle, pickup and delivery. From searches, categories, deals, item IDs or links. Price tracking for sellers, brands and price monitoring.",
@@ -2474,21 +2475,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 7,
-      "totalRuns": 40,
+      "totalRuns": 43,
       "totalUsers": 2,
       "totalUsers7Days": 2,
       "totalUsers30Days": 2,
       "totalUsers90Days": 2,
-      "lastRunStartedAt": "2026-11-18T22:36:32.800Z",
+      "lastRunStartedAt": "2026-11-21T22:40:33.231Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 14,
+        "SUCCEEDED": 16,
         "TIMED-OUT": 0,
-        "TOTAL": 14
+        "TOTAL": 16
       }
     },
     "description": "Scrape Pinterest pins, video pins, boards and profiles by keyword or link, no login: real pin links, saves, outbound links, product prices, monthly views, keyword suggestions. Free date, saves and domain filters, only-new-pins monitoring. For e-commerce, SEO and social media marketing.",
@@ -2634,21 +2635,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 4,
-      "totalRuns": 32,
+      "totalRuns": 35,
       "totalUsers": 1,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-18T16:50:42.542Z",
+      "lastRunStartedAt": "2026-11-21T16:06:33.035Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 9,
+        "SUCCEEDED": 12,
         "TIMED-OUT": 0,
-        "TOTAL": 9
+        "TOTAL": 12
       }
     },
     "description": "See every ad a company runs on LinkedIn: ad text, images, videos, click-through links with UTM campaign tags and who paid, from the official LinkedIn Ad Library. EU ads add run dates, impressions, countries and targeting. Track new competitor ads. No login.",
@@ -2744,21 +2745,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 5,
-      "totalRuns": 33,
+      "totalRuns": 36,
       "totalUsers": 1,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T16:47:31.157Z",
+      "lastRunStartedAt": "2026-11-21T10:58:32.581Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 12,
+        "SUCCEEDED": 15,
         "TIMED-OUT": 0,
-        "TOTAL": 12
+        "TOTAL": 15
       }
     },
     "description": "Scrape LinkedIn company pages without login from links, names, IDs or websites: industry, size, headcount, followers, HQ and office addresses, website, specialties, recent posts and similar companies. For lead generation, CRM enrichment, sales prospecting and market research.",
@@ -2829,21 +2830,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 8,
-      "totalRuns": 53,
+      "totalRuns": 56,
       "totalUsers": 1,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-18T18:06:33.113Z",
+      "lastRunStartedAt": "2026-11-21T18:12:29.626Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 11,
+        "SUCCEEDED": 14,
         "TIMED-OUT": 0,
-        "TOTAL": 11
+        "TOTAL": 14
       }
     },
     "description": "Turn public videos and podcasts into text from a link: TikTok, X, Vimeo, YouTube, TED, Loom, SoundCloud and many more sites, MP3/MP4 files, RSS feeds and Apple Podcasts. Captions first, Whisper speech-to-text when none. SRT, VTT, Markdown and RAG chunks for AI, research and n8n.",
@@ -2964,21 +2965,21 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 7,
-      "totalRuns": 54,
+      "totalRuns": 57,
       "totalUsers": 1,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-18T19:08:30.914Z",
+      "lastRunStartedAt": "2026-11-21T19:12:34.730Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 10,
+        "SUCCEEDED": 13,
         "TIMED-OUT": 0,
-        "TOTAL": 10
+        "TOTAL": 13
       }
     },
     "description": "Find products to resell on Amazon. Compares Amazon with Walmart, Target and other Amazon countries by barcode, adds FBA fees, profit, ROI and sales per month, and ranks products best first with a Buy, Maybe or Skip answer. For online arbitrage and FBA sellers. No login.",
@@ -3073,22 +3074,22 @@
     "name": "telegram-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 3,
-      "totalRuns": 37,
-      "totalUsers": 2,
-      "totalUsers7Days": 1,
-      "totalUsers30Days": 1,
-      "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T18:55:24.577Z",
+      "totalBuilds": 4,
+      "totalRuns": 42,
+      "totalUsers": 3,
+      "totalUsers7Days": 2,
+      "totalUsers30Days": 2,
+      "totalUsers90Days": 2,
+      "lastRunStartedAt": "2026-11-21T18:46:30.721Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0,
       "publicActorRunStats30Days": {
         "ABORTED": 0,
         "FAILED": 0,
-        "SUCCEEDED": 1,
+        "SUCCEEDED": 5,
         "TIMED-OUT": 0,
-        "TOTAL": 1
+        "TOTAL": 5
       }
     },
     "description": "Scrape public Telegram channels without login or API key: full post history, views, reactions, media, comments, subscribers and channel stats. Search all of Telegram by keyword. Only-new-posts monitoring for news, crypto, brand tracking and AI agents.",
@@ -3229,22 +3230,101 @@
     "url": "https://apify.com/panix/telegram-scraper"
   },
   {
+    "title": "Remote Jobs Scraper: 9 Boards, Worldwide & Country Filter",
+    "name": "remote-jobs-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 3,
+      "totalRuns": 29,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-22T15:42:37.342Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0
+    },
+    "description": "Remote jobs from 9 job boards in one deduplicated feed: Himalayas, We Work Remotely, Remote OK, 4 Day Week, Jobgether, Jobicy, Remotive and more. Filter by the country you live in or worldwide only, salary in USD, job type and level. Only-new-jobs alerts for job seekers, job sites and recruiters.",
+    "categories": [
+      "JOBS",
+      "AUTOMATION",
+      "LEAD_GENERATION"
+    ],
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-22T15:24:11.500Z",
+      "startedAt": "2026-11-22T15:24:11.772Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Launch pricing.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.001
+          },
+          "job": {
+            "eventTitle": "Job",
+            "eventDescription": "One remote job delivered: title, company, who can apply (worldwide, regions, countries), salary with yearly USD, type, level, tags, description and apply link. Jobs left out by filters, duplicates across boards, jobs seen in earlier runs (only-new mode) and boards that can't be reached are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0015
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0012
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0008
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "kHdqIifx93GR6H2Ra",
+    "url": "https://apify.com/panix/remote-jobs-scraper"
+  },
+  {
     "title": "Google Trends API: Interest, Related Queries, Trending Now",
     "name": "google-trends-api",
     "username": "panix",
     "stats": {
       "totalBuilds": 10,
-      "totalRuns": 21,
+      "totalRuns": 22,
       "totalUsers": 1,
       "totalUsers7Days": 0,
       "totalUsers30Days": 0,
       "totalUsers90Days": 0,
-      "lastRunStartedAt": "2026-11-19T18:38:44.381Z",
+      "lastRunStartedAt": "2026-11-19T18:50:46.977Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0
     },
     "description": "Google Trends as a live API. Search interest over time and by region, related queries and topics, up to 5 keywords compared, trending searches and suggestions. No Google account or key. Call it over HTTP in about a second, or run it as a batch.",
+    "categories": [],
+    "pictureUrl": "https://images.apifyusercontent.com/1y2g81GNonEb2us5Uh6NiJcItOZzeKqIXra7OQNvo3k/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItS1ZCT3k1QU9kTDVneWlERUYtdW0wRVEwbzhEVC1TZXJ2ZXJfQWN0b3JfXzBfMTAwX0dyb3d0aF9EYXNoYm9hcmQucG5n.webp",
     "notice": "NONE",
     "bookmarkCount": 0,
     "actorReviewRating": 0,
@@ -3331,17 +3411,26 @@
     "username": "panix",
     "stats": {
       "totalBuilds": 2,
-      "totalRuns": 50,
+      "totalRuns": 52,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-19T17:59:20.044Z",
+      "lastRunStartedAt": "2026-11-21T17:52:28.968Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
-      "bookmarkCount": 0
+      "bookmarkCount": 0,
+      "publicActorRunStats30Days": {
+        "ABORTED": 0,
+        "FAILED": 0,
+        "SUCCEEDED": 3,
+        "TIMED-OUT": 0,
+        "TOTAL": 3
+      }
     },
     "description": "Get ESPN scores, betting odds, box scores, standings, rosters, injury reports with return dates, news and player game logs for 50+ leagues: NFL, NBA, MLB, NHL, soccer, college, F1, tennis, golf and UFC. Only-new mode for alerts. No login.",
+    "categories": [],
+    "pictureUrl": "https://images.apifyusercontent.com/_j79uNpmsMY5hbC-hBz-BGMViHRFhp3p2niSwjTuH1E/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItMDJ5ZFhnSnRqdEtqQmFiMW8tWXd6ZVFTa2JOVC1TcG9ydHNfQW5hbHl0aWNzX1Njb3JlYm9hcmRfSWNvbi5wbmc.webp",
     "notice": "NONE",
     "bookmarkCount": 0,
     "actorReviewRating": 0,
