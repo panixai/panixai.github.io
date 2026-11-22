@@ -90,13 +90,13 @@
   "flow": "Daily · only new jobs · Google Sheets"
  },
  "remote-jobs-scraper": {
-  "run": "3zX6BEJMU8GQbeb4a",
+  "run": "JlpohG2hzwc2k864K",
   "input": {
    "keywords": [
     "developer",
     "designer"
    ],
-   "applyFrom": "Pakistan"
+   "applyFrom": "United States"
   },
   "cols": [
    "title",
@@ -105,24 +105,24 @@
   ],
   "rows": [
    [
+    "Designer, PPM",
+    "Pinterest",
+    "Worldwide"
+   ],
+   [
+    "MCAT Psych/Soc Curriculum Devel…",
+    "Jack Westin",
+    "United States"
+   ],
+   [
+    "Flutter Developer",
+    "Hivex",
+    "Worldwide"
+   ],
+   [
     "Graphic and Editorial Design Ex…",
     "micro1",
     "Worldwide"
-   ],
-   [
-    "AI App Developer (ChatGPT, Clau…",
-    "Elvoro",
-    "Worldwide"
-   ],
-   [
-    "Freelance Engineer",
-    "Clera",
-    "Worldwide"
-   ],
-   [
-    "Outsystems Developer II",
-    "BlackStone eIT",
-    "Asia, South Asia, A…"
    ]
   ],
   "use": [

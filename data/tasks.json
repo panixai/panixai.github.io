@@ -631,16 +631,16 @@
  ],
  "remote-jobs-scraper": [
   {
-   "name": "remote-jobs-from-pakistan",
-   "title": "Remote jobs you can apply for from Pakistan",
-   "desc": "Get remote developer and designer jobs from nine job boards that people living in Pakistan can apply for: worldwide jobs plus jobs open to Asia, South Asia or APAC. US-only jobs are left out. Change the country or keywords to your own.",
-   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-jobs-from-pakistan"
+   "name": "remote-jobs-open-to-us-residents",
+   "title": "Remote jobs open to US residents",
+   "desc": "Get remote developer and designer jobs from nine job boards that people living in the United States can apply for: US jobs, North America jobs and worldwide jobs. Europe-only and other country-only jobs are left out.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-jobs-open-to-us-residents"
   },
   {
-   "name": "remote-jobs-from-india",
-   "title": "Remote software jobs open to India",
-   "desc": "Get remote software engineering jobs that applicants in India can apply for, from nine job boards, with level, job type and salary when the employer shows one. Duplicates across boards are merged.",
-   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-jobs-from-india"
+   "name": "senior-remote-software-jobs-us",
+   "title": "Senior remote software jobs in the US",
+   "desc": "Get senior and lead remote software engineering jobs that US residents can apply for, from nine job boards, with the salary range in US dollars per year when the employer shows one.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/senior-remote-software-jobs-us"
   },
   {
    "name": "worldwide-remote-jobs",
