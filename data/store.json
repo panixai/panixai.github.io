@@ -3074,7 +3074,7 @@
     "name": "telegram-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 4,
+      "totalBuilds": 5,
       "totalRuns": 42,
       "totalUsers": 3,
       "totalUsers7Days": 2,
@@ -3234,13 +3234,13 @@
     "name": "remote-jobs-scraper",
     "username": "panix",
     "stats": {
-      "totalBuilds": 3,
-      "totalRuns": 29,
+      "totalBuilds": 4,
+      "totalRuns": 35,
       "totalUsers": 2,
       "totalUsers7Days": 1,
       "totalUsers30Days": 1,
       "totalUsers90Days": 1,
-      "lastRunStartedAt": "2026-11-22T15:42:37.342Z",
+      "lastRunStartedAt": "2026-11-22T18:13:20.531Z",
       "actorReviewCount": 0,
       "actorReviewRating": 0,
       "bookmarkCount": 0
@@ -3251,6 +3251,7 @@
       "AUTOMATION",
       "LEAD_GENERATION"
     ],
+    "pictureUrl": "https://images.apifyusercontent.com/XTzoBrjAc3nx9XM9qxdw6MX_rMzFaStTwDE6pt_-wLQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3Ita0hkcUlpZng5M0dSNkgyUmEtVTJhMDdsV0dKcC1Db25uZWN0ZWRfSG9tZV9MYXB0b3BfSWNvbi5wbmc.webp",
     "notice": "NONE",
     "bookmarkCount": 0,
     "actorReviewRating": 0,
