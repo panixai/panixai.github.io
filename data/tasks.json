@@ -13,12 +13,6 @@
    "url": "https://apify.com/panix/invoice-table-json-extractor/examples/invoice-to-json"
   },
   {
-   "name": "receipt-ocr-to-json",
-   "title": "Read receipt photos with OCR into text and tables",
-   "desc": "Send a photo or scan of a receipt and get the shop, items, prices, tax and total as clean text, with any tables as JSON. OCR runs inside the Actor, so no receipt is sent to an outside AI service. The example reads a phone photo of a cafe receipt; JPG, PNG, TIFF, BMP, WEBP and scanned PDFs all work.",
-   "url": "https://apify.com/panix/invoice-table-json-extractor/examples/receipt-ocr-to-json"
-  },
-  {
    "name": "bank-statement-to-json",
    "title": "Convert bank statement PDFs to JSON transactions",
    "desc": "Extract the transaction table of a PDF bank statement as JSON rows with date, description, reference, debit, credit and balance, plus the summary and the whole statement as Markdown. Use it for bookkeeping, reconciliation and cash-flow analysis. The example parses a sample one-page business statement with 17 transactions.",
@@ -189,12 +183,6 @@
    "title": "Find popular YouTube Shorts ideas for any niche",
    "desc": "Search YouTube Shorts for a topic and see which ones get views. Each row has the title, channel, views and link. The example searches home workout Shorts. Use it to find formats worth copying.",
    "url": "https://apify.com/panix/youtube-scraper/examples/youtube-shorts-ideas-for-a-niche"
-  },
-  {
-   "name": "youtube-find-channels-in-a-niche",
-   "title": "Find YouTube channels in a niche for outreach",
-   "desc": "Search YouTube for channels about a topic and get their subscriber counts, video counts and links. The example looks for personal finance channels. Use it to build a creator list for sponsorships or partnerships.",
-   "url": "https://apify.com/panix/youtube-scraper/examples/youtube-find-channels-in-a-niche"
   }
  ],
  "linkedin-jobs-scraper": [
@@ -235,12 +223,6 @@
    "title": "Get the transcript of a TikTok video",
    "desc": "Pull the spoken text of a TikTok video from its captions. Paste one or more video links and each row returns the transcript with the video's stats. Use it to repurpose content or search what creators say.",
    "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-video-transcripts"
-  },
-  {
-   "name": "tiktok-creator-profile-stats",
-   "title": "Compare follower counts and stats of TikTok creators",
-   "desc": "Get followers, likes, video counts and bio for several TikTok creators in one run. The example compares NASA, National Geographic and Red Bull. Use it to shortlist creators for influencer outreach.",
-   "url": "https://apify.com/panix/tiktok-scraper/examples/tiktok-creator-profile-stats"
   },
   {
    "name": "tiktok-viral-videos-over-100k-views",
@@ -361,12 +343,6 @@
    "title": "Export guest reviews of Airbnb listings in Barcelona",
    "desc": "Collect recent guest reviews for the top Airbnb listings in Barcelona. The example reads 20 reviews each for 3 listings. Use it to find what guests praise or complain about.",
    "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-reviews-barcelona"
-  },
-  {
-   "name": "airbnb-availability-calendar-paris",
-   "title": "Check Airbnb availability calendars in Paris",
-   "desc": "Read the availability and nightly prices for the next 3 months for top Paris listings. Use it to see how booked a market is.",
-   "url": "https://apify.com/panix/airbnb-scraper/examples/airbnb-availability-calendar-paris"
   },
   {
    "name": "airbnb-investment-research-austin",
@@ -539,12 +515,6 @@
    "title": "Track Paris hotel price changes on Booking.com",
    "desc": "Watch Paris hotel prices and flag changes since the last run. Schedule it daily and use the monitor name to keep trips apart.",
    "url": "https://apify.com/panix/booking-scraper/examples/booking-paris-hotel-price-tracker"
-  },
-  {
-   "name": "booking-barcelona-cheapest-hostels",
-   "title": "Find the cheapest hostels in Barcelona on Booking.com",
-   "desc": "List hostels in Barcelona sorted by price. Use it for budget travel planning.",
-   "url": "https://apify.com/panix/booking-scraper/examples/booking-barcelona-cheapest-hostels"
   }
  ],
  "upwork-jobs-scraper": [
@@ -655,6 +625,38 @@
    "title": "Find remote job posts on Telegram",
    "desc": "Search Telegram job channels for remote roles and get the newest posts with the job text, links and the channel it came from. The example searches remote Python and remote React jobs from the last 14 days.",
    "url": "https://apify.com/panix/telegram-scraper/examples/telegram-remote-job-posts"
+  }
+ ],
+ "fiverr-scraper": [
+  {
+   "name": "fiverr-logo-design-price-check",
+   "title": "Check what Fiverr logo designers charge",
+   "desc": "Get the top Top Rated and Level 2 logo design gigs with starting price, delivery days, rating, reviews and seller country, plus a free market report with the price spread. Swap in any keyword to price your own service.",
+   "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-logo-design-price-check"
+  },
+  {
+   "name": "fiverr-new-ai-gigs-alerts",
+   "title": "Get alerts for new AI and automation gigs on Fiverr",
+   "desc": "Watch Fiverr for new gigs about n8n automation and AI agents. Run it on a schedule and each run returns only gigs that are new or whose price or reviews changed. Add a Discord, Slack or Telegram link for instant alerts.",
+   "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-new-ai-gigs-alerts"
+  },
+  {
+   "name": "fiverr-seller-rank-tracker",
+   "title": "Track where a Fiverr seller ranks for a keyword",
+   "desc": "Find out if and where your gig, or a competitor's, shows up in Fiverr search results for each keyword. The example checks two designers across the first 5 pages (240 gigs) of two searches. Replace them with your own.",
+   "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-seller-rank-tracker"
+  },
+  {
+   "name": "fiverr-competitor-seller-watch",
+   "title": "Spy on Fiverr competitors: profiles and all gigs with packages",
+   "desc": "Get a full profile for each competitor seller (level, rating, response time, skills, member since, recent reviews) plus every one of their gigs with all packages, paid extras and FAQ. Replace the usernames with yours.",
+   "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-competitor-seller-watch"
+  },
+  {
+   "name": "fiverr-gig-packages-comparison",
+   "title": "Compare Fiverr gig packages side by side",
+   "desc": "Pull the Basic, Standard and Premium package of the best-reviewed Shopify store gigs: price, delivery days, revisions, what is included and the paid extras. Good for pricing your own packages.",
+   "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-gig-packages-comparison"
   }
  ]
 }

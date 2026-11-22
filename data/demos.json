@@ -884,6 +884,53 @@
   ],
   "flow": "Call live over HTTP or MCP · or weekly batch · Sheets"
  },
+ "fiverr-scraper": {
+  "run": "pYjuQnUU7goSxe3uZ",
+  "input": {
+   "searchQueries": [
+    "logo design"
+   ],
+   "maxGigs": 60,
+   "sellerLevels": [
+    "top_rated",
+    "level_2"
+   ],
+   "minReviews": 50
+  },
+  "cols": [
+   "title",
+   "from",
+   "rating"
+  ],
+  "rows": [
+   [
+    "design a modern, minimalist logo and…",
+    "$150",
+    "4.77"
+   ],
+   [
+    "create a professional minimalist logo…",
+    "$25",
+    "4.88"
+   ],
+   [
+    "do modern minimalist professional log…",
+    "$25",
+    "4.9"
+   ],
+   [
+    "design a professional minimalist mode…",
+    "$95",
+    "4.91"
+   ]
+  ],
+  "use": [
+   "Price your own gig",
+   "Free market report per search",
+   "Rank and new-gig alerts"
+  ],
+  "flow": "Daily · new and changed gigs · Discord"
+ },
  "telegram-scraper": {
   "run": "wtTyA29wlGePqGnkP",
   "input": {

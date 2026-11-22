@@ -3307,6 +3307,155 @@
     "url": "https://apify.com/panix/remote-jobs-scraper"
   },
   {
+    "title": "Fiverr Scraper: Gigs, Sellers, Prices & Reviews",
+    "name": "fiverr-scraper",
+    "username": "panix",
+    "stats": {
+      "totalBuilds": 15,
+      "totalRuns": 90,
+      "totalUsers": 2,
+      "totalUsers7Days": 1,
+      "totalUsers30Days": 1,
+      "totalUsers90Days": 1,
+      "lastRunStartedAt": "2026-11-22T18:07:47.491Z",
+      "actorReviewCount": 0,
+      "actorReviewRating": 0,
+      "bookmarkCount": 0
+    },
+    "description": "Scrape Fiverr gigs by keyword, category, seller or link: prices, all packages, delivery, ratings, reviews and seller stats. Every Fiverr filter, free market report, seller rank tracking, new/changed gig monitor and alerts. For freelancers, agencies and market research.",
+    "categories": [],
+    "pictureUrl": "https://images.apifyusercontent.com/_HcZzlxqPD7YR8uPYTSwDl8UZjQnMMSe9ek_DgukKpE/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkphdDBraXFZYmJFdWdjaXctYWN0b3ItWk9NUWFXSjJaQ0YzMzBRWFQtOHMya29nZkgxai1NYXJrZXRwbGFjZV9BbmFseXRpY3NfSWNvbi5wbmc.webp",
+    "notice": "NONE",
+    "bookmarkCount": 0,
+    "actorReviewRating": 0,
+    "actorReviewCount": 0,
+    "badge": null,
+    "isWhiteListedForAgenticPayments": true,
+    "userFullName": "PANIX AI LAB",
+    "userPictureUrl": "https://images.apifyusercontent.com/qAJCSt6PdpgQ5s_S67IszpD3rRy734WqnIf4BejRNF4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTENJZmRNSUpvYU5TY2E0ckY3enA4Y3BnNWw2T0ZCX3JTdUpsT0k0NW5uby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka3BoZERCcmFYRlpZbUpGZFdkamFYY3RjSEp2Wm1sc1pTMW5hamc0V0dSdWF6UkdMVTVsYjI1ZlVGaGZRVWxmVEdGaVgwaGxlR0ZuYjI1ZlRHOW5ieTV3Ym1jLnBuZw.webp",
+    "currentPricingInfo": {
+      "pricingModel": "PAY_PER_EVENT",
+      "apifyMarginPercentage": 0.2,
+      "createdAt": "2026-11-22T16:14:35.760Z",
+      "startedAt": "2026-11-22T16:14:36.398Z",
+      "minimalMaxTotalChargeUsd": null,
+      "reasonForChange": "Price update.",
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "isOneTimeEvent": true,
+            "eventPriceUsd": 0.0005
+          },
+          "gig": {
+            "eventTitle": "Gig",
+            "eventDescription": "One Fiverr gig: title, link, starting price, delivery days, rating, reviews, seller name, level, country, languages and rating, Pro / Fiverr's Choice / promoted badges, images and search rank. Market, rank and error rows, filtered gigs and unchanged gigs in monitor mode are free.",
+            "isPrimaryEvent": true,
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.001
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0009
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0008
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0007
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0007
+              }
+            }
+          },
+          "gig-details": {
+            "eventTitle": "Gig details",
+            "eventDescription": "Full gig page for a delivered gig: all packages with prices, delivery, revisions and features, paid extras, description, FAQ, tags, orders in queue, rating breakdown and seller stats. Charged only when 'Include full gig details' is on (and for gig links).",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0035
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0032
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0029
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0029
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0029
+              }
+            }
+          },
+          "review": {
+            "eventTitle": "Review",
+            "eventDescription": "One buyer review row: stars, text, buyer country, price paid, order duration, repeat buyer and seller response. Charged only when 'Reviews per gig' is above 0.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.0004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0003
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.00027
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.00025
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.00025
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.00025
+              }
+            }
+          },
+          "seller": {
+            "eventTitle": "Seller profile",
+            "eventDescription": "One seller profile row: level, rating, response time, member since, skills, languages, certifications, education and recent reviews.",
+            "isOneTimeEvent": false,
+            "eventTieredPricingUsd": {
+              "FREE": {
+                "tieredEventPriceUsd": 0.004
+              },
+              "BRONZE": {
+                "tieredEventPriceUsd": 0.0035
+              },
+              "SILVER": {
+                "tieredEventPriceUsd": 0.0032
+              },
+              "GOLD": {
+                "tieredEventPriceUsd": 0.0029
+              },
+              "PLATINUM": {
+                "tieredEventPriceUsd": 0.0029
+              },
+              "DIAMOND": {
+                "tieredEventPriceUsd": 0.0029
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": "ZOMQaWJ2ZCF330QXT",
+    "url": "https://apify.com/panix/fiverr-scraper"
+  },
+  {
     "title": "Google Trends API: Interest, Related Queries, Trending Now",
     "name": "google-trends-api",
     "username": "panix",
