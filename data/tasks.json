@@ -63,12 +63,6 @@
    "title": "Get the Premier League table, results and fixtures",
    "desc": "Get the current Premier League table with points, goals and form, plus the latest results and upcoming fixtures, from one Flashscore league URL. Replace the URL with any league page on Flashscore, from LaLiga to the NBA, or with a past season such as premier-league-2024-2025.",
    "url": "https://apify.com/panix/flashscore-scraper/examples/premier-league-table-results"
-  },
-  {
-   "name": "tennis-point-by-point",
-   "title": "Tennis results with point-by-point data",
-   "desc": "Get the finished ATP and WTA matches of the last two days from Flashscore with the score of every set and point-by-point data: every game with the server, the winner, breaks and the points in order, with break, set and match points counted. Use it for player analytics, betting models and match reports.",
-   "url": "https://apify.com/panix/flashscore-scraper/examples/tennis-point-by-point"
   }
  ],
  "resume-cv-json-parser": [
@@ -283,12 +277,6 @@
    "title": "Export recent customer reviews of Walmart products",
    "desc": "Pull the newest customer reviews for the top Walmart results of a search. The example reads 20 reviews each for two air fryers. Use it for product research and complaint mining.",
    "url": "https://apify.com/panix/walmart-scraper/examples/walmart-product-reviews-export"
-  },
-  {
-   "name": "walmart-price-tracker-lego",
-   "title": "Track Walmart price changes on LEGO sets",
-   "desc": "Watch Walmart LEGO prices and see which products changed since the last run. Schedule it daily and use the monitor name to keep lists apart.",
-   "url": "https://apify.com/panix/walmart-scraper/examples/walmart-price-tracker-lego"
   }
  ],
  "pinterest-scraper": [
@@ -459,12 +447,6 @@
    "url": "https://apify.com/panix/google-news-scraper/examples/google-news-ai-headlines-last-24-hours"
   },
   {
-   "name": "google-news-us-technology-and-business-headlines",
-   "title": "Get today's US technology and business headlines",
-   "desc": "Read the Google News Technology and Business sections for the US. Each row has the headline, source and link. Schedule it for a daily briefing.",
-   "url": "https://apify.com/panix/google-news-scraper/examples/google-news-us-technology-and-business-headlines"
-  },
-  {
    "name": "google-news-brand-mention-monitor-openai",
    "title": "Monitor news mentions of OpenAI",
    "desc": "Watch Google News for mentions of a brand over the last 7 days and return only articles you have not seen. Schedule it and send new rows to Slack or email.",
@@ -561,12 +543,6 @@
    "title": "Get the NFL, NBA, MLB and NHL injury report from ESPN",
    "desc": "Export the current injury list with player, team, status, injury, body part, side, expected return date and the analyst note. The example reads NBA, NHL and WNBA; add NFL, MLB or college football. Turn on Only new to get just the changes each morning.",
    "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-injury-report"
-  },
-  {
-   "name": "espn-standings-tables",
-   "title": "Get league standings from ESPN",
-   "desc": "Export the current standings for the NFL, NBA, MLB, NHL and the Premier League by conference, division or table: rank, team, wins, losses, points, win percentage, streak and home and away records.",
-   "url": "https://apify.com/panix/espn-sports-scraper/examples/espn-standings-tables"
   }
  ],
  "google-trends-api": [
@@ -619,12 +595,6 @@
    "title": "Export Telegram posts with their comments",
    "desc": "Get posts of channels that have a public discussion group together with the comments under each post: text, date, reactions and reply-to. Good for sentiment analysis of what a community says.",
    "url": "https://apify.com/panix/telegram-scraper/examples/telegram-posts-with-comments"
-  },
-  {
-   "name": "telegram-remote-job-posts",
-   "title": "Find remote job posts on Telegram",
-   "desc": "Search Telegram job channels for remote roles and get the newest posts with the job text, links and the channel it came from. The example searches remote Python and remote React jobs from the last 14 days.",
-   "url": "https://apify.com/panix/telegram-scraper/examples/telegram-remote-job-posts"
   }
  ],
  "fiverr-scraper": [
@@ -657,6 +627,38 @@
    "title": "Compare Fiverr gig packages side by side",
    "desc": "Pull the Basic, Standard and Premium package of the best-reviewed Shopify store gigs: price, delivery days, revisions, what is included and the paid extras. Good for pricing your own packages.",
    "url": "https://apify.com/panix/fiverr-scraper/examples/fiverr-gig-packages-comparison"
+  }
+ ],
+ "remote-jobs-scraper": [
+  {
+   "name": "remote-jobs-from-pakistan",
+   "title": "Remote jobs you can apply for from Pakistan",
+   "desc": "Get remote developer and designer jobs from nine job boards that people living in Pakistan can apply for: worldwide jobs plus jobs open to Asia, South Asia or APAC. US-only jobs are left out. Change the country or keywords to your own.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-jobs-from-pakistan"
+  },
+  {
+   "name": "remote-jobs-from-india",
+   "title": "Remote software jobs open to India",
+   "desc": "Get remote software engineering jobs that applicants in India can apply for, from nine job boards, with level, job type and salary when the employer shows one. Duplicates across boards are merged.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-jobs-from-india"
+  },
+  {
+   "name": "worldwide-remote-jobs",
+   "title": "Worldwide remote jobs: apply from anywhere",
+   "desc": "Get every remote job from the last 3 days that accepts applicants from anywhere in the world, across nine job boards and all kinds of roles. Good for job seekers outside the US and Europe and for job newsletters.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/worldwide-remote-jobs"
+  },
+  {
+   "name": "remote-engineering-jobs-with-salary",
+   "title": "Remote engineering jobs paying $100k+",
+   "desc": "Get full-time remote engineering jobs that publish a salary of at least $100,000 a year (converted to US dollars per year), with the original pay range, currency and company.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/remote-engineering-jobs-with-salary"
+  },
+  {
+   "name": "daily-remote-job-alert",
+   "title": "Daily remote job alert: only new jobs",
+   "desc": "A ready-made daily alert: new remote customer support and marketing jobs from nine boards, delivered once. Schedule it daily and connect it to email, Slack, Telegram or Google Sheets. Change the keywords to any role.",
+   "url": "https://apify.com/panix/remote-jobs-scraper/examples/daily-remote-job-alert"
   }
  ]
 }
